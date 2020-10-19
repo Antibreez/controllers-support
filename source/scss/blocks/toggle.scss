@@ -1,0 +1,101 @@
+.toggle-wrapper {
+  position: relative;
+}
+
+.toggle-label {
+  @include transition;
+
+  position: relative;
+
+  display: block;
+  width: 100%;
+  padding: 23px 54px 23px 15px;
+
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 17px;
+  color: #000;
+
+  background-color: #fff;
+  border-radius: 5px;
+
+  z-index: 10;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover::before {
+    opacity: 0.75;
+  }
+
+  &:active::before {
+    opacity: 0.5;
+  }
+
+  &::before {
+    @include transition;
+
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    right: 10px;
+
+    height: 24px;
+    width: 24px;
+
+    transform: translateY(-50%) rotate(45deg);
+    background-image: url("../img/search-close.svg");
+  }
+}
+
+.toggle-input:checked + .toggle-label {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.toggle-input:not(:checked) + .toggle-label:hover {
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.05);
+}
+
+.toggle-input:checked + .toggle-label::before {
+  transform: translateY(-50%) rotate(0);
+}
+
+.toggle-content {
+  position: relative;
+
+  display: none;
+
+  background-color: #fff;
+  z-index: 10;
+
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top: 1px solid #f7f7f7;
+}
+
+.toggle-input:checked + .toggle-label + .toggle-content {
+  display: block;
+}
+
+.toggle-shadow {
+  @include transition;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  border-radius: 5px;
+}
+
+.toggle-input:checked
++ .toggle-label:hover
++ .toggle-content
++ .toggle-shadow {
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.05);
+}
