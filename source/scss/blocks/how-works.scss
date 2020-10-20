@@ -1,0 +1,92 @@
+.how-works {
+  &__title {
+    margin: 0 auto 25px;
+    padding-top: 50px;
+    max-width: 500px;
+
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 30px;
+    color: #707070;
+    text-align: center;
+  }
+
+  &__content {
+    padding: 50px 30px;
+  }
+
+  &__list {
+    margin: 0;
+    margin-bottom: 50px;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    max-width: 236px;
+
+    text-align: center;
+  }
+
+  &__number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+
+    font-size: 14px;
+    line-height: 16px;
+    color: #fff;
+
+    border-radius: 50%;
+    background-color: #5ea9ff;
+  }
+
+  &__image-wrapper {
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__text {
+    margin: 0;
+
+    font-size: 15px;
+    line-height: 18px;
+    color: #707070;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__link {
+    @include link-reset;
+    @include transition;
+
+    width: 162px;
+    height: 48px;
+
+    &--ios {
+      margin-right: 15px;
+
+      background-image: url("../img/app-ios.svg");
+
+      &:hover {
+        background-image: url("../img/app-ios-blue.svg");
+      }
+    }
+
+    &--android {
+      background-image: url("../img/app-google.svg");
+
+      &:hover {
+        background-image: url("../img/app-google-blue.svg");
+      }
+    }
+  }
+}

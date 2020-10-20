@@ -1,4 +1,19 @@
 (function () {
+  const initSwiper = () => {
+    return new Swiper('.model__image-container', {
+      pagination: {
+        el: '.model__pagination',
+        type: 'bullets',
+        clickable: true,
+      },
+      loop: true,
+    });
+  };
+
+  initSwiper();
+})();
+
+(function () {
   if (!document.getElementById('animation')) {
     return;
   }
@@ -221,7 +236,7 @@
   
 })();
 
-(function (backend, PAGES) {
+(function () {
   // const splits = [
   //   {
   //     "id":7,
@@ -243,46 +258,39 @@
   //   {"id":8,"title":"Midea","series":[{"id":61,"title":"Blanc MSMA"},{"id":60,"title":"Blanc MSMA ERP (MA)"},{"id":59,"title":"Mission MSMB (MB)"},{"id":58,"title":"Ultimate Comfort MSMT (MT)"}]}];
 
 
-  let seriesName = '';
-  let brandName = '';
-  let linkHref = '';
-
-  const brandClass = '.model-choice__brand-select';
-  const seriesClass = '.model-choice__series-select';
+  //let seriesName = '';
+  //let brandName = '';
 
   const brandList = document.querySelector('.model-choice__brand-list');
   const brandButton = document.querySelector('.model-choice__brand-choice');
-  const seriesList = document.querySelector('.model-choice__series-list');
-  const seriesButton = document.querySelector('.model-choice__series-choice');
-  const brandSelect = document.querySelector('.model-choice__select-brand');
-  const seriesSelect = document.querySelector('.model-choice__select-series');
+  //const brandSelect = document.querySelector('.model-choice__select-brand');
 
   if (!brandList) {
     return;
   }
 
-  let currentBrandIdx = -1;
-  let currentOptionIdx = -1;
+  //let currentBrandIdx = -1;
+  //let currentOptionIdx = -1;
 
   //const brandSelect = document.querySelector('.model-choice__brand-select');
-  const seriesWrapper = document.querySelector('.model-choice__series-wrapper');
-  const seriesTemplate = document.querySelector('#series').content.querySelector('.model-choice__series-select');
+  //const seriesWrapper = document.querySelector('.model-choice__series-wrapper');
+  //const seriesTemplate = document.querySelector('#series').content.querySelector('.model-choice__series-select');
 
-  const link = document.querySelector('.model-choice__link');
+  //const link = document.querySelector('.model-choice__link');
 
-  const getHref = (series) => {
-    let href = '';
+  // const getHref = (series) => {
+  //   let href = '';
 
-    PAGES.forEach((page) => {
-      if (href === '') {
-        if (series.toLowerCase().indexOf(page) !== -1) {
-          href = page;
-        }
-      }
-    });
+  //   PAGES.forEach((page) => {
+  //     if (href === '') {
+  //       if (series.toLowerCase().indexOf(page) !== -1) {
+  //         href = page;
+  //       }
+  //     }
+  //   });
 
-    return href === '' ? '' : href + '.html';
-  };
+  //   return href === '' ? '' : href + '.html';
+  // };
 
   const onBrandClick = () => {
     if (!brandList.classList.contains('show')) {
@@ -304,19 +312,19 @@
     // });
   };
 
-  const onSeriesClick = () => {
-    if (!seriesList.classList.contains('show')) {
-      seriesList.classList.add('show');
-      seriesButton.classList.add('opened');
-      // console.log(seriesList.getBoundingClientRect().bottom - window.innerHeight);
-      return;
-    }
+  // const onSeriesClick = () => {
+  //   if (!seriesList.classList.contains('show')) {
+  //     seriesList.classList.add('show');
+  //     seriesButton.classList.add('opened');
+  //     // console.log(seriesList.getBoundingClientRect().bottom - window.innerHeight);
+  //     return;
+  //   }
 
-    if (seriesList.classList.contains('show')) {
-      seriesList.classList.remove('show');
-      seriesButton.classList.remove('opened');
-    }
-  };
+  //   if (seriesList.classList.contains('show')) {
+  //     seriesList.classList.remove('show');
+  //     seriesButton.classList.remove('opened');
+  //   }
+  // };
 
   const onOutsideClick = (evt) => {
     let target = evt.target;
@@ -331,205 +339,205 @@
       brandButton.classList.remove('opened');
     }
 
-    if (
-      !target.classList.contains('model-choice__series-choice')
-      && !target.classList.contains('model-choice__series-item')
-      && !target.classList.contains('model-choice__series-list')
-      && seriesList.classList.contains('show')
-    ) {
-      seriesList.classList.remove('show');
-      seriesButton.classList.remove('opened');
-    }
+    // if (
+    //   !target.classList.contains('model-choice__series-choice')
+    //   && !target.classList.contains('model-choice__series-item')
+    //   && !target.classList.contains('model-choice__series-list')
+    //   && seriesList.classList.contains('show')
+    // ) {
+    //   seriesList.classList.remove('show');
+    //   seriesButton.classList.remove('opened');
+    // }
   };
 
-  const makeOptionNode = (arr) => {
-    let fragment = document.createDocumentFragment();
-    let i = 0;
 
-    arr.forEach((item) => {
-      let node = document.createElement('li');
-      node.textContent = item['title'];
-      node.classList.add('model-choice__brand-item');
-      node.setAttribute('data-id', i);
-      i++;
-      fragment.appendChild(node);
+    // let fragment = document.createDocumentFragment();
+    // let i = 0;
 
-      // let seriesSelect = seriesTemplate.cloneNode(true);
-      // seriesSelect.classList.add('hidden');
-      // seriesSelect.setAttribute('name', item['title']);
+    // arr.forEach((item) => {
+    //   let node = document.createElement('li');
+    //   node.textContent = item['title'];
+    //   node.classList.add('model-choice__brand-item');
+    //   node.setAttribute('data-id', i);
+    //   i++;
+    //   fragment.appendChild(node);
 
-      // item.series.forEach((serie) => {
-      //   let node = document.createElement('option');
-      //   node.setAttribute('value', serie['title']);
-      //   node.textContent = serie['title'];
-      //   seriesSelect.appendChild(node);
-      // });
+    //   // let seriesSelect = seriesTemplate.cloneNode(true);
+    //   // seriesSelect.classList.add('hidden');
+    //   // seriesSelect.setAttribute('name', item['title']);
 
-      // seriesWrapper.appendChild(seriesSelect);
-    });
+    //   // item.series.forEach((serie) => {
+    //   //   let node = document.createElement('option');
+    //   //   node.setAttribute('value', serie['title']);
+    //   //   node.textContent = serie['title'];
+    //   //   seriesSelect.appendChild(node);
+    //   // });
 
-    brandList.appendChild(fragment);
+    //   // seriesWrapper.appendChild(seriesSelect);
+    // });
 
-
-    let fragment1 = document.createDocumentFragment();
-    let j = 0;
-
-    arr.forEach((item) => {
-      let node1 = document.createElement('option');
-      node1.textContent = item['title'];
-      node1.classList.add('model-choice__brand-option');
-      node1.setAttribute('data-id', i);
-      j++;
-      fragment1.appendChild(node1);
-
-      // let seriesSelect = seriesTemplate.cloneNode(true);
-      // seriesSelect.classList.add('hidden');
-      // seriesSelect.setAttribute('name', item['title']);
-
-      // item.series.forEach((serie) => {
-      //   let node = document.createElement('option');
-      //   node.setAttribute('value', serie['title']);
-      //   node.textContent = serie['title'];
-      //   seriesSelect.appendChild(node);
-      // });
-
-      // seriesWrapper.appendChild(seriesSelect);
-    });
-
-    brandSelect.appendChild(fragment1);
+    // brandList.appendChild(fragment);
 
 
+    // let fragment1 = document.createDocumentFragment();
+    // let j = 0;
 
-    const onBrandItemClick = (evt) => {
-      let target = evt.target;
-      let idx = +target.getAttribute('data-id');
+    // arr.forEach((item) => {
+    //   let node1 = document.createElement('option');
+    //   node1.textContent = item['title'];
+    //   node1.classList.add('model-choice__brand-option');
+    //   node1.setAttribute('data-id', i);
+    //   j++;
+    //   fragment1.appendChild(node1);
 
-      if (target.classList.contains('model-choice__brand-item')) {
-        if (currentBrandIdx === idx) {
-          brandList.classList.remove('show');
-          brandButton.classList.remove('opened');
-        }
+    //   // let seriesSelect = seriesTemplate.cloneNode(true);
+    //   // seriesSelect.classList.add('hidden');
+    //   // seriesSelect.setAttribute('name', item['title']);
 
-        if (currentBrandIdx !== idx) {
-          seriesList.innerHTML = '';
+    //   // item.series.forEach((serie) => {
+    //   //   let node = document.createElement('option');
+    //   //   node.setAttribute('value', serie['title']);
+    //   //   node.textContent = serie['title'];
+    //   //   seriesSelect.appendChild(node);
+    //   // });
 
-          seriesButton.textContent = 'Выбрать из списка';
-          seriesButton.classList.remove('selected');
+    //   // seriesWrapper.appendChild(seriesSelect);
+    // });
 
-          let fragment = document.createDocumentFragment();
-          let idx = +target.getAttribute('data-id');
-
-          arr[idx].series.forEach((serie) => {
-            let node = document.createElement('li');
-            node.textContent = serie['title'];
-            node.classList.add('model-choice__series-item');
-            fragment.appendChild(node);
-          });
-
-          seriesList.appendChild(fragment);
-          currentBrandIdx = idx;
-
-          brandButton.textContent = target.textContent;
-          brandName = target.textContent;
-          if (!brandButton.classList.contains('selected')) {
-            brandButton.classList.add('selected');
-          }
-
-          if (seriesButton.hasAttribute('disabled')) {
-            seriesButton.removeAttribute('disabled');
-          }
-
-          brandList.classList.remove('show');
-          brandButton.classList.remove('opened');
-
-          link.classList.add('disabled');
-          link.removeAttribute('href');
-        }
-      }
-    }
-
-    const onBrandChange = (evt) => {
-      currentOptionIdx = evt.target.selectedIndex - 1;
-      seriesSelect.innerHTML = '';
-
-      seriesButton.textContent = 'Выбрать из списка';
-      seriesButton.classList.remove('selected');
-
-      let node = document.createElement('option');
-      node.textContent = '';
-      node.setAttribute('disabled', '');
-      node.setAttribute('selected', '');
-      node.style.display = 'none';
-
-      seriesSelect.appendChild(node);
-
-      let fragment = document.createDocumentFragment();
-
-      if (seriesSelect.hasAttribute('disabled')) {
-        seriesSelect.removeAttribute('disabled');
-      }
+    // brandSelect.appendChild(fragment1);
 
 
-      arr[currentOptionIdx].series.forEach((serie) => {
-        let node = document.createElement('option');
-        node.textContent = serie['title'];
-        node.classList.add('model-choice__series-option');
-        fragment.appendChild(node);
-      });
 
-      seriesSelect.appendChild(fragment);
+    // const onBrandItemClick = (evt) => {
+    //   let target = evt.target;
+    //   let idx = +target.getAttribute('data-id');
 
-      brandButton.textContent = evt.target.value;
-      brandName = evt.target.value;
-      if (!brandButton.classList.contains('selected')) {
-        brandButton.classList.add('selected');
-      }
+    //   if (target.classList.contains('model-choice__brand-item')) {
+    //     if (currentBrandIdx === idx) {
+    //       brandList.classList.remove('show');
+    //       brandButton.classList.remove('opened');
+    //     }
 
-      link.classList.add('disabled');
-      link.removeAttribute('href');
-    }
+    //     if (currentBrandIdx !== idx) {
+    //       seriesList.innerHTML = '';
 
-    const onSeriesItemClick = (evt) => {
-      let target = evt.target;
+    //       seriesButton.textContent = 'Выбрать из списка';
+    //       seriesButton.classList.remove('selected');
 
-      if (target.classList.contains('model-choice__series-item')) {
-        seriesButton.textContent = target.textContent;
-        if (!seriesButton.classList.contains('selected')) {
-          seriesButton.classList.add('selected');
-        }
+    //       let fragment = document.createDocumentFragment();
+    //       let idx = +target.getAttribute('data-id');
 
-        seriesList.classList.remove('show');
-        seriesButton.classList.remove('opened');
+    //       arr[idx].series.forEach((serie) => {
+    //         let node = document.createElement('li');
+    //         node.textContent = serie['title'];
+    //         node.classList.add('model-choice__series-item');
+    //         fragment.appendChild(node);
+    //       });
 
-        link.classList.remove('disabled');
-        seriesName = target.textContent;
-        link.setAttribute('href', getHref(seriesName));
-      }
-    }
+    //       seriesList.appendChild(fragment);
+    //       currentBrandIdx = idx;
 
-    const onSeriesChange = (evt) => {
-      seriesButton.textContent = evt.target.value;
-      if (!seriesButton.classList.contains('selected')) {
-        seriesButton.classList.add('selected');
-      }
+    //       brandButton.textContent = target.textContent;
+    //       brandName = target.textContent;
+    //       if (!brandButton.classList.contains('selected')) {
+    //         brandButton.classList.add('selected');
+    //       }
 
-      link.classList.remove('disabled');
-      seriesName = evt.target.value;
-      link.setAttribute('href', getHref(seriesName));
-    }
+    //       if (seriesButton.hasAttribute('disabled')) {
+    //         seriesButton.removeAttribute('disabled');
+    //       }
 
-    const onLinkClick = (evt) => {
-      evt.preventDefault();
-      let href = evt.target.getAttribute('href');
+    //       brandList.classList.remove('show');
+    //       brandButton.classList.remove('opened');
 
-      if (href === '') {
-        alert('Инструкция по установке Wi-Fi контроллера для данной серии кондиционера в скором времени появится.');
+    //       link.classList.add('disabled');
+    //       link.removeAttribute('href');
+    //     }
+    //   }
+    // }
 
-        return;
-      }
+    // const onBrandChange = (evt) => {
+    //   currentOptionIdx = evt.target.selectedIndex - 1;
+    //   seriesSelect.innerHTML = '';
 
-      document.location.href = href;
-    };
+    //   seriesButton.textContent = 'Выбрать из списка';
+    //   seriesButton.classList.remove('selected');
+
+    //   let node = document.createElement('option');
+    //   node.textContent = '';
+    //   node.setAttribute('disabled', '');
+    //   node.setAttribute('selected', '');
+    //   node.style.display = 'none';
+
+    //   seriesSelect.appendChild(node);
+
+    //   let fragment = document.createDocumentFragment();
+
+    //   if (seriesSelect.hasAttribute('disabled')) {
+    //     seriesSelect.removeAttribute('disabled');
+    //   }
+
+
+    //   arr[currentOptionIdx].series.forEach((serie) => {
+    //     let node = document.createElement('option');
+    //     node.textContent = serie['title'];
+    //     node.classList.add('model-choice__series-option');
+    //     fragment.appendChild(node);
+    //   });
+
+    //   seriesSelect.appendChild(fragment);
+
+    //   brandButton.textContent = evt.target.value;
+    //   brandName = evt.target.value;
+    //   if (!brandButton.classList.contains('selected')) {
+    //     brandButton.classList.add('selected');
+    //   }
+
+    //   link.classList.add('disabled');
+    //   link.removeAttribute('href');
+    // }
+
+    // const onSeriesItemClick = (evt) => {
+    //   let target = evt.target;
+
+    //   if (target.classList.contains('model-choice__series-item')) {
+    //     seriesButton.textContent = target.textContent;
+    //     if (!seriesButton.classList.contains('selected')) {
+    //       seriesButton.classList.add('selected');
+    //     }
+
+    //     seriesList.classList.remove('show');
+    //     seriesButton.classList.remove('opened');
+
+    //     link.classList.remove('disabled');
+    //     seriesName = target.textContent;
+    //     link.setAttribute('href', getHref(seriesName));
+    //   }
+    // }
+
+    // const onSeriesChange = (evt) => {
+    //   seriesButton.textContent = evt.target.value;
+    //   if (!seriesButton.classList.contains('selected')) {
+    //     seriesButton.classList.add('selected');
+    //   }
+
+    //   link.classList.remove('disabled');
+    //   seriesName = evt.target.value;
+    //   link.setAttribute('href', getHref(seriesName));
+    // }
+
+    // const onLinkClick = (evt) => {
+    //   evt.preventDefault();
+    //   let href = evt.target.getAttribute('href');
+
+    //   if (href === '') {
+    //     alert('Инструкция по установке Wi-Fi контроллера для данной серии кондиционера в скором времени появится.');
+
+    //     return;
+    //   }
+
+    //   document.location.href = href;
+    // };
 
     //let splitsData = backend.load(getData);
 
@@ -593,18 +601,18 @@
     //Resize.addListener();
 
     brandButton.addEventListener('click', onBrandClick);
-    seriesButton.addEventListener('click', onSeriesClick);
-    brandList.addEventListener('click', onBrandItemClick);
-    seriesList.addEventListener('click', onSeriesItemClick);
-    brandSelect.addEventListener('change', onBrandChange);
-    seriesSelect.addEventListener('change', onSeriesChange);
-    link.addEventListener('click', onLinkClick);
+    //seriesButton.addEventListener('click', onSeriesClick);
+    // brandList.addEventListener('click', onBrandItemClick);
+    // seriesList.addEventListener('click', onSeriesItemClick);
+    // brandSelect.addEventListener('change', onBrandChange);
+    // seriesSelect.addEventListener('change', onSeriesChange);
+    // link.addEventListener('click', onLinkClick);
     document.addEventListener('mousedown', onOutsideClick);
-  };
 
-  backend.load(makeOptionNode);
 
-})(window.backend, window.PAGES);
+  //backend.load(makeOptionNode);
+
+})();
 
 (function () {
   const wrapper = document.querySelector('.equipment__wrapper');

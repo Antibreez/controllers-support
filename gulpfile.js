@@ -111,6 +111,7 @@ gulp.task(`js-vendor`, function () {
 
 gulp.task(`js`, function () {
   return gulp.src([
+    `source/js/modules/model.js`,
     `source/js/modules/animation.js`,
     `source/js/modules/backend.js`,
     `source/js/modules/select.js`,
