@@ -32,13 +32,229 @@
         <div class="toggle-wrapper">
           <input id="how-works" type="checkbox" class="visually-hidden  toggle-input">
           <label for="how-works" class="how-works__label  toggle-label">Как это работает?</label>
-          <div style="height: 200px;" class="how-works__content  toggle-content">sdfgsdfgsdfgsdfgsdgf</div>
+          <div class="how-works__content  toggle-content">
+            <ul class="how-works__list">
+              <li class="how-works__item">
+                <div class="how-works__number">1</div>
+                <div class="how-works__image-wrapper">
+                  <img class="how-works__image  how-works__image--install" src="img/install.svg" alt="Установка">
+                </div>
+                <p class="how-works__text">
+                  Установите Wi-Fi контроллер во внутреннем блоке кондиционера согласно инструкции
+                </p>
+              </li>
+              <li class="how-works__item">
+                <div class="how-works__number">2</div>
+                <div class="how-works__image-wrapper">
+                  <img class="how-works__image  how-works__image--house" src="img/house.svg" alt="Приложение">
+                </div>
+                <p class="how-works__text">
+                  Скачайте и установите приложение Daichi Comfort на мобильный телефон или ПК
+                </p>
+              </li>
+              <li class="how-works__item">
+                <div class="how-works__number">3</div>
+                <div class="how-works__image-wrapper">
+                  <img class="how-works__image  how-works__image--control" src="img/controll.svg" alt="Управление">
+                </div>
+                <p class="how-works__text">
+                  Управляйте кондиционером из любой точки мира, используя удобные функции приложения
+                </p>
+              </li>
+            </ul>
+            <div class="how-works__links">
+              <a href="#" class="how-works__link  how-works__link--ios"></a>
+              <a href="#" class="how-works__link  how-works__link--android"></a>
+            </div>
+          </div>
           <div class="toggle-shadow"></div>
+        </div>
+      </section>
+      <section class="model-choice">
+        <h2 class="model-choice__title">Совместимость кондиционеров с контроллером Wi-Fi</h2>
+        <div class="model-choice__brand-wrapper">
+          <h3 class="model-choice__brand-choice-title">Производитель кондиционера</h3>
+          <button class="model-choice__brand-choice">Все</button>
+          <ul class="model-choice__brand-list">
+            <li class="model-choice__brand-item  active">Все</li>
+            <li class="model-choice__brand-item">Zanussi</li>
+            <li class="model-choice__brand-item">HALSEN</li>
+            <li class="model-choice__brand-item">GOOPER&HUNTER</li>
+            <li class="model-choice__brand-item">DAIKIN</li>
+            <li class="model-choice__brand-item">Electrolux</li>
+            <li class="model-choice__brand-item">Midea</li>
+          </ul>
+          <select class="model-choice__select-brand">
+            <option value="" disabled selected style="display: none;"></option>
+          </select>
+          <!-- <label for="brand-select">Бренд</label>
+          <select class="model-choice__select  model-choice__brand-select" name="brand" id="brand-select" style="width: 100%">
+            <option value="" disabled selected>Выбрать из списка</option>
+          </select> -->
+
+          <!-- <select name="a" id="aaa" style="width: 100%; z-index: 1000; position: absolute; top: 0; left: 0;">
+            <option value="" disabled selected hidden>xxx</option>
+            <option value="c">ccc</option>
+            <option value="d">ddd</option>
+            <option value="n">nnn</option>
+            <option value="m">mmm</option>
+            <option value="r">rrr</option>
+          </select> -->
+        <div class="model-choice__shadow"></div>
+        </div>
+      </section>
+      <section class="models">
+        <ul class="models__list">
+          <li class="models__item  model">
+            <div class="model__image-container  swiper-container">
+              <div class="model__image-wrapper  swiper-wrapper">
+                <div class="model__image  swiper-slide">
+                  <img src="img/ftxs-rxs.png" alt="FTXS/RXS">
+                </div>
+                <div class="model__image  swiper-slide">
+                  <img src="img/ftxs-rxs.png" alt="FTXS/RXS">
+                </div>
+                <div class="model__image  swiper-slide">
+                  <img src="img/ftxs-rxs.png" alt="FTXS/RXS">
+                </div>
+              </div>
+              <div class="model__pagination  swiper-pagination"></div>
+            </div>
+            <p class="model__brand">Daikin</p>
+            <p class="model__name">FTXS-K</p>
+            <div class="model__number">
+              <span class="model__compatible">4</span>
+              /
+              <span class="model__total">5</span>
+              <span class="model__text">моделей совместимы</span>
+            </div>
+          </li>
+          <li class="models__item  model">
+            <div class="model__image-container  swiper-container">
+              <div class="model__image-wrapper  swiper-wrapper">
+                <div class="model__image  swiper-slide">
+                  <img src="img/ftxs-rxs.png" alt="FTXS/RXS">
+                </div>
+                <div class="model__image  swiper-slide">
+                  <img src="img/ftxs-rxs.png" alt="FTXS/RXS">
+                </div>
+                <div class="model__image  swiper-slide">
+                  <img src="img/ftxs-rxs.png" alt="FTXS/RXS">
+                </div>
+              </div>
+              <div class="model__pagination  swiper-pagination"></div>
+            </div>
+            <p class="model__brand">Daikin</p>
+            <p class="model__name">FTXS-K</p>
+            <div class="model__number">
+              <span class="model__compatible">4</span>
+              /
+              <span class="model__total">5</span>
+              <span class="model__text">моделей совместимы</span>
+            </div>
+          </li>
+          <li class="models__item  model">
+            <div class="model__image-container  swiper-container">
+              <div class="model__image-wrapper  swiper-wrapper">
+                <div class="model__image  swiper-slide">
+                  <img src="img/ftxs-rxs.png" alt="FTXS/RXS">
+                </div>
+                <div class="model__image  swiper-slide">
+                  <img src="img/ftxs-rxs.png" alt="FTXS/RXS">
+                </div>
+                <div class="model__image  swiper-slide">
+                  <img src="img/ftxs-rxs.png" alt="FTXS/RXS">
+                </div>
+              </div>
+              <div class="model__pagination  swiper-pagination"></div>
+            </div>
+            <p class="model__brand">Daikin</p>
+            <p class="model__name">FTXS-K</p>
+            <div class="model__number">
+              <span class="model__compatible">4</span>
+              /
+              <span class="model__total">5</span>
+              <span class="model__text">моделей совместимы</span>
+            </div>
+          </li>
+          <li class="models__item  model">
+            <div class="model__image-container  swiper-container">
+              <div class="model__image-wrapper  swiper-wrapper">
+                <div class="model__image  swiper-slide">
+                  <img src="img/ftxs-rxs.png" alt="FTXS/RXS">
+                </div>
+                <div class="model__image  swiper-slide">
+                  <img src="img/ftxs-rxs.png" alt="FTXS/RXS">
+                </div>
+                <div class="model__image  swiper-slide">
+                  <img src="img/ftxs-rxs.png" alt="FTXS/RXS">
+                </div>
+              </div>
+              <div class="model__pagination  swiper-pagination"></div>
+            </div>
+            <p class="model__brand">Daikin</p>
+            <p class="model__name">FTXS-K</p>
+            <div class="model__number">
+              <span class="model__compatible">4</span>
+              /
+              <span class="model__total">5</span>
+              <span class="model__text">моделей совместимы</span>
+            </div>
+          </li>
+          <li class="models__item  model">
+            <div class="model__image-container  swiper-container">
+              <div class="model__image-wrapper  swiper-wrapper">
+                <div class="model__image  swiper-slide">
+                  <img src="img/ftxs-rxs.png" alt="FTXS/RXS">
+                </div>
+                <div class="model__image  swiper-slide">
+                  <img src="img/ftxs-rxs.png" alt="FTXS/RXS">
+                </div>
+                <div class="model__image  swiper-slide">
+                  <img src="img/ftxs-rxs.png" alt="FTXS/RXS">
+                </div>
+              </div>
+              <div class="model__pagination  swiper-pagination"></div>
+            </div>
+            <p class="model__brand">Daikin</p>
+            <p class="model__name">FTXS-K</p>
+            <div class="model__number">
+              <span class="model__compatible">4</span>
+              /
+              <span class="model__total">5</span>
+              <span class="model__text">моделей совместимы</span>
+            </div>
+          </li>
+        </ul>
+        <button class="models__show-more">Показать еще</button>
+        <div class="models__pagination">
+          <span class="models__pagination-prev  disabled"></span>
+          <ul class="models__pagination-list">
+            <li class="models__pagination-item  active">1</li>
+            <li class="models__pagination-item">2</li>
+            <li class="models__pagination-item">3</li>
+            <li class="models__pagination-item">4</li>
+            <li class="models__pagination-dotes">...</li>
+            <li class="models__pagination-item">31</li>
+          </ul>
+          <span class="models__pagination-next"></span>
         </div>
       </section>
     </div>
   </main>
+  <footer class="footer  container">
+    <div class="footer__right">
+      <a class="footer__link" href="https:/daichi.ru">
+        <svg xmlns="http://www.w3.org/2000/svg" width="154.826" height="28" viewBox="0 0 154.826 28"><defs><style>.a{fill: inherit;}</style></defs><g transform="translate(-41 -254)"><g transform="translate(41 254)"><path class="a" d="M44.034.718A13.883,13.883,0,0,1,53.886,4.64a13.52,13.52,0,0,1,2.966,4.3,12.865,12.865,0,0,1,1.061,5.311,13.412,13.412,0,0,1-1.061,5.311,13.971,13.971,0,0,1-2.966,4.3,13.119,13.119,0,0,1-4.409,2.86,13.57,13.57,0,0,1-5.443,1.062H33.665V.718Zm3.429,21.3a7.459,7.459,0,0,0,2.64-1.8,8.859,8.859,0,0,0,1.687-2.7,8.716,8.716,0,0,0,.6-3.268,9,9,0,0,0-.6-3.323A7.962,7.962,0,0,0,50.1,8.262a8.314,8.314,0,0,0-2.64-1.825,9.263,9.263,0,0,0-3.429-.654H39.19V22.7h4.844A8.293,8.293,0,0,0,47.464,22.017Z" transform="translate(-11.948 -0.255)"/><path class="a" d="M127.023.718V27.764H121.5V.718Z" transform="translate(-43.119 -0.255)"/><path class="a" d="M158.532,16.914a7.2,7.2,0,0,1-7.457,5.747c-5.769,0-7.593-4.467-7.593-8.661s1.851-8.661,7.593-8.661a7.171,7.171,0,0,1,7.457,5.747h5.661C163.077,4.44,158.178,0,151.293,0c-7.838,0-13.553,5.747-13.553,14,0,8.226,5.688,14,13.553,14,6.885,0,11.784-4.412,12.9-11.058h-5.661Z" transform="translate(-48.883)"/><path class="a" d="M236.961.718V27.764h-5.525V.718Z" transform="translate(-82.135 -0.255)"/><path class="a" d="M191.442.718V11.694h12.138V.718h5.552V27.764h-5.525V16.542H191.442V27.764h-5.525V.718Z" transform="translate(-65.98 -0.255)"/><path class="a" d="M8.273,0a8.28,8.28,0,1,0,8.273,8.28A8.273,8.273,0,0,0,8.273,0Zm0,11.658a3.4,3.4,0,1,1,3.4-3.4A3.44,3.44,0,0,1,8.273,11.658Z"/><path class="a" d="M94.171,27.764h5.851L90.824.718H82.332L73.025,27.764h5.851L80.7,22.208H92.348Zm-11.893-10.3L86.551,4.531,90.8,17.469Z" transform="translate(-25.916 -0.255)"/></g></g></svg>
+      </a>
+      <p class="footer__copyright">© Daichi 2020. Все права защищены</p>
+    </div>
 
+    <div class="footer__links">
+      <a href="#" class="footer__link  footer__link--ios"></a>
+      <a href="#" class="footer__link  footer__link--android"></a>
+    </div>
+  </footer>
 
 
 

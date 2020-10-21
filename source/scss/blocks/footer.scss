@@ -1,0 +1,58 @@
+.footer {
+  width: 100%;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  display: flex;
+  justify-content: space-between;
+
+  &__link {
+    margin-bottom: 25px;
+
+    & svg {
+      @include transition;
+
+      fill: #e5e5e5;
+    }
+
+    &:hover svg {
+      fill: #5ea9ff;
+    }
+  }
+
+  &__copyright {
+    font-size: 15px;
+    line-height: 17px;
+    color: #e5e5e5;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__link {
+    @include link-reset;
+    @include transition;
+
+    width: 162px;
+    height: 48px;
+
+    &--ios {
+      margin-right: 15px;
+
+      background-image: url("../img/app-ios-grey.svg");
+
+      &:hover {
+        background-image: url("../img/app-ios-blue.svg");
+      }
+    }
+
+    &--android {
+      background-image: url("../img/app-google-grey.svg");
+
+      &:hover {
+        background-image: url("../img/app-google-blue.svg");
+      }
+    }
+  }
+}
