@@ -279,12 +279,12 @@
 }
 
 @include desktop {
-  .model-choice {
-    max-width: 620px;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding: 75px 50px;
-  }
+  // .model-choice {
+  //   max-width: 620px;
+  //   margin-left: 10px;
+  //   margin-right: 10px;
+  //   padding: 75px 50px;
+  // }
 }
 
 @include tablet {
@@ -292,21 +292,19 @@
     margin-left: 0;
     margin-right: 0;
     max-width: 100%;
-    min-height: 100vh;
-    padding: 50px 11px;
 
-    &__title {
-      font-size: 36px;
-      line-height: 42px;
-      padding-right: 20%;
-      margin-bottom: 70px;
+    // &__title {
+    //   font-size: 36px;
+    //   line-height: 42px;
+    //   padding-right: 20%;
+    //   margin-bottom: 70px;
 
-      &::after {
-        bottom: -20px;
+    //   &::after {
+    //     bottom: -20px;
 
-        height: 5px;
-      }
-    }
+    //     height: 5px;
+    //   }
+    // }
   }
 }
 

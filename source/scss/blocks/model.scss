@@ -55,3 +55,25 @@
     color: #000;
   }
 }
+
+@include desktop {
+  .model {
+    max-width: 48%;
+  }
+}
+
+@include tablet {
+  .model {
+    padding: 20px;
+
+    &__brand {
+      font-size: 13px;
+      line-height: 15px;
+    }
+
+    &__number {
+      font-size: 13px;
+      line-height: 15px;
+    }
+  }
+}

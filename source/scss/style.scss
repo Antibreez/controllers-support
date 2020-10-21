@@ -11,6 +11,7 @@
 @import "general/global.scss";
 
 // blocks
+@import "blocks/button-blue.scss";
 @import "blocks/header.scss";
 @import "blocks/toggle.scss";
 @import "blocks/how-works.scss";
@@ -19,3 +20,10 @@
 @import "blocks/model.scss";
 @import "blocks/footer.scss";
 @import "blocks/device.scss";
+@import "blocks/difficulty.scss";
+@import "blocks/equipment.scss";
+@import "blocks/installation.scss";
+@import "blocks/page-installation.scss";
+@import "blocks/process.scss";
+@import "blocks/manual.scss";
+@import "blocks/add-model.scss";

@@ -5,7 +5,8 @@
   display: flex;
   justify-content: space-between;
 
-  &__link {
+  &__logo-link {
+    display: block;
     margin-bottom: 25px;
 
     & svg {
@@ -20,6 +21,8 @@
   }
 
   &__copyright {
+    margin: 0;
+
     font-size: 15px;
     line-height: 17px;
     color: #e5e5e5;
@@ -53,6 +56,19 @@
       &:hover {
         background-image: url("../img/app-google-blue.svg");
       }
+    }
+  }
+}
+
+@include desktop {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+
+    &__right {
+      margin-bottom: 25px;
+
+      text-align: center;
     }
   }
 }

@@ -1,0 +1,16 @@
+.button-blue {
+  height: 56px;
+  padding: 10px 60px;
+
+  font-size: 15px;
+  line-height: 17px;
+  color: #fff;
+
+  background-color: #5ea9ff;
+  border: none;
+  border-radius: 28px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

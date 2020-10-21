@@ -1,6 +1,6 @@
 .device {
   padding-top: 40px;
-
+  margin-bottom: 25px;
   &__info {
     display: flex;
     flex-wrap: wrap;
@@ -43,6 +43,16 @@
     &:active {
       opacity: 0.5;
     }
+  }
+
+  &__result {
+    margin: 0;
+    margin-bottom: 20px;
+
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    color: #707070;
   }
 
   &__title-wrap {
@@ -105,6 +115,7 @@
     padding: 0;
     margin-left: auto;
     margin-right: 10px;
+    max-width: 100px;
 
     color: #5ea9ff;
 
@@ -118,8 +129,66 @@
     }
   }
 
+  &__model-not-supported {
+    margin: 0;
+    margin-left: auto;
+
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 16px;
+    color: #FF0000;
+  }
+
   &__wire-color {
     position: relative;
+
+    &.white .device__wire-dote {
+      background-color: #fff;
+    }
+
+    &.white .device__wire-image-wrap {
+      background-image: url("../img/wire-white.jpg");
+    }
+
+    &.grey .device__wire-dote {
+      background-color: #dadada;
+    }
+
+    &.grey .device__wire-image-wrap {
+      background-image: url("../img/wire-grey.jpg");
+    }
+
+    &.red .device__wire-dote {
+      background-color: #d64933;
+    }
+
+    &.red .device__wire-image-wrap {
+      background-image: url("../img/wire-red.jpg");
+    }
+
+    &.black .device__wire-dote {
+      background-color: #303030;
+    }
+
+    &.black .device__wire-image-wrap {
+      background-image: url("../img/wire-black.jpg");
+    }
+
+    &.blue .device__wire-dote {
+      background-color: #5ea9ff;
+    }
+
+    &.blue .device__wire-image-wrap {
+      background-image: url("../img/wire-blue.jpg");
+    }
+
+    &.green .device__wire-dote {
+      background-color: #48c369;
+    }
+
+    &.green .device__wire-image-wrap {
+      background-image: url("../img/wire-green.jpg");
+    }
   }
 
   &__wire-dote {
@@ -159,6 +228,8 @@
     overflow: hidden;
     border-radius: 5px;
     background-color: #e5e5e5;
+    background-size: cover;
+    background-position: center center;
   }
 
   &__wire-info {

@@ -1,0 +1,327 @@
+.difficulty {
+  max-width: 660px;
+
+  &__bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 29px;
+  }
+
+  &__section {
+    position: relative;
+
+    width: 9.7%;
+    height: 15px;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      bottom: -29px;
+      left: 50%;
+
+      width: 22px;
+      height: 19px;
+      margin-left: -11px;
+    }
+
+    &--1 {
+      background-color: #5EA9FF;
+    }
+
+    &--2 {
+      background-color: #7CB3FF;
+    }
+
+    &--3 {
+      background-color: #9ABEFF;
+    }
+
+    &--4 {
+      background-color: #B7C9FF;
+    }
+
+    &--5 {
+      background-color: #D5D3FF;
+    }
+
+    &--6 {
+      background-color: #DDA9CC;
+    }
+
+    &--7 {
+      background-color: #E67F99;
+    }
+
+    &--8 {
+      background-color: #EE5466;
+    }
+
+    &--9 {
+      background-color: #F72A33;
+    }
+
+    &--10 {
+      background-color: #FF0000;
+    }
+  }
+}
+
+.difficulty--10 .difficulty__section--10 {
+  &::after {
+    background-image: url('../img/difficulty-arrow.svg');
+  }
+}
+
+.difficulty--9 .difficulty__section {
+  &--10 {
+    background-color: #F7F7F7;
+  }
+
+  &--9 {
+    &::after {
+      background-image: url('../img/difficulty-arrow.svg');
+    }
+  }
+}
+
+.difficulty--8 .difficulty__section {
+  &--10 {
+    background-color: #F7F7F7;
+  }
+
+  &--9 {
+    background-color: #F7F7F7;
+  }
+
+  &--8 {
+    &::after {
+      background-image: url('../img/difficulty-arrow.svg');
+    }
+  }
+}
+
+.difficulty--7 .difficulty__section {
+  &--10 {
+    background-color: #F7F7F7;
+  }
+
+  &--9 {
+    background-color: #F7F7F7;
+  }
+
+  &--8 {
+    background-color: #F7F7F7;
+  }
+
+  &--7 {
+    &::after {
+      background-image: url('../img/difficulty-arrow.svg');
+    }
+  }
+}
+
+.difficulty--6 .difficulty__section {
+  &--10 {
+    background-color: #F7F7F7;
+  }
+
+  &--9 {
+    background-color: #F7F7F7;
+  }
+
+  &--8 {
+    background-color: #F7F7F7;
+  }
+
+  &--7 {
+    background-color: #F7F7F7;
+  }
+
+  &--6 {
+    &::after {
+      background-image: url('../img/difficulty-arrow.svg');
+    }
+  }
+}
+
+.difficulty--5 .difficulty__section {
+  &--10 {
+    background-color: #F7F7F7;
+  }
+
+  &--9 {
+    background-color: #F7F7F7;
+  }
+
+  &--8 {
+    background-color: #F7F7F7;
+  }
+
+  &--7 {
+    background-color: #F7F7F7;
+  }
+
+  &--6 {
+    background-color: #F7F7F7;
+  }
+
+  &--5 {
+    &::after {
+      background-image: url('../img/difficulty-arrow.svg');
+    }
+  }
+}
+
+.difficulty--4 .difficulty__section {
+  &--10 {
+    background-color: #F7F7F7;
+  }
+
+  &--9 {
+    background-color: #F7F7F7;
+  }
+
+  &--8 {
+    background-color: #F7F7F7;
+  }
+
+  &--7 {
+    background-color: #F7F7F7;
+  }
+
+  &--6 {
+    background-color: #F7F7F7;
+  }
+
+  &--5 {
+    background-color: #F7F7F7;
+  }
+
+  &--4 {
+    &::after {
+      background-image: url('../img/difficulty-arrow.svg');
+    }
+  }
+}
+
+.difficulty--3 .difficulty__section {
+  &--10 {
+    background-color: #F7F7F7;
+  }
+
+  &--9 {
+    background-color: #F7F7F7;
+  }
+
+  &--8 {
+    background-color: #F7F7F7;
+  }
+
+  &--7 {
+    background-color: #F7F7F7;
+  }
+
+  &--6 {
+    background-color: #F7F7F7;
+  }
+
+  &--5 {
+    background-color: #F7F7F7;
+  }
+
+  &--4 {
+    background-color: #F7F7F7;
+  }
+
+  &--3 {
+    &::after {
+      background-image: url('../img/difficulty-arrow.svg');
+    }
+  }
+}
+
+.difficulty--2 .difficulty__section {
+  &--10 {
+    background-color: #F7F7F7;
+  }
+
+  &--9 {
+    background-color: #F7F7F7;
+  }
+
+  &--8 {
+    background-color: #F7F7F7;
+  }
+
+  &--7 {
+    background-color: #F7F7F7;
+  }
+
+  &--6 {
+    background-color: #F7F7F7;
+  }
+
+  &--5 {
+    background-color: #F7F7F7;
+  }
+
+  &--4 {
+    background-color: #F7F7F7;
+  }
+
+  &--3 {
+    background-color: #F7F7F7;
+  }
+
+  &--2 {
+    &::after {
+      background-image: url('../img/difficulty-arrow.svg');
+    }
+  }
+}
+
+.difficulty--1 .difficulty__section {
+  &--10 {
+    background-color: #F7F7F7;
+  }
+
+  &--9 {
+    background-color: #F7F7F7;
+  }
+
+  &--8 {
+    background-color: #F7F7F7;
+  }
+
+  &--7 {
+    background-color: #F7F7F7;
+  }
+
+  &--6 {
+    background-color: #F7F7F7;
+  }
+
+  &--5 {
+    background-color: #F7F7F7;
+  }
+
+  &--4 {
+    background-color: #F7F7F7;
+  }
+
+  &--3 {
+    background-color: #F7F7F7;
+  }
+
+  &--2 {
+    background-color: #F7F7F7;
+  }
+
+  &--1 {
+    &::after {
+      background-image: url('../img/difficulty-arrow.svg');
+    }
+  }
+}

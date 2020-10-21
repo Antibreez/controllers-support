@@ -1,0 +1,169 @@
+.process {
+  &__title {
+    @include section-title;
+
+    margin-bottom: 25px;
+  }
+
+  &__container {
+    display: none;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: 320px;
+    margin-bottom: 25px;
+  }
+
+  &__image {
+    margin-bottom: 25px;
+  }
+
+  &__image img {
+    border-radius: 5px;
+  }
+
+  &__item-content {
+    display: flex;
+  }
+
+  &__item-number {
+    display: flex;
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 14px;
+
+    font-size: 14px;
+    line-height: 14px;
+    color: #fff;
+
+    background-color: #5EA9FF;
+    border-radius: 50%;
+  }
+
+  &__item-desc {
+    margin: 0;
+
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: #707070;
+  }
+}
+
+@include desktop {
+  .process {
+    &__item {
+      width: 100%;
+      display: flex;
+    }
+
+    &__image {
+      width: 320px;
+      min-width: 320px;
+      margin-right: 20px;
+    }
+
+    &__item-content {
+      flex-direction: column;
+    }
+
+    &__item-number {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@include tablet {
+  .process {
+    &__wrapper {
+      display: none;
+    }
+
+    &__container {
+      display: block;
+    }
+
+    &__item {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    &__image {
+      width: 100%;
+      margin: 0 0 87px;
+    }
+
+    &__item-desc {
+      text-align: center;
+      padding-top: 0;
+    }
+
+    &__item-number {
+      display: none;
+    }
+
+    &__pagination {
+      bottom: auto;
+      top: calc(67vw);
+    }
+
+    &__number {
+      position: absolute;
+      top: calc(74vw);
+      left: 50%;
+
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: -12px;
+
+      font-size: 14px;
+      line-height: 14px;
+      color: #fff;
+
+      background-color: #5EA9FF;
+      border-radius: 50%;
+    }
+  }
+}
+
+@include mobile {
+  .process {
+    &__item-content {
+      padding-left: 3.1%;
+      padding-right: 3.1%;
+    }
+
+    &__image img {
+      border-radius: 0;
+    }
+
+    &__pagination {
+      top: calc(71.3vw);
+    }
+
+    &__number {
+      top: calc(79vw);
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .process {
+    &__number {
+      top: calc(81.5vw);
+
+    }
+  }
+}

@@ -1,0 +1,164 @@
+.equipment {
+  margin-bottom: 90px;
+
+  &__title {
+    @include section-title;
+
+    margin-bottom: 25px;
+  }
+}
+.equipment {
+  &__container {
+    display: none;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__image {
+    width: 320px;
+    min-width: 320px;
+    min-height: 150px;
+    margin-right: 20px;
+
+    background-size: cover;
+    overflow: hidden;
+
+    // &--dw01-b_11 {
+    //   background-image: url('../img/dw01-b_11.jpg');
+    // }
+
+    // &--dw01-b {
+    //   background-image: url('../img/dw01-b.jpg');
+    // }
+
+    // &--dw01-11 {
+    //   background-image: url('../img/dw01-11.jpg');
+    // }
+
+    // &--cable-white {
+    //   background-image: url('../img/cable-white.jpg');
+    // }
+
+    // &--cable-black {
+    //   background-image: url('../img/cable-black.jpg');
+    // }
+
+    // &--cable-blue {
+    //   background-image: url('../img/cable-blue.jpg');
+    // }
+
+    // &--cable-breen {
+    //   background-image: url('../img/cable-breen.jpg');
+    // }
+
+    // &--cable-red {
+    //   background-image: url('../img/cable-red.jpg');
+    // }
+
+    // &--crosshead-sd {
+    //   background-image: url('../img/crosshead-sd.svg');
+    // }
+
+    // &--flat-sd {
+    //   background-image: url('../img/flat-sd.svg');
+    // }
+  }
+
+  &__image img {
+    max-width: 100%;
+    height: auto;
+
+    border-radius: 5px;
+  }
+
+  &__item-title {
+    margin: 0;
+    margin-bottom: 15px;
+
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+    color: #000;
+  }
+
+  &__item-desc {
+    margin: 0;
+
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+    color: #707070;
+  }
+}
+
+@include tablet {
+  .equipment {
+    margin-bottom: 50px;
+
+    &__container {
+      display: block;
+    }
+
+    &__wrapper {
+      display: none;
+    }
+
+    &__item {
+      flex-direction: column;
+
+      &:nth-child(n) {
+        margin-bottom: 0;
+      }
+    }
+
+    &__item-title,
+    &__item-desc {
+      text-align: center;
+    }
+
+    &__image {
+      width: 100%;
+      height: auto;
+      min-height: auto;
+      //min-height: calc(95.8vw);
+      margin-bottom: 48px;
+    }
+
+    &__pagination {
+      bottom: auto !important;
+      top: calc(47vw);
+    }
+  }
+}
+
+@include mobile {
+  .equipment {
+    &__item {
+      width: 100%;
+    }
+
+    &__image img {
+      border-radius: 0;
+    }
+
+    &__content {
+      padding-left: 3.1%;
+      padding-right: 3.1%;
+    }
+
+    &__pagination {
+      top: calc(51.5vw);
+    }
+  }
+}

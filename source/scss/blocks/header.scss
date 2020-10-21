@@ -74,6 +74,10 @@
     width: 100%;
   }
 
+  &__placeholder {
+    display: none;
+  }
+
   &__search-wrapper span {
     position: absolute;
     top: 0;
@@ -124,6 +128,8 @@
 
   &__search {
     @include transition;
+
+    position: relative;
 
     width: 100%;
     padding: 23px 54px;
@@ -191,6 +197,70 @@
 
     &::-webkit-search-cancel-button {
       display: none;
+    }
+  }
+}
+
+@include tablet {
+  .header {
+    background-image: url('../img/header-bg-mobile.jpg');
+    background-size: cover;
+
+    &__container {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+
+    &__logo {
+      margin-top: 53px;
+    }
+
+    &__search {
+      z-index: 10;
+
+      &::-webkit-input-placeholder {
+        opacity: 0;
+      }
+
+      &::-moz-placeholder {
+        opacity: 0;
+      }
+
+      &:-moz-placeholder {
+        opacity: 0;
+      }
+
+      &:-ms-input-placeholder {
+        opacity: 0;
+      }
+
+    }
+
+    &__search-wrapper span {
+      z-index: 11;
+    }
+
+    &__search-close {
+      z-index: 11;
+    }
+
+    &__placeholder {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding-left: 54px;
+      padding-right: 18px;
+      height: 100%;
+      width: 100%;
+
+      font-size: 15px;
+      line-height: 16px;
+      color: #fff;
+      opacity: 0.8;
     }
   }
 }
