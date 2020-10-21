@@ -25,7 +25,7 @@
   </header>
   <main class="main">
     <div class="main__container  container">
-      <section class="how-works">
+      <section class="how-works" id="how-works-section">
         <h2 class="how-works__title">
           Управление кондиционером через мобильное устройство или ПК
         </h2>
@@ -260,5 +260,15 @@
 
   <script src="js/vendor.min.js"></script>
   <script src="js/script.min.js"></script>
+
+  <script>
+    console.log('#######', !!window.location.search)
+
+    if (!!window.location.search) {
+      window.location = '#how-works-section';
+      document.getElementById('how-works').checked = true;
+    }
+
+  </script>
 </body>
 </html>
