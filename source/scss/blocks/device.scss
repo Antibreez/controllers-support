@@ -1,0 +1,186 @@
+.device {
+  padding-top: 40px;
+
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__to-main {
+    @include link-reset;
+    @include transition;
+
+    position: relative;
+
+    display: inline-block;
+    padding-left: 39px;
+    margin-bottom: 37px;
+
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: #707070;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      left: 0;
+
+      width: 24px;
+      height: 24px;
+
+      transform: translateY(-50%) rotate(-90deg);
+      background-image: url("../img/arrow-big.svg");
+    }
+
+    &:hover {
+      opacity: 0.75;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+  &__title-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    & p {
+      flex-grow: 1;
+      max-width: 392px;
+      padding: 0 15px;
+      display: flex;
+      justify-content: space-between;
+
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 20px;
+      color: #707070;
+    }
+  }
+
+  &__model {
+    flex-grow: 1;
+    max-width: 392px;
+  }
+
+  &__model-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__model-item {
+    display: flex;
+    align-items: center;
+
+    padding: 23px 15px;
+
+    background-color: #fff;
+    border-radius: 5px;
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__model-name {
+    margin: 0;
+    max-width: 200px;
+
+    font-weight: 400px;
+    font-size: 15px;
+    line-height: 16px;
+  }
+
+  &__controller-link {
+    @include transition;
+    @include link-reset;
+
+    display: block;
+    padding: 0;
+    margin-left: auto;
+    margin-right: 10px;
+
+    color: #5ea9ff;
+
+    border: 0;
+    border-bottom: 1px solid rgba(94, 169, 255, 0.3);
+    background-color: transparent;
+
+    &:hover {
+      cursor: pointer;
+      border-bottom: 1px solid rgba(94, 169, 255, 1);
+    }
+  }
+
+  &__wire-color {
+    position: relative;
+  }
+
+  &__wire-dote {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid #e5e5e5;
+  }
+
+  &__wire-popup {
+    position: absolute;
+    bottom: calc(100% + 20px);
+    right: 100%;
+
+    display: none;
+    align-items: center;
+    padding: 15px;
+    width: 333px;
+
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  &__wire-color > .device__wire-dote:hover + .device__wire-popup {
+    display: flex;
+  }
+
+  &__wire-image-wrap {
+    width: 133px;
+    height: 70px;
+    margin-right: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: #e5e5e5;
+  }
+
+  &__wire-info {
+    width: 155px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__wire-title {
+    margin: 0;
+    margin-bottom: 6px;
+
+    font-size: 15px;
+    line-height: 16px;
+  }
+
+  &__wire-name {
+    margin: 0;
+    margin-left: 15px;
+
+    font-size: 15px;
+    font-weight: 16px;
+  }
+}
