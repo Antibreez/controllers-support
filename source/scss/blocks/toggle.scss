@@ -99,3 +99,10 @@
 + .toggle-shadow {
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.05);
 }
+
+@include mobile {
+  .toggle-label {
+    font-size: 13px;
+    line-height: 15px;
+  }
+}

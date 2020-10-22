@@ -74,6 +74,10 @@
     }
   }
 
+  &__item {
+    align-self: flex-start;
+  }
+
   &__model {
     flex-grow: 1;
     max-width: 392px;
@@ -100,6 +104,7 @@
 
   &__model-name {
     margin: 0;
+    margin-right: auto;
     max-width: 200px;
 
     font-weight: 400px;
@@ -113,7 +118,7 @@
 
     display: block;
     padding: 0;
-    margin-left: auto;
+    margin-left: 10px;
     margin-right: 10px;
     max-width: 100px;
 
@@ -131,7 +136,8 @@
 
   &__model-not-supported {
     margin: 0;
-    margin-left: auto;
+    margin-left: 10px;
+    min-width: 145px;
 
     font-weight: 400;
     font-size: 15px;
@@ -146,7 +152,8 @@
       background-color: #fff;
     }
 
-    &.white .device__wire-image-wrap {
+    &.white .device__wire-image-wrap,
+    &.white .device__wire-image-wrap-mobile {
       background-image: url("../img/wire-white.jpg");
     }
 
@@ -154,7 +161,8 @@
       background-color: #dadada;
     }
 
-    &.grey .device__wire-image-wrap {
+    &.grey .device__wire-image-wrap,
+    &.grey .device__wire-image-wrap-mobile {
       background-image: url("../img/wire-grey.jpg");
     }
 
@@ -162,7 +170,8 @@
       background-color: #d64933;
     }
 
-    &.red .device__wire-image-wrap {
+    &.red .device__wire-image-wrap,
+    &.red .device__wire-image-wrap-mobile {
       background-image: url("../img/wire-red.jpg");
     }
 
@@ -170,7 +179,8 @@
       background-color: #303030;
     }
 
-    &.black .device__wire-image-wrap {
+    &.black .device__wire-image-wrap,
+    &.black .device__wire-image-wrap-mobile {
       background-image: url("../img/wire-black.jpg");
     }
 
@@ -178,7 +188,8 @@
       background-color: #5ea9ff;
     }
 
-    &.blue .device__wire-image-wrap {
+    &.blue .device__wire-image-wrap,
+    &.blue .device__wire-image-wrap-mobile {
       background-image: url("../img/wire-blue.jpg");
     }
 
@@ -186,7 +197,8 @@
       background-color: #48c369;
     }
 
-    &.green .device__wire-image-wrap {
+    &.green .device__wire-image-wrap,
+    &.green .device__wire-image-wrap-mobile {
       background-image: url("../img/wire-green.jpg");
     }
   }
@@ -196,6 +208,16 @@
     height: 16px;
     border-radius: 50%;
     border: 1px solid #e5e5e5;
+
+    & span {
+      display: none;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__wire-popup-mobile {
+    display: none;
   }
 
   &__wire-popup {
@@ -253,5 +275,116 @@
 
     font-size: 15px;
     font-weight: 16px;
+  }
+}
+
+@include desktop {
+  .device {
+
+    &__title-wrap {
+
+      & p {
+        max-width: 48.5%;
+      }
+    }
+
+    &__model {
+      max-width: 49%;
+    }
+
+    &__model-name {
+      max-width: 158px;
+    }
+
+    &__wire-dote span {
+      display: block;
+    }
+
+    &__wire-color > .device__wire-dote:hover + .device__wire-popup {
+      display: none;
+    }
+
+    &__wire-popup-mobile {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+
+      display: none;
+      width: 288px;
+
+      border-radius: 5px;
+      background-color: #fff;
+      transform: translate(-50%, -50%);
+      z-index: 100;
+
+      &-wrap {
+        padding: 15px 15px 25px 15px;
+      }
+
+      &.js--show {
+        display: block;
+      }
+    }
+
+    &__wire-image-wrap-mobile {
+      width: 100%;
+      height: 136px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-radius: 5px;
+      background-color: #e5e5e5;
+      background-size: cover;
+      background-position: center center;
+    }
+
+    &__wire-popup-text {
+      display: flex;
+
+      font-size: 13px;
+      line-height: 16px;
+
+      & > span:first-of-type {
+        margin-right: auto;
+      }
+
+      & > span:not(:first-of-type) {
+        color: #707070;
+      }
+
+      & .device__wire-dote {
+        margin-right: 10px;
+      }
+    }
+
+    &__wire-popup-close {
+      display: block;
+      width: 100%;
+      height: 57px;
+
+      border: none;
+      border-top: 1px solid #f7f7f7;
+      background-color: #fff;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+
+    &__wire-popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+
+      display: none;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 99;
+
+      &.js--show {
+        display: block;
+      }
+    }
   }
 }

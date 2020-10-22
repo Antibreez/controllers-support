@@ -310,15 +310,36 @@
 
 @include mobile {
   .model-choice {
-    &__title {
-      font-size: 28px;
-      line-height: 32px;
-      padding-right: 13%;
-    }
+    // &__title {
+    //   font-size: 28px;
+    //   line-height: 32px;
+    //   padding-right: 13%;
+    // }
 
     &__image {
       width: 288px;
       height: 222px
+    }
+
+    &__brand-choice {
+      padding: 34px 15px 14px;
+
+      font-size: 13px;
+      line-height: 15px;
+      text-align: left;
+    }
+
+    &__brand-choice-title {
+      top: 14px;
+
+      margin-top: 0;
+
+      font-size: 13px;
+      line-height: 15px;
+
+      & span {
+        display: none;
+      }
     }
   }
 

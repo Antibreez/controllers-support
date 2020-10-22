@@ -264,3 +264,33 @@
     }
   }
 }
+
+@include mobile {
+  .header {
+    &__container {
+      flex-direction: column;
+    }
+
+    &__exit-link {
+      order: 0;
+    }
+
+    &__logo {
+      margin-top: 35px;
+      order: 1;
+    }
+
+    &__title {
+      order: 2;
+    }
+
+    &__search-wrapper {
+      order: 3;
+    }
+
+    &__placeholder {
+      font-size: 13px;
+      line-height: 15px;
+    }
+  }
+}
