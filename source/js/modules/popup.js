@@ -4,6 +4,10 @@
   const closeButtons = document.querySelectorAll('.device__wire-popup-close');
   const overlay = document.querySelector('.device__wire-popup-overlay');
 
+  if (!wireButtons[0]) {
+    return;
+  }
+
   const closeAnyPopup = () => {
     popups.forEach((popup) => {
       if (popup.classList.contains('js--show')) {

@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 .device {
   padding-top: 40px;
   margin-bottom: 25px;
@@ -142,6 +149,7 @@
     font-weight: 400;
     font-size: 15px;
     line-height: 16px;
+    text-align: right;
     color: #FF0000;
   }
 
@@ -385,6 +393,106 @@
       &.js--show {
         display: block;
       }
+    }
+  }
+}
+
+@include tablet {
+  .device {
+    &__title-wrap {
+      order: 1;
+    }
+
+    & .device__series-title {
+      display: none;
+    }
+
+    & .device__model-title {
+      max-width: 100%;
+      flex-grow: 1;
+    }
+
+    &__item {
+      max-width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px;
+      margin-bottom: 0;
+      order: 0;
+    }
+
+    &__item .model__image-container {
+      max-width: 45%;
+      margin-bottom: 0;
+      flex-grow: 1;
+    }
+
+    &__item .device__item-data {
+      max-width: 45%;
+      flex-grow: 1;
+    }
+
+    &__item .model__image {
+      height: 160px;
+      display: flex;
+      align-items: center;
+    }
+
+    &__model {
+      max-width: 100%;
+      order: 2;
+    }
+  }
+}
+
+@include mobile {
+  .device {
+    padding-top: 35px;
+
+    &__to-main {
+      padding-left: 28px;
+      margin-bottom: 35px;
+
+      font-size: 13px;
+      line-height: 15px;
+
+      &::before {
+        width: 18px;
+        height: 18px;
+
+        background-size: cover;
+      }
+    }
+
+    &__title-wrap p {
+      font-size: 13px;
+      line-height: 15px;
+    }
+
+    &__item {
+      flex-direction: column;
+      padding-bottom: 20px;
+    }
+
+    &__item .model__image-container {
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+
+    &__item .device__item-data {
+      max-width: 100%;
+    }
+
+    &__model-name,
+    &__controller-link,
+    &__model-not-supported {
+      font-size: 13px;
+      line-height: 15px;
+    }
+
+    &__model-not-supported {
+      min-width: 130px;
     }
   }
 }

@@ -118,7 +118,7 @@
 
     &__number {
       position: absolute;
-      top: calc(74vw);
+      top: calc(71vw);
       left: 50%;
 
       width: 24px;
@@ -154,7 +154,7 @@
     }
 
     &__number {
-      top: calc(79vw);
+      top: calc(76vw);
     }
   }
 }
@@ -162,7 +162,7 @@
 @media (max-width: 400px) {
   .process {
     &__number {
-      top: calc(81.5vw);
+      top: calc(78vw);
 
     }
   }
