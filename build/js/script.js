@@ -763,10 +763,22 @@
 })();
 
 (function () {
+  const form = document.querySelector('.add-model__form');
+
   const emailInput = document.querySelector("input[name='email']");
+  const emailError = document.querySelector('.add-model__email-error');
+
   const brandInput = document.querySelector("input[name='brand']");
+  const brandError = document.querySelector('.add-model__brand-error');
+
   const modelInput = document.querySelector("input[name='model']");
+  const modelError = document.querySelector('.add-model__model-error');
+
   const fileInput = document.querySelector("input[type='file']");
+
+  const checkbox = document.querySelector('.add-model__agreement-input');
+
+  const submit = document.querySelector('.add-model__submit');
 
   const progress = document.querySelector('.add-model__file-progress');
   const bar = document.querySelector('.add-model__bar-current');
@@ -792,39 +804,28 @@
     }
   };
 
-  const onTextFocus = (evt) => {
-    const input = evt.target;
-
-    addClassName(input, 'fill');
-
-    if (input.value === '') {
-      addClassName(input, 'mask');
-    }
+  const enableButton = () => {
+    submit.hasAttribute('disabled') && submit.removeAttribute('disabled');
   };
 
-  const onTextBlur = (evt) => {
-    const input = evt.target;
+  const disableButton = () => {
+    !submit.hasAttribute('disabled') && submit.setAttribute('disabled', '');
+  };
 
-    if (!input.value) {
-      removeClassName(input, 'fill');
+  const isFormFilled = () => {
+    return emailInput.validity.valid
+      && brandInput.value !== ''
+      && modelInput.value !== ''
+      && checkbox.checked
+  };
+
+  const checkForm = () => {
+    if (isFormFilled()) {
+      enableButton();
+    } else {
+      disableButton();
     }
-
-    removeClassName(input, 'mask');
-  }
-
-  const onTextInput = (evt) => {
-    const input = evt.target;
-
-    if (input.value === '') {
-      addClassName(input, 'mask');
-    }
-
-    if (input.value !== '') {
-      removeClassName(input, 'mask');
-    }
-  }
-
-  const image = document.getElementById('file-image');
+  };
 
   const readUrl = (input) => {
     if (input.files && input.files[0]) {
@@ -852,6 +853,91 @@
     }
   }
 
+  const onTextFocus = (evt) => {
+    const input = evt.target;
+
+    addClassName(input, 'fill');
+
+    if (input.value === '') {
+      addClassName(input, 'mask');
+    }
+  };
+
+  const onTextBlur = (evt) => {
+    const input = evt.target;
+
+    if (!input.value) {
+      removeClassName(input, 'fill');
+    }
+
+    removeClassName(input, 'mask');
+  }
+
+  const onEmailInput = (evt) => {
+    const input = evt.target;
+
+    // if (input.value === '') {
+    //   addClassName(input, 'mask');
+    //   addClassName(input, 'error');
+    // }
+
+    if (!emailInput.validity.valid) {
+      addClassName(emailError, 'show');
+      addClassName(emailInput, 'error');
+    }
+
+    if (emailInput.validity.valid) {
+      removeClassName(input, 'error');
+      removeClassName(emailError, 'show');
+    }
+
+    if (input.value === '') {
+      addClassName(input, 'mask');
+    }
+
+    if (input.value !== '') {
+      removeClassName(input, 'mask');
+    }
+
+    checkForm();
+  }
+
+  const onBrandInput = (evt) => {
+    const input = evt.target;
+
+    if (input.value === '') {
+      addClassName(input, 'mask');
+      addClassName(input, 'error');
+      addClassName(brandError, 'show');
+    }
+
+    if (input.value !== '') {
+      removeClassName(input, 'mask');
+      removeClassName(input, 'error');
+      removeClassName(brandError, 'show');
+    }
+
+    checkForm();
+  }
+
+  const onModelInput = (evt) => {
+    const input = evt.target;
+
+    if (input.value === '') {
+      addClassName(input, 'mask');
+      addClassName(input, 'error');
+      addClassName(modelError, 'show');
+    }
+
+    if (input.value !== '') {
+      removeClassName(input, 'mask');
+      removeClassName(input, 'error');
+      removeClassName(modelError, 'show');
+    }
+
+    checkForm();
+  }
+
   const onFileClear = () => {
     fileInput.value = '';
 
@@ -867,48 +953,38 @@
 
   const onFileChange = (evt) => {
     readUrl(evt.target);
-    console.log(evt.target);
+  }
+
+  const onCheckboxClick = () => {
+    !checkbox.checked
+      ? addClassName(checkbox, 'error')
+      : removeClassName(checkbox, 'error');
+
+    checkForm();
+  }
+
+  const onSubmit = (evt) => {
+    evt.preventDefault();
+
+    form.submit();
   }
 
   emailInput.addEventListener('focus', onTextFocus);
   emailInput.addEventListener('blur', onTextBlur);
-  emailInput.addEventListener('input', onTextInput);
+  emailInput.addEventListener('input', onEmailInput);
 
   brandInput.addEventListener('focus', onTextFocus);
   brandInput.addEventListener('blur', onTextBlur);
-  brandInput.addEventListener('input', onTextInput);
+  brandInput.addEventListener('input', onBrandInput);
 
   modelInput.addEventListener('focus', onTextFocus);
   modelInput.addEventListener('blur', onTextBlur);
-  modelInput.addEventListener('input', onTextInput);
+  modelInput.addEventListener('input', onModelInput);
 
   fileInput.addEventListener('change', onFileChange);
   fileClear.addEventListener('click', onFileClear);
-  // textInputs.forEach((input, idx) => {
-  //   input.addEventListener('focus', () => {
-  //     addClassName(textLabels[idx], 'fill');
 
-  //     if (input.value === '') {
-  //       addClassName(input, 'mask');
-  //     }
-  //   });
+  checkbox.addEventListener('click', onCheckboxClick);
 
-  //   input.addEventListener('blur', (evt) => {
-  //     if (!evt.target.value) {
-  //       removeClassName(textLabels[idx], 'fill');
-  //     }
-
-  //     removeClassName(input, 'mask');
-  //   });
-
-  //   input.addEventListener('input', () => {
-  //     if (input.value === '') {
-  //       addClassName(input, 'mask');
-  //     }
-
-  //     if (input.value !== '') {
-  //       removeClassName(input, 'mask');
-  //     }
-  //   })
-  // })
+  submit.addEventListener('click', onSubmit);
 })();

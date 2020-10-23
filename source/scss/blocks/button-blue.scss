@@ -1,4 +1,6 @@
 .button-blue {
+  @include transition;
+
   height: 56px;
   padding: 10px 60px;
 
@@ -10,7 +12,25 @@
   border: none;
   border-radius: 28px;
 
+  &:focus {
+    outline: none;
+  }
+
   &:hover {
     cursor: pointer;
+    background-color: #70B3FF;
+  }
+
+  &:active {
+    background-color: #85BEFF;
+  }
+
+  &:disabled {
+    color: rgba(112, 112, 112, 0.3);
+    background-color: #E5E5E5;
+
+    &:hover {
+      cursor: initial;
+    }
   }
 }
