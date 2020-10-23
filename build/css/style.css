@@ -5546,6 +5546,14 @@ a {
   color: #5ea9ff;
 }
 
+.add-model__agreement-label:focus {
+  color: rgba(112, 112, 112, 0.5);
+}
+
+.add-model__agreement-label:active {
+  color: rgba(112, 112, 112, 0.5);
+}
+
 .add-model__agreement-label::before {
   content: "";
   position: absolute;

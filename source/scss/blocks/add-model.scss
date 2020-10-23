@@ -197,6 +197,14 @@
       color: #5ea9ff;
     }
 
+    &:focus {
+      color:  rgba(112, 112, 112, 0.5);
+    }
+
+    &:active {
+      color:  rgba(112, 112, 112, 0.5);
+    }
+
     &::before {
       content: "";
 
