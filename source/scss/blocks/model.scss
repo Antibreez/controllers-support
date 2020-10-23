@@ -1,13 +1,28 @@
 .model {
   max-width: 392px;
   flex-grow: 1;
-  padding: 30px;
+  //padding: 30px;
   margin-bottom: 16px;
 
   text-align: center;
 
   background-color: #fff;
   border-radius: 5px;
+
+  &__link {
+    @include transition;
+
+    display: block;
+    padding: 30px;
+    text-decoration: none;
+    color: inherit;
+
+    border-radius: 5px;
+
+    &:hover {
+      box-shadow: 0 3px 20px rgba(0, 0, 0, 0.05);
+    }
+  }
 
   &__image-container {
     margin-bottom: 25px;
@@ -64,7 +79,9 @@
 
 @include tablet {
   .model {
-    padding: 20px;
+    &__link {
+      padding: 20px;
+    }
 
     &__brand {
       font-size: 13px;

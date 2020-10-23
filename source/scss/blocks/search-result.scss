@@ -1,0 +1,15 @@
+.search-result {
+  margin-bottom: 25px;
+
+  &:not(:first-of-type) .device__title-wrap {
+    display: none;
+  }
+}
+
+@include tablet {
+  .search-result {
+    &:not(:first-of-type) .device__title-wrap {
+      display: block;
+    }
+  }
+}

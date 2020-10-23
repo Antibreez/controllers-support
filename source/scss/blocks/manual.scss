@@ -1,6 +1,6 @@
 .manual {
   margin-bottom: 40px;
-  overflow: hidden;
+  //overflow: hidden;
 }
 
 .manual__installation {
@@ -8,7 +8,7 @@
 
   opacity: 0;
   position: absolute;
-  top: calc(100vh + 500px);
+  left: calc(100vh + 1000px);
 }
 
 .toggle-input:checked + .toggle-label + .toggle-content {
