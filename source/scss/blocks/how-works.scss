@@ -1,4 +1,9 @@
 .how-works {
+  & .toggle-wrapper > *:not(.toggle-shadow) {
+    position: relative !important;
+    z-index: 10;
+  }
+
   &__title {
     margin: 0 auto 25px;
     padding-top: 50px;

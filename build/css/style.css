@@ -3006,7 +3006,7 @@ a {
   font-weight: 400;
   font-size: 15px;
   line-height: 16px;
-  color: #707070;
+  color: #fff;
   border: none;
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.2);
@@ -3021,6 +3021,7 @@ a {
 }
 
 .header__search:focus {
+  color: #707070;
   background-color: white;
 }
 
@@ -3116,6 +3117,9 @@ a {
     line-height: 16px;
     color: #fff;
     opacity: 0.8;
+  }
+  .header__placeholder.hide {
+    display: none;
   }
 }
 
@@ -3252,6 +3256,11 @@ a {
     font-size: 13px;
     line-height: 15px;
   }
+}
+
+.how-works .toggle-wrapper > *:not(.toggle-shadow) {
+  position: relative !important;
+  z-index: 10;
 }
 
 .how-works__title {
@@ -3924,7 +3933,7 @@ a {
 }
 
 .footer__logo-link:hover svg {
-  fill: #5ea9ff;
+  fill: #000;
 }
 
 .footer__copyright {
@@ -4169,6 +4178,7 @@ a {
 
 .device__wire-color.white .device__wire-dote {
   background-color: #fff;
+  border: 1px solid #e5e5e5;
 }
 
 .device__wire-color.white .device__wire-image-wrap,
@@ -4225,7 +4235,6 @@ a {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  border: 1px solid #e5e5e5;
 }
 
 .device__wire-dote span {
@@ -4240,7 +4249,7 @@ a {
 
 .device__wire-popup {
   position: absolute;
-  bottom: calc(100% + 20px);
+  bottom: calc(100% + 35px);
   right: 100%;
   display: none;
   -webkit-box-align: center;
@@ -4254,7 +4263,7 @@ a {
           box-shadow: 0 3px 20px rgba(0, 0, 0, 0.05);
 }
 
-.device__wire-color > .device__wire-dote:hover + .device__wire-popup {
+.device__model-item:hover .device__wire-popup {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4321,6 +4330,9 @@ a {
   }
   .device__wire-color > .device__wire-dote:hover + .device__wire-popup {
     display: none;
+  }
+  .device__wire-popup {
+    display: none !important;
   }
   .device__wire-popup-mobile {
     position: fixed;
@@ -5427,6 +5439,11 @@ a {
   border-radius: 5px;
 }
 
+.add-model__file-label.highlight {
+  color: #5ea9ff;
+  border: 1px dashed #5ea9ff;
+}
+
 .add-model__file-label:hover {
   cursor: pointer;
   color: #5ea9ff;
@@ -5700,6 +5717,11 @@ a {
 
 .add-model__file-close:hover {
   cursor: pointer;
+  opacity: 0.75;
+}
+
+.add-model__file-close:active {
+  opacity: 0.5;
 }
 
 .add-model__file-close:focus {

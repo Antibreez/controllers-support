@@ -1,4 +1,33 @@
 (function () {
+  const placeholder = document.querySelector('.header__placeholder');
+  const input = document.querySelector('.header__search');
+
+  if (!input) {
+    return;
+  }
+
+  const hide = () => {
+    !placeholder.classList.contains('hide')
+      placeholder.classList.add('hide');
+  };
+
+  const show = () => {
+    placeholder.classList.contains('hide')
+      placeholder.classList.remove('hide');
+  };
+
+  const onBlur = () => {
+    if (input.value) {
+      hide();
+    } else {
+      show();
+    }
+  };
+
+  input.addEventListener('blur', onBlur);
+})();
+
+(function () {
   const modelLinks = document.querySelectorAll('.model__link')
 
   const initSwiper = () => {
@@ -26,7 +55,7 @@
 })();
 
 (function () {
-  const wireButtons = document.querySelectorAll('.device__wire-dote span');
+  const wireButtons = document.querySelectorAll('.device__model-item');
   const popups = document.querySelectorAll('.device__wire-popup-mobile');
   const closeButtons = document.querySelectorAll('.device__wire-popup-close');
   const overlay = document.querySelector('.device__wire-popup-overlay');
@@ -44,9 +73,15 @@
   };
 
   wireButtons.forEach((wireButton, idx) => {
-    wireButton.addEventListener('click', () => {
-      popups[idx].classList.add('js--show');
-      overlay.classList.add('js--show');
+    wireButton.addEventListener('click', (evt) => {
+      if (wireButton.querySelector('.device__model-not-supported')) {
+        return;
+      }
+
+      if (!evt.target.classList.contains('device__wire-popup-close')) {
+        popups[idx].classList.add('js--show');
+        overlay.classList.add('js--show');
+      }
     });
   });
 
@@ -795,6 +830,9 @@
   const progress = document.querySelector('.add-model__file-progress');
   const bar = document.querySelector('.add-model__bar-current');
 
+  const fileLabel = document.querySelector('.add-model__file-label');
+  const fileDropArea = document.querySelector('.add-model__file-wrap');
+
   const fileResult = document.querySelector('.add-model__file-result');
   const fileImg = document.querySelector('.add-model__file-image');
   const fileName = document.querySelector('.add-model__file-name');
@@ -802,6 +840,67 @@
 
   if (!emailInput) {
     return;
+  }
+
+  // Сбрасываем стандартные события при перетаскивании файла
+
+  ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+    fileDropArea.addEventListener(eventName, preventDefaults, false)
+  });
+
+  function preventDefaults (e) {
+    e.preventDefault();
+    e.stopPropagation();
+  };
+
+  // Добавляем стили при перетаскивании файла над нужной областью
+
+  ['dragenter', 'dragover'].forEach(eventName => {
+    fileDropArea.addEventListener(eventName, highlight, false)
+  });
+
+  ['dragleave', 'drop'].forEach(eventName => {
+    fileDropArea.addEventListener(eventName, unhighlight, false)
+  })
+
+  function highlight(e) {
+    fileLabel.classList.add('highlight');
+  };
+
+  function unhighlight(e) {
+    fileLabel.classList.remove('highlight');
+  };
+
+  //
+
+  fileDropArea.addEventListener('drop', handleDrop, false)
+
+  function handleDrop(e) {
+    let dt = e.dataTransfer
+    let files = dt.files
+
+    if (fileInput.files && fileInput.files[0]) {
+      fileInput.value = '';
+
+      if(!/safari/i.test(navigator.userAgent)){
+        fileInput.type = '';
+        fileInput.type = 'file';
+      }
+
+      fileResult.classList.remove('show');
+      fileName.textContent = '';
+      fileImg.removeAttribute('src');
+    }
+
+    fileInput.files = files;
+    onFileChange();
+
+    //handleFiles(files)
+  };
+
+  function preventDefaults (e) {
+    e.preventDefault()
+    e.stopPropagation()
   }
 
   const addClassName = (element, className) => {
@@ -963,8 +1062,8 @@
     fileImg.removeAttribute('src');
   }
 
-  const onFileChange = (evt) => {
-    readUrl(evt.target);
+  const onFileChange = () => {
+    readUrl(fileInput);
   }
 
   const onCheckboxClick = () => {

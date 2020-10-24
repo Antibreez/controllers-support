@@ -67,6 +67,11 @@
     border: 1px dashed rgba(112, 112, 112, 0.5);
     border-radius: 5px;
 
+    &.highlight {
+      color: #5ea9ff;
+      border: 1px dashed #5ea9ff;
+    }
+
     &:hover {
       cursor: pointer;
       color: #5ea9ff;
@@ -352,6 +357,11 @@
 
     &:hover {
       cursor: pointer;
+      opacity: 0.75;
+    }
+
+    &:active {
+      opacity: 0.5;
     }
 
     &:focus {

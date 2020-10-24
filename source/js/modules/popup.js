@@ -1,5 +1,5 @@
 (function () {
-  const wireButtons = document.querySelectorAll('.device__wire-dote span');
+  const wireButtons = document.querySelectorAll('.device__model-item');
   const popups = document.querySelectorAll('.device__wire-popup-mobile');
   const closeButtons = document.querySelectorAll('.device__wire-popup-close');
   const overlay = document.querySelector('.device__wire-popup-overlay');
@@ -17,9 +17,15 @@
   };
 
   wireButtons.forEach((wireButton, idx) => {
-    wireButton.addEventListener('click', () => {
-      popups[idx].classList.add('js--show');
-      overlay.classList.add('js--show');
+    wireButton.addEventListener('click', (evt) => {
+      if (wireButton.querySelector('.device__model-not-supported')) {
+        return;
+      }
+
+      if (!evt.target.classList.contains('device__wire-popup-close')) {
+        popups[idx].classList.add('js--show');
+        overlay.classList.add('js--show');
+      }
     });
   });
 
