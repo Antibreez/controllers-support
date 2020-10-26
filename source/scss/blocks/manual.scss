@@ -1,4 +1,9 @@
 .manual {
+  & .toggle-wrapper > .how-works__label {
+    position: relative !important;
+    z-index: 10;
+  }
+
   margin-bottom: 40px;
   //overflow: hidden;
 }
@@ -15,6 +20,8 @@
   display: block;
 
   opacity: 1;
-  position: static;
+  position: relative;
   top: auto;
+  left: auto;
+  z-index: 100;
 }

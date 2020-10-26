@@ -3258,7 +3258,8 @@ a {
   }
 }
 
-.how-works .toggle-wrapper > *:not(.toggle-shadow) {
+.how-works .toggle-wrapper > .how-works__label,
+.how-works .toggle-wrapper > .how-works__content {
   position: relative !important;
   z-index: 10;
 }
@@ -5353,6 +5354,11 @@ a {
   margin-bottom: 40px;
 }
 
+.manual .toggle-wrapper > .how-works__label {
+  position: relative !important;
+  z-index: 10;
+}
+
 .manual__installation {
   display: block;
   opacity: 0;
@@ -5363,8 +5369,10 @@ a {
 .toggle-input:checked + .toggle-label + .toggle-content {
   display: block;
   opacity: 1;
-  position: static;
+  position: relative;
   top: auto;
+  left: auto;
+  z-index: 100;
 }
 
 .add-model {

@@ -1,5 +1,6 @@
 .how-works {
-  & .toggle-wrapper > *:not(.toggle-shadow) {
+  & .toggle-wrapper > .how-works__label,
+  & .toggle-wrapper > .how-works__content {
     position: relative !important;
     z-index: 10;
   }
