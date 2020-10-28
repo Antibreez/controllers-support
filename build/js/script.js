@@ -28,7 +28,11 @@
 })();
 
 (function () {
-  const modelLinks = document.querySelectorAll('.model__link')
+  const modelLinks = document.querySelectorAll('.model__link');
+
+  if (!modelLinks[0]) {
+    return;
+  }
 
   const initSwiper = () => {
     return new Swiper('.model__image-container', {
