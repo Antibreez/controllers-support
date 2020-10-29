@@ -27,10 +27,16 @@
     font-weight: 400;
     font-size: 15px;
     line-height: 63px;
+    color: #707070;
 
     &:hover {
       cursor: pointer;
       background-color: #f7f7f7;
+    }
+
+    & .match {
+      color: #000;
+      font-weight: 600;
     }
   }
 
@@ -53,9 +59,11 @@
   &__item {
     position: relative;
     padding: 20px 16px;
+    padding-right: 50px;
 
     font-size: 15px;
     line-height: 18px;
+    color: #707070;
 
     &::after {
       content: "";
@@ -70,6 +78,11 @@
 
       background-image: url("../img/arrow-big.svg");
       transform: rotate(90deg);
+    }
+
+    & .match {
+      color: #000;
+      font-weight: 600;
     }
   }
 }

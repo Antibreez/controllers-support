@@ -79,7 +79,7 @@
     display: none;
   }
 
-  &__search-wrapper span {
+  &__search-wrapper span:not(.match) {
     position: absolute;
     top: 0;
     left: 0;
