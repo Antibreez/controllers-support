@@ -130,6 +130,10 @@
     &:active {
       opacity: 0.5;
     }
+
+    &.show {
+      display: block;
+    }
   }
 
   &__search {
@@ -166,9 +170,9 @@
         background-image: url("../img/search-grey.svg");
       }
 
-      & + span + .header__search-close {
-        display: block;
-      }
+      // & + span + .header__search-close {
+      //   display: block;
+      // }
     }
 
     &::-webkit-input-placeholder {
