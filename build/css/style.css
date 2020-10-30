@@ -3966,6 +3966,10 @@ a {
           justify-content: center;
 }
 
+.model__image img {
+  max-height: 100%;
+}
+
 .model__brand {
   margin: 0;
   margin-bottom: 10px;

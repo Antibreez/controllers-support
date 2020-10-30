@@ -41,6 +41,10 @@
     justify-content: center;
   }
 
+  &__image img {
+    max-height: 100%;
+  }
+
   &__brand {
     margin: 0;
     margin-bottom: 10px;
