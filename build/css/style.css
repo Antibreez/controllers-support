@@ -3352,6 +3352,10 @@ a {
   }
 }
 
+.how-works {
+  margin-bottom: 16px;
+}
+
 .how-works .toggle-wrapper > .how-works__label,
 .how-works .toggle-wrapper > .how-works__content {
   position: relative !important;
