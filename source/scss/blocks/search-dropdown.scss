@@ -65,6 +65,11 @@
     line-height: 18px;
     color: #707070;
 
+    &:hover {
+      cursor: pointer;
+      background-color: #f7f7f7;
+    }
+
     &::after {
       content: "";
 

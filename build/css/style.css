@@ -2902,6 +2902,11 @@ a {
   color: #707070;
 }
 
+.search-dropdown-mobile__item:hover {
+  cursor: pointer;
+  background-color: #f7f7f7;
+}
+
 .search-dropdown-mobile__item::after {
   content: "";
   position: absolute;
