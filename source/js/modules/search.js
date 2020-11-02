@@ -24,5 +24,9 @@
     }
   };
 
+  if (input.value) {
+    hide();
+  };
+
   input.addEventListener('blur', onBlur);
 })();
