@@ -1,14 +1,15 @@
 (function () {
   const modelLinks = document.querySelectorAll('.model__link');
+  const imageContainers = document.querySelectorAll('.model__image-container');
 
   if (!modelLinks[0]) {
     return;
   }
 
   const initSwiper = () => {
-    return new Swiper('.model__image-container', {
+    return new Swiper('.model__swiper-container', {
       pagination: {
-        el: '.model__pagination',
+        el: '.model__swiper-container .model__pagination',
         type: 'bullets',
         clickable: true,
       },
@@ -68,6 +69,14 @@
       link.addEventListener('touchmove', onTouchMove);
       link.addEventListener('touchend', onTouchEnd);
     });
+  });
+
+  imageContainers.forEach((container) => {
+    const images = container.querySelectorAll('.model__image');
+
+    if (images.length > 1) {
+      container.classList.add('model__swiper-container');
+    }
   });
 
   initSwiper();
