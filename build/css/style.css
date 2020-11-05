@@ -5326,10 +5326,39 @@ a {
 }
 
 .process__image {
+  position: relative;
   margin-bottom: 25px;
+  padding-top: 66.6%;
+  overflow: hidden;
+}
+
+.process__image.cross::before, .process__image.flat::before {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 17px;
+  width: 35px;
+  height: 35px;
+  background-size: cover;
+  z-index: 10;
+}
+
+.process__image.cross::before {
+  background-image: url("../img/crosshead-sd-marker.png");
+}
+
+.process__image.flat::before {
+  background-image: url("../img/flat-sd-marker.png");
 }
 
 .process__image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 100%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   border-radius: 5px;
 }
 
@@ -5377,6 +5406,7 @@ a {
   }
   .process__image {
     width: 320px;
+    padding-top: 41%;
     min-width: 320px;
     margin-right: 20px;
   }
@@ -5407,6 +5437,8 @@ a {
   }
   .process__image {
     width: 100%;
+    min-width: 100%;
+    padding-top: 66.6%;
     margin: 0 0 87px;
   }
   .process__item-desc {
@@ -5470,6 +5502,10 @@ a {
   margin-bottom: 40px;
 }
 
+.manual .toggle-wrapper {
+  background-color: #fff;
+}
+
 .manual .toggle-wrapper > .how-works__label {
   position: relative !important;
   z-index: 10;
@@ -5477,6 +5513,7 @@ a {
 
 .manual__installation {
   display: block;
+  margin: 0 auto;
   opacity: 0;
   position: absolute;
   left: calc(100vh + 1000px);

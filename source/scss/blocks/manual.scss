@@ -1,4 +1,8 @@
 .manual {
+  & .toggle-wrapper {
+    background-color: #fff;
+  }
+
   & .toggle-wrapper > .how-works__label {
     position: relative !important;
     z-index: 10;
@@ -10,6 +14,7 @@
 
 .manual__installation {
   display: block;
+  margin: 0 auto;
 
   opacity: 0;
   position: absolute;

@@ -21,10 +21,45 @@
   }
 
   &__image {
+    position: relative;
     margin-bottom: 25px;
+    padding-top: 66.6%;
+
+    overflow: hidden;
+
+    &.cross::before,
+    &.flat::before {
+      content: "";
+
+      position: absolute;
+      top: 17px;
+      left: 17px;
+
+      width: 35px;
+      height:35px;
+
+      background-size: cover;
+      z-index: 10;
+    }
+
+    &.cross::before {
+      background-image: url("../img/crosshead-sd-marker.png");
+    }
+
+    &.flat::before {
+      background-image: url("../img/flat-sd-marker.png");
+    }
   }
 
   &__image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    max-width: 100%;
+    width: 100%;
+
+    transform: translate(-50%, -50%);
     border-radius: 5px;
   }
 
@@ -68,6 +103,7 @@
 
     &__image {
       width: 320px;
+      padding-top: 41%;
       min-width: 320px;
       margin-right: 20px;
     }
@@ -99,6 +135,9 @@
 
     &__image {
       width: 100%;
+      min-width: 100%;
+      padding-top: 66.6%;
+
       margin: 0 0 87px;
     }
 
