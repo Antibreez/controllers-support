@@ -4274,6 +4274,7 @@ a {
 
 .device__controller-link:hover {
   cursor: pointer;
+  opacity: 0.75;
 }
 
 .device__model-not-supported {
