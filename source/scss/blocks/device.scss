@@ -73,12 +73,17 @@
       padding: 0 15px;
       display: flex;
       justify-content: space-between;
+      align-items: flex-end;
 
       font-weight: 400;
       font-size: 15px;
       line-height: 20px;
       color: #707070;
     }
+  }
+
+  &__model-title span:last-child {
+    text-align: right;
   }
 
   &__item {
@@ -130,6 +135,7 @@
     max-width: 100px;
 
     color: #5ea9ff;
+    text-align: right;
 
     border: 0;
     //border-bottom: 1px solid rgba(94, 169, 255, 0.3);

@@ -1,4 +1,6 @@
 .model {
+  @include transition;
+
   max-width: 392px;
   flex-grow: 1;
   //padding: 30px;
@@ -9,19 +11,17 @@
   background-color: #fff;
   border-radius: 5px;
 
-  &__link {
-    @include transition;
+  &:hover {
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.05);
+  }
 
+  &__link {
     display: block;
     padding: 30px;
     text-decoration: none;
     color: inherit;
 
     border-radius: 5px;
-
-    &:hover {
-      box-shadow: 0 3px 20px rgba(0, 0, 0, 0.05);
-    }
   }
 
   &__image-container {
@@ -75,6 +75,25 @@
   &__compatible {
     font-weight: 600;
     color: #000;
+  }
+
+  &__to-manual {
+    display: block;
+    padding: 25px;
+
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 16px;
+    text-decoration: none;
+    color: inherit;
+    border-top: 2px solid #f7f7f7;
+    background-color: #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    &:hover {
+      background-color: #fdfdfd;
+    }
   }
 }
 

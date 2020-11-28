@@ -26,6 +26,7 @@
     padding-top: 66.6%;
 
     overflow: hidden;
+    border-radius: 5px;
 
     &.cross::before,
     &.flat::before {
@@ -131,6 +132,7 @@
     &__item {
       flex-direction: column;
       width: 100%;
+      margin-bottom: 0;
     }
 
     &__image {
@@ -138,7 +140,7 @@
       min-width: 100%;
       padding-top: 66.6%;
 
-      margin: 0 0 87px;
+      margin: 0 0 97px;
     }
 
     &__item-desc {
@@ -151,13 +153,13 @@
     }
 
     &__pagination {
-      bottom: auto;
-      top: calc(67vw);
+      bottom: auto!important;
+      top: calc(95.8vw*0.666 + 15px);
     }
 
     &__number {
       position: absolute;
-      top: calc(71vw);
+      top: calc(95.8vw*0.666 + 58px);
       left: 50%;
 
       width: 24px;
@@ -189,20 +191,20 @@
     }
 
     &__pagination {
-      top: calc(71.3vw);
+      top: calc(100vw*0.666 + 15px);
     }
 
     &__number {
-      top: calc(76vw);
+      top: calc(100vw*0.666 + 58px);
     }
   }
 }
 
-@media (max-width: 400px) {
-  .process {
-    &__number {
-      top: calc(78vw);
+// @media (max-width: 400px) {
+//   .process {
+//     &__number {
+//       top: calc(78vw);
 
-    }
-  }
-}
+//     }
+//   }
+// }

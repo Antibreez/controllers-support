@@ -141,6 +141,12 @@
   }
 }
 
+@media(min-width: 640px) and (max-width: 660px) {
+  .installation {
+    padding: 75px calc((100vw - 40px - 520px)/2);
+  }
+}
+
 @include tablet {
   .installation {
     max-width: 100%;
