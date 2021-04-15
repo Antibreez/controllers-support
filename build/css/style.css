@@ -4373,6 +4373,42 @@ a {
   background-image: url("../img/wire-green.jpg");
 }
 
+.device__wire-color.rose .device__wire-dote {
+  background-color: pink;
+}
+
+.device__wire-color.rose .device__wire-image-wrap,
+.device__wire-color.rose .device__wire-image-wrap-mobile {
+  background-image: url("../img/wire-rose.jpg");
+}
+
+.device__wire-color.orange .device__wire-dote {
+  background-color: orange;
+}
+
+.device__wire-color.orange .device__wire-image-wrap,
+.device__wire-color.orange .device__wire-image-wrap-mobile {
+  background-image: url("../img/wire-orange.jpg");
+}
+
+.device__wire-color.yellow .device__wire-dote {
+  background-color: yellow;
+}
+
+.device__wire-color.yellow .device__wire-image-wrap,
+.device__wire-color.yellow .device__wire-image-wrap-mobile {
+  background-image: url("../img/wire-yellow.jpg");
+}
+
+.device__wire-color.brown .device__wire-dote {
+  background-color: brown;
+}
+
+.device__wire-color.brown .device__wire-image-wrap,
+.device__wire-color.brown .device__wire-image-wrap-mobile {
+  background-image: url("../img/wire-brown.jpg");
+}
+
 .device__wire-dote {
   width: 16px;
   height: 16px;

@@ -217,6 +217,42 @@
     &.green .device__wire-image-wrap-mobile {
       background-image: url("../img/wire-green.jpg");
     }
+
+    &.rose .device__wire-dote {
+      background-color: pink;
+    }
+
+    &.rose .device__wire-image-wrap,
+    &.rose .device__wire-image-wrap-mobile {
+      background-image: url("../img/wire-rose.jpg");
+    }
+
+    &.orange .device__wire-dote {
+      background-color: orange;
+    }
+
+    &.orange .device__wire-image-wrap,
+    &.orange .device__wire-image-wrap-mobile {
+      background-image: url("../img/wire-orange.jpg");
+    }
+
+    &.yellow .device__wire-dote {
+      background-color: yellow;
+    }
+
+    &.yellow .device__wire-image-wrap,
+    &.yellow .device__wire-image-wrap-mobile {
+      background-image: url("../img/wire-yellow.jpg");
+    }
+
+    &.brown .device__wire-dote {
+      background-color: brown;
+    }
+
+    &.brown .device__wire-image-wrap,
+    &.brown .device__wire-image-wrap-mobile {
+      background-image: url("../img/wire-brown.jpg");
+    }
   }
 
   &__wire-dote {
