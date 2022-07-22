@@ -29,26 +29,25 @@ gulp.task(`clean`, function () {
 });
 
 gulp.task(`copy`, function () {
-  return gulp.src([
-    `source/fonts/**`,
-    `source/data.json`
-  ], {
-    base: `source`
-  })
+  return gulp
+    .src([`source/fonts/**`, `source/data.json`], {
+      base: `source`,
+    })
     .pipe(gulp.dest(`build`));
 });
 
 // СТИЛИ
 gulp.task(`css`, function () {
-  return gulp.src(`source/scss/style.scss`)
+  return gulp
+    .src(`source/scss/style.scss`)
     .pipe(plumber())
     .pipe(sourcemap.init())
-    .pipe(sass({
-      outputStyle: `expanded`
-    }))
-    .pipe(postcss([
-      autoprefixer()
-    ]))
+    .pipe(
+      sass({
+        outputStyle: `expanded`,
+      })
+    )
+    .pipe(postcss([autoprefixer()]))
     .pipe(gulp.dest(`build/css`))
     .pipe(csso())
     .pipe(rename(`style.min.css`))
@@ -59,88 +58,102 @@ gulp.task(`css`, function () {
 
 // ИЗОБРАЖЕНИЯ
 gulp.task(`sprite`, function () {
-  return gulp.src(`source/img/*.svg`)
-    .pipe(svgstore({
-      inlineSvg: true
-    }))
+  return gulp
+    .src(`source/img/*.svg`)
+    .pipe(
+      svgstore({
+        inlineSvg: true,
+      })
+    )
     .pipe(rename(`sprite.svg`))
     .pipe(gulp.dest(`build/img`));
 });
 
 gulp.task(`webp`, function () {
-  return gulp.src(`build/img/*.{png,jpg,gif}`)
-    .pipe(webp({quality: 90}))
+  return gulp
+    .src(`build/img/*.{png,jpg,gif}`)
+    .pipe(webp({ quality: 90 }))
     .pipe(gulp.dest(`build/img`));
 });
 
 gulp.task(`images`, function () {
-  return gulp.src(`source/img/**/*.{png,jpg,svg,gif}`)
+  return gulp
+    .src(`source/img/**/*.{png,jpg,svg,gif}`)
     .pipe(newer(`build/img`))
     .pipe(gulp.dest(`build/img`));
 });
 
 gulp.task(`imagemin`, function () {
-  return gulp.src(`build/img/**/*.{png,jpg,svg}`)
-    .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 3}),
-      imagemin.mozjpeg({progressive: true}),
-      imagemin.svgo({
-        plugins: [{
-          removeViewBox: false,
-          removeUselessStrokeAndFill: false
-        }]
-      })
-    ]))
+  return gulp
+    .src(`build/img/**/*.{png,jpg,svg}`)
+    .pipe(
+      imagemin([
+        imagemin.optipng({ optimizationLevel: 3 }),
+        imagemin.mozjpeg({ progressive: true }),
+        imagemin.svgo({
+          plugins: [
+            {
+              removeViewBox: false,
+              removeUselessStrokeAndFill: false,
+            },
+          ],
+        }),
+      ])
+    )
     .pipe(gulp.dest(`build/img`));
 });
 
 // СКРИПТЫ
 gulp.task(`js-vendor`, function () {
-  return gulp.src([
-    `source/js/vendor/*.js`,
-  ])
+  return gulp
+    .src([`source/js/vendor/*.js`])
     .pipe(plumber())
     .pipe(concat(`vendor.js`))
     .pipe(gulp.dest(`build/js`))
     .pipe(uglify())
-    .pipe(rename({
-      suffix: `.min`
-    }))
+    .pipe(
+      rename({
+        suffix: `.min`,
+      })
+    )
     .pipe(gulp.dest(`build/js`));
 });
 
 gulp.task(`js`, function () {
-  return gulp.src([
-    `source/js/modules/search.js`,
-    `source/js/modules/model.js`,
-    `source/js/modules/popup.js`,
-    `source/js/modules/animation.js`,
-    `source/js/modules/backend.js`,
-    `source/js/modules/select.js`,
-    `source/js/modules/resize.js`,
-    `source/js/modules/choice.js`,
-    `source/js/modules/equipment.js`,
-    `source/js/modules/process.js`,
-    `source/js/modules/form.js`,
-  ])
+  return gulp
+    .src([
+      `source/js/modules/search.js`,
+      `source/js/modules/model.js`,
+      `source/js/modules/popup.js`,
+      `source/js/modules/animation.js`,
+      `source/js/modules/backend.js`,
+      `source/js/modules/select.js`,
+      `source/js/modules/resize.js`,
+      `source/js/modules/choice.js`,
+      `source/js/modules/equipment.js`,
+      `source/js/modules/process.js`,
+      `source/js/modules/form.js`,
+      `source/js/modules/device.js`,
+    ])
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(concat(`script.js`))
     .pipe(gulp.dest(`build/js`))
     .pipe(uglify())
-    .pipe(rename({
-      suffix: `.min`
-    }))
+    .pipe(
+      rename({
+        suffix: `.min`,
+      })
+    )
     .pipe(sourcemap.write())
     .pipe(gulp.dest(`build/js`));
 });
 
 // HTML
 gulp.task(`html`, function () {
-  return gulp.src(`source/*.html`)
-    .pipe(posthtml([
-      include()
-    ]))
+  return gulp
+    .src(`source/*.html`)
+    .pipe(posthtml([include()]))
     .pipe(gulp.dest(`build`));
 });
 
@@ -151,11 +164,14 @@ gulp.task(`server`, function () {
     notify: false,
     open: true,
     cors: true,
-    ui: false
+    ui: false,
   });
 
   gulp.watch(`source/scss/**/*.scss`, gulp.series(`css`));
-  gulp.watch(`source/img/**/*`, gulp.series(`images`, `sprite`, `webp`, `refresh`));
+  gulp.watch(
+    `source/img/**/*`,
+    gulp.series(`images`, `sprite`, `webp`, `refresh`)
+  );
   gulp.watch(`source/js/**/*.js`, gulp.series(`js`, `js-vendor`, `refresh`));
   gulp.watch(`source/*.html`).on(`change`, gulp.series(`html`, `refresh`));
 });
@@ -166,5 +182,19 @@ gulp.task(`refresh`, function (done) {
 });
 
 // СБОРКА И СТАРТ
-gulp.task(`build`, gulp.series(`clean`, `copy`, `images`, `webp`, `imagemin`, `sprite`, `css`, `js-vendor`, `js`, `html`));
+gulp.task(
+  `build`,
+  gulp.series(
+    `clean`,
+    `copy`,
+    `images`,
+    `webp`,
+    `imagemin`,
+    `sprite`,
+    `css`,
+    `js-vendor`,
+    `js`,
+    `html`
+  )
+);
 gulp.task(`start`, gulp.series(`build`, `server`));

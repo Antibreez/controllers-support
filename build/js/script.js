@@ -32,23 +32,25 @@
 })();
 
 (function () {
-  const modelLinks = document.querySelectorAll('.model__link');
-  const imageContainers = document.querySelectorAll('.model__image-container');
-
-  if (!modelLinks[0]) {
-    return;
-  }
+  const modelLinks = document.querySelectorAll(".model__link");
+  const imageContainers = document.querySelectorAll(".model__image-container");
 
   const initSwiper = () => {
-    return new Swiper('.model__swiper-container', {
+    return new Swiper(".model__swiper-container", {
       pagination: {
-        el: '.model__swiper-container .model__pagination',
-        type: 'bullets',
+        el: ".model__swiper-container .model__pagination",
+        type: "bullets",
         clickable: true,
       },
       loop: true,
     });
   };
+
+  initSwiper();
+
+  if (!modelLinks[0]) {
+    return;
+  }
 
   // modelLinks.forEach((link) => {
   //   link.addEventListener('click', (evt) => {
@@ -61,7 +63,7 @@
   // });
 
   modelLinks.forEach((link) => {
-    link.addEventListener('mousedown', (evt) => {
+    link.addEventListener("mousedown", (evt) => {
       let isDraged = false;
 
       const onMouseMove = () => {
@@ -74,15 +76,15 @@
         }
 
         isDraged = false;
-        link.removeEventListener('mousemove', onMouseMove);
-        link.removeEventListener('mouseup', onMouseUp);
-      }
+        link.removeEventListener("mousemove", onMouseMove);
+        link.removeEventListener("mouseup", onMouseUp);
+      };
 
-      link.addEventListener('mousemove', onMouseMove);
-      link.addEventListener('mouseup', onMouseUp);
+      link.addEventListener("mousemove", onMouseMove);
+      link.addEventListener("mouseup", onMouseUp);
     });
 
-    link.addEventListener('toushstart', (evt) => {
+    link.addEventListener("toushstart", (evt) => {
       let isDraged = false;
 
       const onTouchMove = () => {
@@ -95,24 +97,22 @@
         }
 
         isDraged = false;
-        link.removeEventListener('touchmove', onTouchMove);
-        link.removeEventListener('touchend', onTouchEnd);
-      }
+        link.removeEventListener("touchmove", onTouchMove);
+        link.removeEventListener("touchend", onTouchEnd);
+      };
 
-      link.addEventListener('touchmove', onTouchMove);
-      link.addEventListener('touchend', onTouchEnd);
+      link.addEventListener("touchmove", onTouchMove);
+      link.addEventListener("touchend", onTouchEnd);
     });
   });
 
   imageContainers.forEach((container) => {
-    const images = container.querySelectorAll('.model__image');
+    const images = container.querySelectorAll(".model__image");
 
     if (images.length > 1) {
-      container.classList.add('model__swiper-container');
+      container.classList.add("model__swiper-container");
     }
   });
-
-  initSwiper();
 })();
 
 (function () {
@@ -1159,4 +1159,67 @@
   checkbox.addEventListener('click', onCheckboxClick);
 
   submit.addEventListener('click', onSubmit);
+})();
+
+(function () {
+  const $warning = $(".device__warning-icon");
+  const $chip = $(".device__stroke-chip");
+  const $popupCable = $(".device__stroke-popup");
+  const $popupWarning = $(".device__warning-popup");
+
+  $warning.on("mouseenter", function () {
+    const $popup = $(this).next();
+    const offset =
+      $popup.offset().left + $popup.outerWidth() - $(window).outerWidth();
+
+    if (offset > 0) {
+      $popup.css("transform", "translateX(calc(-100% + 40px))");
+    }
+  });
+
+  $warning.on("mouseleave", function () {
+    const $popup = $(this).next();
+    $popup.css("transform", "");
+  });
+
+  $chip.on("click", function () {
+    const $popup = $(this).next();
+
+    $popup.addClass("opened");
+  });
+
+  $popupCable.on("click", function (e) {
+    if (
+      $(e.target).hasClass("device__stroke-popup") ||
+      $(e.target).hasClass("device__stroke-popup-close") ||
+      $(e.target).parents(".device__stroke-popup-close").length > 0
+    ) {
+      $(this).removeClass("opened");
+    }
+  });
+
+  $warning.on("click", function () {
+    const $popup = $(this).next();
+
+    $popup.addClass("opened");
+  });
+
+  $popupWarning.on("click", function (e) {
+    if (
+      $(e.target).hasClass("device__warning-popup") ||
+      $(e.target).hasClass("device__stroke-popup-close") ||
+      $(e.target).parents(".device__stroke-popup-close").length > 0
+    ) {
+      $(this).removeClass("opened");
+    }
+  });
+
+  const swiper = new Swiper(".model__image-container", {
+    pagination: {
+      el: ".model__image-container .model__pagination",
+      type: "bullets",
+      clickable: true,
+    },
+    loop: true,
+  });
 })();

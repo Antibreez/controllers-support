@@ -1,50 +1,49 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Daichi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.min.css" type="text/css">
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Daichi</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.min.css" type="text/css">
-</head>
+  <body class="page-body">
+    <header class="header">
+      <div class="header__container container">
+        <a href="main.html" class="header__logo">
+          <img src="img/cloud-logo.svg" alt="Daichi Cloud">
+        </a>
+        <a href="https://daichi.ru/" class="header__exit-link">Перейти к Daichi.ru</a>
+        <h1 class="header__title">Центр поддержки</h1>
+        <div class="header__search-wrapper">
+          <input class="header__search" type="search" placeholder="Поиск по совместимым с Wi-Fi контроллером кондиционерам...">
+          <span></span>
+          <button type="button" class="header__search-close"></button>
+          <p class="header__placeholder">
+            Поиск по совместимым с Wi-Fi контроллером кондиционерам...
+          </p>
 
-<body class="page-body">
-  <header class="header">
-    <div class="header__container  container">
-      <a href="main.html" class="header__logo">
-        <img src="img/cloud-logo.svg" alt="Daichi Cloud">
-      </a>
-      <a href="https://daichi.ru/" class="header__exit-link">Перейти к Daichi.ru</a>
-      <h1 class="header__title">Центр поддержки</h1>
-      <div class="header__search-wrapper">
-        <input class="header__search" type="search" placeholder="Поиск по совместимым с Wi-Fi контроллером кондиционерам...">
-        <span></span>
-        <button type="button" class="header__search-close"></button>
-        <p class="header__placeholder">Поиск по совместимым с Wi-Fi контроллером кондиционерам...</p>
-
-        <div class="search-dropdown  show">
-          <ul class="search-dropdown__list">
-            <li class="search-dropdown__item">FTXS</li>
-            <li class="search-dropdown__item">FTXS</li>
-            <li class="search-dropdown__item">FTXS</li>
-            <li class="search-dropdown__item">FTXS</li>
-            <li class="search-dropdown__item">FTXS</li>
-            <li class="search-dropdown__item">FTXS</li>
-            <li class="search-dropdown__item">FTXS</li>
-            <li class="search-dropdown__item">FTXS</li>
-            <li class="search-dropdown__item">FTXS</li>
-            <li class="search-dropdown__item">FTXS</li>
-            <li class="search-dropdown__item">FTXS</li>
-            <li class="search-dropdown__item">FTXS</li>
-          </ul>
+          <div class="search-dropdown">
+            <ul class="search-dropdown__list">
+              <li class="search-dropdown__item">FTXS</li>
+              <li class="search-dropdown__item">FTXS</li>
+              <li class="search-dropdown__item">FTXS</li>
+              <li class="search-dropdown__item">FTXS</li>
+              <li class="search-dropdown__item">FTXS</li>
+              <li class="search-dropdown__item">FTXS</li>
+              <li class="search-dropdown__item">FTXS</li>
+              <li class="search-dropdown__item">FTXS</li>
+              <li class="search-dropdown__item">FTXS</li>
+              <li class="search-dropdown__item">FTXS</li>
+              <li class="search-dropdown__item">FTXS</li>
+              <li class="search-dropdown__item">FTXS</li>
+            </ul>
+          </div>
         </div>
-
       </div>
-    </div>
-  </header>
-  <main class="main">
-
-    <div class="search-dropdown-mobile  show">
+    </header>
+    <main class="main">
+      <div class="search-dropdown-mobile">
         <ul class="search-dropdown-mobile__list">
           <li class="search-dropdown-mobile__item">FTXS</li>
           <li class="search-dropdown-mobile__item">FTXS</li>
@@ -59,37 +58,1448 @@
           <li class="search-dropdown-mobile__item">FTXS</li>
           <li class="search-dropdown-mobile__item">FTXS</li>
         </ul>
-    </div>
+      </div>
 
-    <div class="main__container  container">
-      <section class="device">
-        <a class="device__to-main" href="main.html">Вернуться к списку</a>
-        <div class="device__info">
-          <div class="device__title-wrap">
-            <p class="device__series-title">
-              <span>Серия</span>
-            </p>
-            <p class="device__model-title">
-              <span>Модель</span>
-              <span>Контроллер Wi-Fi</span>
-            </p>
+      <div class="main__container container">
+        <section class="device">
+          <a class="device__to-main" href="main.html">Вернуться к списку</a>
+
+          <div class="device__block">
+            <div class="model__image-container swiper-container">
+              <div class="model__image-wrapper swiper-wrapper">
+                <div class="model__image swiper-slide">
+                  <img src="img/ftxs-rxs.png" alt="FTXS/RXS">
+                </div>
+                <div class="model__image swiper-slide">
+                  <img src="img/ftxs-rxs.png" alt="FTXS/RXS">
+                </div>
+                <div class="model__image swiper-slide">
+                  <img src="img/ftxs-rxs.png" alt="FTXS/RXS">
+                </div>
+              </div>
+              <div class="model__pagination swiper-pagination"></div>
+            </div>
+            <div class="device__block-info">
+              <h2 class="device__block-name">Perfera FTXM-R</h2>
+              <div class="device__block-part">
+                <p class="device__block-subtitle">Бренд</p>
+                <p class="device__block-value">Daikin</p>
+              </div>
+              <div class="device__block-part">
+                <p class="device__block-subtitle">Совместимость</p>
+                <p class="device__block-value">
+                  <span class="all">7</span> / 7 моделей совместимы
+                </p>
+                <p class="device__block-value">
+                  <span class="current">6</span> / 7 моделей совместимы
+                </p>
+                <p class="device__block-value">
+                  <span class="none">0</span> / 7 моделей совместимы
+                </p>
+              </div>
+            </div>
           </div>
 
-            <div class="device__item  model">
-              <a class="model__link" href="#">
-                <div class="model__image-container  swiper-container">
-                  <div class="model__image-wrapper  swiper-wrapper">
-                    <div class="model__image  swiper-slide">
-                      <img src="img/ftxs-rxs.png" alt="FTXS/RXS">
+          <section class="manual">
+            <div class="toggle-wrapper">
+              <input id="how-works" type="checkbox" class="visually-hidden toggle-input">
+              <label for="how-works" class="how-works__label toggle-label">Инструкция по установке</label>
+              <div class="manual__installation installation toggle-content">
+                <p class="installation__warning">
+                  Все работы по монтажу и обслуживанию Wi-Fi контроллера
+                  производятся только при отключенном электропитании.
+                </p>
+                <p class="installation__desc">
+                  В процессе монтажа и эксплуатации соблюдайте общие правила
+                  электробезопасности при использовании электроприборов.
+                </p>
+                <section class="installation__difficulty-section">
+                  <h2 class="installation__difficulty-title">
+                    Уровень сложности
+                  </h2>
+                  <section class="installation__difficulty difficulty difficulty--7">
+                    <div class="difficulty__bar">
+                      <span class="difficulty__section difficulty__section--1"></span>
+                      <span class="difficulty__section difficulty__section--2"></span>
+                      <span class="difficulty__section difficulty__section--3"></span>
+                      <span class="difficulty__section difficulty__section--4"></span>
+                      <span class="difficulty__section difficulty__section--5"></span>
+                      <span class="difficulty__section difficulty__section--6"></span>
+                      <span class="difficulty__section difficulty__section--7"></span>
+                      <span class="difficulty__section difficulty__section--8"></span>
+                      <span class="difficulty__section difficulty__section--9"></span>
+                      <span class="difficulty__section difficulty__section--10"></span>
                     </div>
-                    <div class="model__image  swiper-slide">
-                      <img src="img/ftxs-rxs.png" alt="FTXS/RXS">
+                  </section>
+                </section>
+                <section class="installation__equipment equipment">
+                  <h2 class="equipment__title">Вам понадобятся:</h2>
+                  <div class="equipment__wrapper">
+                    <div class="equipment__item">
+                      <div class="equipment__image equipment__image--dw01-b_11">
+                        <img src="img/dw01-b_11.jpg" alt="Контроллер">
+                      </div>
+                      <div class="equipment__content">
+                        <h3 class="equipment__item-title">
+                          Контроллер DW01-B или DW01/11
+                        </h3>
+                        <p class="equipment__item-desc">
+                          Wi-Fi контроллер управления
+                        </p>
+                      </div>
                     </div>
-                    <div class="model__image  swiper-slide">
-                      <img src="img/ftxs-rxs.png" alt="FTXS/RXS">
+                    <div class="equipment__item">
+                      <div class="equipment__image equipment__image--cable-white">
+                        <img src="img/cable-black-big.jpg" alt="Кабель подключения">
+                      </div>
+                      <div class="equipment__content">
+                        <h3 class="equipment__item-title">
+                          Кабель подключения
+                        </h3>
+                        <p class="equipment__item-desc">
+                          Кабель входит в стандартную комплектацию Вашего
+                          контроллера
+                        </p>
+                      </div>
+                    </div>
+                    <div class="equipment__item">
+                      <div class="equipment__image equipment__image--crosshead-sd">
+                        <img src="img/crosshead-sd.svg" alt="Отвертка крестовая">
+                      </div>
+                      <div class="equipment__content">
+                        <h3 class="equipment__item-title">
+                          Отвертка крестовая
+                        </h3>
+                        <p class="equipment__item-desc">
+                          Ширина наконечника 5мм
+                        </p>
+                      </div>
+                    </div>
+                    <div class="equipment__item">
+                      <div class="equipment__image equipment__image--flat-sd">
+                        <img src="img/flat-sd.svg" alt="Отвертка плоская">
+                      </div>
+                      <div class="equipment__content">
+                        <h3 class="equipment__item-title">Отвертка плоская</h3>
+                        <p class="equipment__item-desc">
+                          Ширина наконечника 5мм
+                        </p>
+                      </div>
                     </div>
                   </div>
-                  <div class="model__pagination  swiper-pagination"></div>
+                  <div class="equipment__container swiper-container"></div>
+                </section>
+                <section class="installation__process process">
+                  <h2 class="process__title">Процесс установки:</h2>
+                  <div class="process__wrapper">
+                    <div class="process__item">
+                      <div class="process__image flat">
+                        <img src="img/flxs-step-1.jpg" alt="Слайд установки">
+                      </div>
+                      <div class="process__item-content">
+                        <span class="process__item-number">1</span>
+                        <p class="process__item-desc">
+                          Снимите 3 заглушки, скрывающие винты крепления панели
+                          внутреннего блока
+                        </p>
+                      </div>
+                    </div>
+                    <div class="process__item">
+                      <div class="process__image">
+                        <img src="img/step-000.jpg" alt="Слайд установки">
+                      </div>
+                      <div class="process__item-content">
+                        <span class="process__item-number">2</span>
+                        <p class="process__item-desc">
+                          Открутите 3 винта крепления корпуса внутреннего блока
+                        </p>
+                      </div>
+                    </div>
+                    <div class="process__item">
+                      <div class="process__image">
+                        <img src="img/flxs-step-3.jpg" alt="Слайд установки">
+                      </div>
+                      <div class="process__item-content">
+                        <span class="process__item-number">3</span>
+                        <p class="process__item-desc">
+                          Откройте панель фильтров
+                        </p>
+                      </div>
+                    </div>
+                    <div class="process__item">
+                      <div class="process__image">
+                        <img src="img/flxs-step-4.jpg" alt="Слайд установки">
+                      </div>
+                      <div class="process__item-content">
+                        <span class="process__item-number">4</span>
+                        <p class="process__item-desc">
+                          Открутите 2 винта за панелью фильтров
+                        </p>
+                      </div>
+                    </div>
+                    <div class="process__item">
+                      <div class="process__image">
+                        <img src="img/flxs-step-5.jpg" alt="Слайд установки">
+                      </div>
+                      <div class="process__item-content">
+                        <span class="process__item-number">5</span>
+                        <p class="process__item-desc">
+                          Отщёлкните центральный фиксатор
+                        </p>
+                      </div>
+                    </div>
+                    <div class="process__item">
+                      <div class="process__image">
+                        <img src="img/flxs-step-6.jpg" alt="Слайд установки">
+                      </div>
+                      <div class="process__item-content">
+                        <span class="process__item-number">6</span>
+                        <p class="process__item-desc">
+                          Открутите 2 винта под крышкой блока фильтров
+                        </p>
+                      </div>
+                    </div>
+                    <div class="process__item">
+                      <div class="process__image">
+                        <img src="img/flxs-step-7.jpg" alt="Слайд установки">
+                      </div>
+                      <div class="process__item-content">
+                        <span class="process__item-number">7</span>
+                        <p class="process__item-desc">
+                          Снимите корпус внутреннего блока
+                        </p>
+                      </div>
+                    </div>
+                    <div class="process__item">
+                      <div class="process__image">
+                        <img src="img/flxs-step-8.jpg" alt="Слайд установки">
+                      </div>
+                      <div class="process__item-content">
+                        <span class="process__item-number">8</span>
+                        <p class="process__item-desc">
+                          Открутите 4 винта крепления пластикового блока
+                          управления
+                        </p>
+                      </div>
+                    </div>
+                    <div class="process__item">
+                      <div class="process__image">
+                        <img src="img/flxs-step-9.jpg" alt="Слайд установки">
+                      </div>
+                      <div class="process__item-content">
+                        <span class="process__item-number">9</span>
+                        <p class="process__item-desc">
+                          Снимите крышку блока управления для доступа к разъёму
+                          S21 подключения внещних контроллеров
+                        </p>
+                      </div>
+                    </div>
+                    <div class="process__item">
+                      <div class="process__image">
+                        <img src="img/flxs-step-10.jpg" alt="Слайд установки">
+                      </div>
+                      <div class="process__item-content">
+                        <span class="process__item-number">10</span>
+                        <p class="process__item-desc">
+                          Подключите один конец разъёма кабеля контроллера к
+                          разъёму плат внутренного блока, второй конец к
+                          контроллеру DW01-B
+                        </p>
+                      </div>
+                    </div>
+                    <div class="process__item">
+                      <div class="process__image">
+                        <img src="img/flxs-step-11.jpg" alt="Слайд установки">
+                      </div>
+                      <div class="process__item-content">
+                        <span class="process__item-number">11</span>
+                        <p class="process__item-desc">
+                          Закройте крышку блока управления, закрепите контроллер
+                          в пространстве внутреннего блока
+                        </p>
+                      </div>
+                    </div>
+                    <div class="process__item">
+                      <div class="process__image">
+                        <img src="img/flxs-step-12.jpg" alt="Слайд установки">
+                      </div>
+                      <div class="process__item-content">
+                        <span class="process__item-number">12</span>
+                        <p class="process__item-desc">
+                          Закрепите блок управления кондиционера винтами.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="process__item">
+                      <div class="process__image">
+                        <img src="img/daichi-comfort-qr.jpg" alt="Слайд установки">
+                      </div>
+                      <div class="process__item-content">
+                        <span class="process__item-number">13</span>
+                        <p class="process__item-desc">
+                          Соберите корпус внутреннего блока в обратном порядке
+                        </p>
+                      </div>
+                    </div>
+                    <div class="process__item">
+                      <div class="process__image">
+                        <img src="img/service-center.jpg" alt="Слайд установки">
+                      </div>
+                      <div class="process__item-content">
+                        <span class="process__item-number">14</span>
+                        <p class="process__item-desc">
+                          Установка контроллера завершена!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="process__container swiper-container"></div>
+                </section>
+              </div>
+              <div class="toggle-shadow"></div>
+            </div>
+          </section>
+
+          <div class="device__strokes">
+            <div class="device__strokes-titles">
+              <span>Модель</span>
+              <span>Подходящий контроллер Wi-Fi</span>
+            </div>
+            <ul class="device__strokes-list">
+              <li class="device__stroke">
+                <p class="device__stroke-title-mobile">Модель</p>
+                <span class="device__stroke-name">FTXM20R</span>
+                <p class="device__stroke-title-mobile">
+                  Подходящий контроллер Wi-Fi
+                </p>
+                <div class="device__stroke-wires">
+                  <div class="device__stroke-controller">
+                    <div class="device__stroke-chip">
+                      <span>DW01-B</span>
+                      <span>DW11-B</span>
+                      <span>DW02-B</span>
+                      <span>DW02-B</span>
+                      <div class="dote blue"></div>
+                    </div>
+                    <div class="device__stroke-popup">
+                      <div class="device__stroke-popup-body">
+                        <div class="device__stroke-popup-img">
+                          <img src="img/cable-blue.jpg" alt="Cable">
+                        </div>
+                        <div class="device__stroke-popup-inner">
+                          <p class="device__stroke-popup-title">
+                            Кабель подключения
+                          </p>
+                          <div class="device__stroke-popup-cable">
+                            <div class="dote blue"></div>
+                            <span>Синий</span>
+                          </div>
+                        </div>
+                        <button class="device__stroke-popup-close">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#close"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="device__stroke-controller">
+                    <div class="device__stroke-chip">
+                      <span>DW21-B</span>
+                      <span>DW22-B</span>
+                      <div class="dote black"><div>A</div></div>
+                    </div>
+                    <div class="device__stroke-popup">
+                      <div class="device__stroke-popup-body">
+                        <div class="device__stroke-popup-img">
+                          <img src="img/cable-blue.jpg" alt="Cable">
+                        </div>
+                        <div class="device__stroke-popup-inner">
+                          <p class="device__stroke-popup-title">
+                            Кабель подключения
+                          </p>
+                          <div class="device__stroke-popup-cable">
+                            <div class="dote black"><div>A</div></div>
+                            <span>DCOMUS1A</span>
+                          </div>
+                          <div class="device__stroke-popup-note">
+                            Не забудьте приобрести соответствующий кабель для
+                            модели DW22-B
+                          </div>
+                        </div>
+                        <button class="device__stroke-popup-close">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#close"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="device__warning-block">
+                  <div class="device__warning-icon">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#warning-dark"></use>
+                    </svg>
+                  </div>
+                  <div class="device__warning-popup">
+                    <div class="device__warning-popup-body">
+                      <div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Sed iaculis malesuada tellus, et fermentum dolor porta
+                        quis. Curabitur quis urna sed erat maximus congue.
+                        Aenean eu massa id augue commodo auctor.
+                      </div>
+                      <button class="device__stroke-popup-close">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="device__stroke">
+                <p class="device__stroke-title-mobile">Модель</p>
+                <span class="device__stroke-name">FTXM20R</span>
+                <p class="device__stroke-title-mobile">
+                  Подходящий контроллер Wi-Fi
+                </p>
+                <div class="device__stroke-wires">
+                  <div class="device__stroke-controller">
+                    <div class="device__stroke-chip">
+                      <span>DW01-B</span>
+                      <span>DW11-B</span>
+                      <span>DW02-B</span>
+                      <div class="dote blue"></div>
+                    </div>
+                    <div class="device__stroke-popup">
+                      <div class="device__stroke-popup-body">
+                        <div class="device__stroke-popup-img">
+                          <img src="img/cable-blue.jpg" alt="Cable">
+                        </div>
+                        <div class="device__stroke-popup-inner">
+                          <p class="device__stroke-popup-title">
+                            Кабель подключения
+                          </p>
+                          <div class="device__stroke-popup-cable">
+                            <div class="dote blue"></div>
+                            <span>Синий</span>
+                          </div>
+                        </div>
+                        <button class="device__stroke-popup-close">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#close"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="device__stroke-controller">
+                    <div class="device__stroke-chip">
+                      <span>DW21-B</span>
+                      <span>DW22-B</span>
+                      <div class="dote black"><div>A</div></div>
+                    </div>
+                    <div class="device__stroke-popup">
+                      <div class="device__stroke-popup-body">
+                        <div class="device__stroke-popup-img">
+                          <img src="img/cable-blue.jpg" alt="Cable">
+                        </div>
+                        <div class="device__stroke-popup-inner">
+                          <p class="device__stroke-popup-title">
+                            Кабель подключения
+                          </p>
+                          <div class="device__stroke-popup-cable">
+                            <div class="dote black"><div>A</div></div>
+                            <span>DCOMUS1A</span>
+                          </div>
+                          <div class="device__stroke-popup-note">
+                            Не забудьте приобрести соответствующий кабель для
+                            модели DW22-B
+                          </div>
+                        </div>
+                        <button class="device__stroke-popup-close">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#close"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="device__warning-block">
+                  <div class="device__warning-icon">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#warning-dark"></use>
+                    </svg>
+                  </div>
+                  <div class="device__warning-popup">
+                    <div class="device__warning-popup-body">
+                      <div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Sed iaculis malesuada tellus, et fermentum dolor porta
+                        quis. Curabitur quis urna sed erat maximus congue.
+                        Aenean eu massa id augue commodo auctor.
+                      </div>
+                      <button class="device__stroke-popup-close">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="device__stroke">
+                <p class="device__stroke-title-mobile">Модель</p>
+                <span class="device__stroke-name">FTXM20R</span>
+                <p class="device__stroke-title-mobile">
+                  Подходящий контроллер Wi-Fi
+                </p>
+                <div class="device__stroke-wires">
+                  <div class="device__stroke-controller">
+                    <div class="device__stroke-chip">
+                      <span>DW01-B</span>
+                      <span>DW11-B</span>
+                      <span>DW02-B</span>
+                      <div class="dote white"></div>
+                    </div>
+                    <div class="device__stroke-popup">
+                      <div class="device__stroke-popup-body">
+                        <div class="device__stroke-popup-img">
+                          <img src="img/cable-blue.jpg" alt="Cable">
+                        </div>
+                        <div class="device__stroke-popup-inner">
+                          <p class="device__stroke-popup-title">
+                            Кабель подключения
+                          </p>
+                          <div class="device__stroke-popup-cable">
+                            <div class="dote white"></div>
+                            <span>Белый</span>
+                          </div>
+                        </div>
+                        <button class="device__stroke-popup-close">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#close"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="device__stroke-controller">
+                    <div class="device__stroke-chip">
+                      <span>DW21-B</span>
+                      <span>DW22-B</span>
+                      <div class="dote black"><div>С</div></div>
+                    </div>
+                    <div class="device__stroke-popup">
+                      <div class="device__stroke-popup-body">
+                        <div class="device__stroke-popup-img">
+                          <img src="img/cable-blue.jpg" alt="Cable">
+                        </div>
+                        <div class="device__stroke-popup-inner">
+                          <p class="device__stroke-popup-title">
+                            Кабель подключения
+                          </p>
+                          <div class="device__stroke-popup-cable">
+                            <div class="dote black"><div>С</div></div>
+                            <span>DCOMUS1A</span>
+                          </div>
+                          <div class="device__stroke-popup-note">
+                            Не забудьте приобрести соответствующий кабель для
+                            модели DW22-B
+                          </div>
+                        </div>
+                        <button class="device__stroke-popup-close">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#close"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="device__warning-block">
+                  <div class="device__warning-icon">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#warning-dark"></use>
+                    </svg>
+                  </div>
+                  <div class="device__warning-popup">
+                    <div class="device__warning-popup-body">
+                      <div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Sed iaculis malesuada tellus, et fermentum dolor porta
+                        quis. Curabitur quis urna sed erat maximus congue.
+                        Aenean eu massa id augue commodo auctor.
+                      </div>
+                      <button class="device__stroke-popup-close">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="device__stroke">
+                <p class="device__stroke-title-mobile">Модель</p>
+                <span class="device__stroke-name">FTXM20R</span>
+                <p class="device__stroke-title-mobile">
+                  Подходящий контроллер Wi-Fi
+                </p>
+                <div class="device__stroke-wires">
+                  <div class="device__stroke-controller">
+                    <div class="device__stroke-chip">
+                      <span>DW01-B</span>
+                      <span>DW11-B</span>
+                      <span>DW02-B</span>
+                      <div class="dote grey"></div>
+                    </div>
+                    <div class="device__stroke-popup">
+                      <div class="device__stroke-popup-body">
+                        <div class="device__stroke-popup-img">
+                          <img src="img/cable-blue.jpg" alt="Cable">
+                        </div>
+                        <div class="device__stroke-popup-inner">
+                          <p class="device__stroke-popup-title">
+                            Кабель подключения
+                          </p>
+                          <div class="device__stroke-popup-cable">
+                            <div class="dote grey"></div>
+                            <span>Серый</span>
+                          </div>
+                        </div>
+                        <button class="device__stroke-popup-close">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#close"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="device__stroke-controller">
+                    <div class="device__stroke-chip">
+                      <span>DW21-B</span>
+                      <span>DW22-B</span>
+                      <div class="dote black"><div>E</div></div>
+                    </div>
+                    <div class="device__stroke-popup">
+                      <div class="device__stroke-popup-body">
+                        <div class="device__stroke-popup-img">
+                          <img src="img/cable-blue.jpg" alt="Cable">
+                        </div>
+                        <div class="device__stroke-popup-inner">
+                          <p class="device__stroke-popup-title">
+                            Кабель подключения
+                          </p>
+                          <div class="device__stroke-popup-cable">
+                            <div class="dote black"><div>E</div></div>
+                            <span>DCOMUS1A</span>
+                          </div>
+                          <div class="device__stroke-popup-note">
+                            Не забудьте приобрести соответствующий кабель для
+                            модели DW22-B
+                          </div>
+                        </div>
+                        <button class="device__stroke-popup-close">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#close"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="device__warning-block">
+                  <div class="device__warning-icon">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#warning-dark"></use>
+                    </svg>
+                  </div>
+                  <div class="device__warning-popup">
+                    <div class="device__warning-popup-body">
+                      <div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Sed iaculis malesuada tellus, et fermentum dolor porta
+                        quis. Curabitur quis urna sed erat maximus congue.
+                        Aenean eu massa id augue commodo auctor.
+                      </div>
+                      <button class="device__stroke-popup-close">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="device__stroke">
+                <p class="device__stroke-title-mobile">Модель</p>
+                <span class="device__stroke-name">FTXM20R</span>
+                <p class="device__stroke-title-mobile">
+                  Подходящий контроллер Wi-Fi
+                </p>
+                <div class="device__stroke-wires">
+                  <div class="device__stroke-controller">
+                    <div class="device__stroke-chip">
+                      <span>DW01-B</span>
+                      <span>DW11-B</span>
+                      <span>DW02-B</span>
+                      <div class="dote red"></div>
+                    </div>
+                    <div class="device__stroke-popup">
+                      <div class="device__stroke-popup-body">
+                        <div class="device__stroke-popup-img">
+                          <img src="img/cable-blue.jpg" alt="Cable">
+                        </div>
+                        <div class="device__stroke-popup-inner">
+                          <p class="device__stroke-popup-title">
+                            Кабель подключения
+                          </p>
+                          <div class="device__stroke-popup-cable">
+                            <div class="dote red"></div>
+                            <span>Красный</span>
+                          </div>
+                        </div>
+                        <button class="device__stroke-popup-close">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#close"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="device__stroke-controller">
+                    <div class="device__stroke-chip">
+                      <span>DW21-B</span>
+                      <span>DW22-B</span>
+                      <div class="dote black"><div>F</div></div>
+                    </div>
+                    <div class="device__stroke-popup">
+                      <div class="device__stroke-popup-body">
+                        <div class="device__stroke-popup-img">
+                          <img src="img/cable-blue.jpg" alt="Cable">
+                        </div>
+                        <div class="device__stroke-popup-inner">
+                          <p class="device__stroke-popup-title">
+                            Кабель подключения
+                          </p>
+                          <div class="device__stroke-popup-cable">
+                            <div class="dote black"><div>F</div></div>
+                            <span>DCOMUS1A</span>
+                          </div>
+                          <div class="device__stroke-popup-note">
+                            Не забудьте приобрести соответствующий кабель для
+                            модели DW22-B
+                          </div>
+                        </div>
+                        <button class="device__stroke-popup-close">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#close"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="device__warning-block">
+                  <div class="device__warning-icon">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#warning-dark"></use>
+                    </svg>
+                  </div>
+                  <div class="device__warning-popup">
+                    <div class="device__warning-popup-body">
+                      <div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Sed iaculis malesuada tellus, et fermentum dolor porta
+                        quis. Curabitur quis urna sed erat maximus congue.
+                        Aenean eu massa id augue commodo auctor.
+                      </div>
+                      <button class="device__stroke-popup-close">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="device__stroke">
+                <p class="device__stroke-title-mobile">Модель</p>
+                <span class="device__stroke-name">FTXM20R</span>
+                <p class="device__stroke-title-mobile">
+                  Подходящий контроллер Wi-Fi
+                </p>
+                <div class="device__stroke-wires">
+                  <div class="device__stroke-controller">
+                    <div class="device__stroke-chip">
+                      <span>DW01-B</span>
+                      <span>DW11-B</span>
+                      <span>DW02-B</span>
+                      <div class="dote black"></div>
+                    </div>
+                    <div class="device__stroke-popup">
+                      <div class="device__stroke-popup-body">
+                        <div class="device__stroke-popup-img">
+                          <img src="img/cable-blue.jpg" alt="Cable">
+                        </div>
+                        <div class="device__stroke-popup-inner">
+                          <p class="device__stroke-popup-title">
+                            Кабель подключения
+                          </p>
+                          <div class="device__stroke-popup-cable">
+                            <div class="dote black"></div>
+                            <span>Черный</span>
+                          </div>
+                        </div>
+                        <button class="device__stroke-popup-close">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#close"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="device__stroke-controller">
+                    <div class="device__stroke-chip">
+                      <span>DW21-B</span>
+                      <span>DW22-B</span>
+                      <div class="dote black"><div>G</div></div>
+                    </div>
+                    <div class="device__stroke-popup">
+                      <div class="device__stroke-popup-body">
+                        <div class="device__stroke-popup-img">
+                          <img src="img/cable-blue.jpg" alt="Cable">
+                        </div>
+                        <div class="device__stroke-popup-inner">
+                          <p class="device__stroke-popup-title">
+                            Кабель подключения
+                          </p>
+                          <div class="device__stroke-popup-cable">
+                            <div class="dote black"><div>G</div></div>
+                            <span>DCOMUS1A</span>
+                          </div>
+                          <div class="device__stroke-popup-note">
+                            Не забудьте приобрести соответствующий кабель для
+                            модели DW22-B
+                          </div>
+                        </div>
+                        <button class="device__stroke-popup-close">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#close"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="device__warning-block">
+                  <div class="device__warning-icon">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#warning-dark"></use>
+                    </svg>
+                  </div>
+                  <div class="device__warning-popup">
+                    <div class="device__warning-popup-body">
+                      <div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Sed iaculis malesuada tellus, et fermentum dolor porta
+                        quis. Curabitur quis urna sed erat maximus congue.
+                        Aenean eu massa id augue commodo auctor.
+                      </div>
+                      <button class="device__stroke-popup-close">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="device__stroke">
+                <p class="device__stroke-title-mobile">Модель</p>
+                <span class="device__stroke-name">FTXM20R</span>
+                <p class="device__stroke-title-mobile">
+                  Подходящий контроллер Wi-Fi
+                </p>
+                <div class="device__stroke-wires">
+                  <div class="device__stroke-controller">
+                    <div class="device__stroke-chip">
+                      <span>DW01-B</span>
+                      <span>DW11-B</span>
+                      <span>DW02-B</span>
+                      <div class="dote blue"></div>
+                    </div>
+                    <div class="device__stroke-popup">
+                      <div class="device__stroke-popup-body">
+                        <div class="device__stroke-popup-img">
+                          <img src="img/cable-blue.jpg" alt="Cable">
+                        </div>
+                        <div class="device__stroke-popup-inner">
+                          <p class="device__stroke-popup-title">
+                            Кабель подключения
+                          </p>
+                          <div class="device__stroke-popup-cable">
+                            <div class="dote blue"></div>
+                            <span>Голубой</span>
+                          </div>
+                        </div>
+                        <button class="device__stroke-popup-close">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#close"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="device__stroke-controller">
+                    <div class="device__stroke-chip">
+                      <span>DW21-B</span>
+                      <span>DW22-B</span>
+                      <div class="dote black"><div>L</div></div>
+                    </div>
+                    <div class="device__stroke-popup">
+                      <div class="device__stroke-popup-body">
+                        <div class="device__stroke-popup-img">
+                          <img src="img/cable-blue.jpg" alt="Cable">
+                        </div>
+                        <div class="device__stroke-popup-inner">
+                          <p class="device__stroke-popup-title">
+                            Кабель подключения
+                          </p>
+                          <div class="device__stroke-popup-cable">
+                            <div class="dote black"><div>L</div></div>
+                            <span>DCOMUS1A</span>
+                          </div>
+                          <div class="device__stroke-popup-note">
+                            Не забудьте приобрести соответствующий кабель для
+                            модели DW22-B
+                          </div>
+                        </div>
+                        <button class="device__stroke-popup-close">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#close"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="device__warning-block">
+                  <div class="device__warning-icon">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#warning-dark"></use>
+                    </svg>
+                  </div>
+                  <div class="device__warning-popup">
+                    <div class="device__warning-popup-body">
+                      <div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Sed iaculis malesuada tellus, et fermentum dolor porta
+                        quis. Curabitur quis urna sed erat maximus congue.
+                        Aenean eu massa id augue commodo auctor.
+                      </div>
+                      <button class="device__stroke-popup-close">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="device__stroke">
+                <p class="device__stroke-title-mobile">Модель</p>
+                <span class="device__stroke-name">FTXM20R</span>
+                <p class="device__stroke-title-mobile">
+                  Подходящий контроллер Wi-Fi
+                </p>
+                <div class="device__stroke-wires">
+                  <div class="device__stroke-controller">
+                    <div class="device__stroke-chip">
+                      <span>DW01-B</span>
+                      <span>DW11-B</span>
+                      <span>DW02-B</span>
+                      <div class="dote green"></div>
+                    </div>
+                    <div class="device__stroke-popup">
+                      <div class="device__stroke-popup-body">
+                        <div class="device__stroke-popup-img">
+                          <img src="img/cable-blue.jpg" alt="Cable">
+                        </div>
+                        <div class="device__stroke-popup-inner">
+                          <p class="device__stroke-popup-title">
+                            Кабель подключения
+                          </p>
+                          <div class="device__stroke-popup-cable">
+                            <div class="dote green"></div>
+                            <span>Зеленый</span>
+                          </div>
+                        </div>
+                        <button class="device__stroke-popup-close">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#close"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="device__stroke-controller">
+                    <div class="device__stroke-chip">
+                      <span>DW21-B</span>
+                      <span>DW22-B</span>
+                      <div class="dote black"><div>M</div></div>
+                    </div>
+                    <div class="device__stroke-popup">
+                      <div class="device__stroke-popup-body">
+                        <div class="device__stroke-popup-img">
+                          <img src="img/cable-blue.jpg" alt="Cable">
+                        </div>
+                        <div class="device__stroke-popup-inner">
+                          <p class="device__stroke-popup-title">
+                            Кабель подключения
+                          </p>
+                          <div class="device__stroke-popup-cable">
+                            <div class="dote black"><div>M</div></div>
+                            <span>DCOMUS1A</span>
+                          </div>
+                          <div class="device__stroke-popup-note">
+                            Не забудьте приобрести соответствующий кабель для
+                            модели DW22-B
+                          </div>
+                        </div>
+                        <button class="device__stroke-popup-close">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#close"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="device__warning-block">
+                  <div class="device__warning-icon">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#warning-dark"></use>
+                    </svg>
+                  </div>
+                  <div class="device__warning-popup">
+                    <div class="device__warning-popup-body">
+                      <div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Sed iaculis malesuada tellus, et fermentum dolor porta
+                        quis. Curabitur quis urna sed erat maximus congue.
+                        Aenean eu massa id augue commodo auctor.
+                      </div>
+                      <button class="device__stroke-popup-close">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="device__stroke">
+                <p class="device__stroke-title-mobile">Модель</p>
+                <span class="device__stroke-name">FTXM20R</span>
+                <p class="device__stroke-title-mobile">
+                  Подходящий контроллер Wi-Fi
+                </p>
+                <div class="device__stroke-wires">
+                  <div class="device__stroke-controller">
+                    <div class="device__stroke-chip">
+                      <span>DW01-B</span>
+                      <span>DW11-B</span>
+                      <span>DW02-B</span>
+                      <div class="dote rose"></div>
+                    </div>
+                    <div class="device__stroke-popup">
+                      <div class="device__stroke-popup-body">
+                        <div class="device__stroke-popup-img">
+                          <img src="img/cable-blue.jpg" alt="Cable">
+                        </div>
+                        <div class="device__stroke-popup-inner">
+                          <p class="device__stroke-popup-title">
+                            Кабель подключения
+                          </p>
+                          <div class="device__stroke-popup-cable">
+                            <div class="dote rose"></div>
+                            <span>Розовый</span>
+                          </div>
+                        </div>
+                        <button class="device__stroke-popup-close">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#close"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="device__stroke-controller">
+                    <div class="device__stroke-chip">
+                      <span>DW21-B</span>
+                      <span>DW22-B</span>
+                      <div class="dote black"><div>H</div></div>
+                    </div>
+                    <div class="device__stroke-popup">
+                      <div class="device__stroke-popup-body">
+                        <div class="device__stroke-popup-img">
+                          <img src="img/cable-blue.jpg" alt="Cable">
+                        </div>
+                        <div class="device__stroke-popup-inner">
+                          <p class="device__stroke-popup-title">
+                            Кабель подключения
+                          </p>
+                          <div class="device__stroke-popup-cable">
+                            <div class="dote black"><div>H</div></div>
+                            <span>DCOMUS1A</span>
+                          </div>
+                          <div class="device__stroke-popup-note">
+                            Не забудьте приобрести соответствующий кабель для
+                            модели DW22-B
+                          </div>
+                        </div>
+                        <button class="device__stroke-popup-close">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#close"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="device__warning-block">
+                  <div class="device__warning-icon">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#warning-dark"></use>
+                    </svg>
+                  </div>
+                  <div class="device__warning-popup">
+                    <div class="device__warning-popup-body">
+                      <div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Sed iaculis malesuada tellus, et fermentum dolor porta
+                        quis. Curabitur quis urna sed erat maximus congue.
+                        Aenean eu massa id augue commodo auctor.
+                      </div>
+                      <button class="device__stroke-popup-close">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="device__stroke">
+                <p class="device__stroke-title-mobile">Модель</p>
+                <span class="device__stroke-name">FTXM20R</span>
+                <p class="device__stroke-title-mobile">
+                  Подходящий контроллер Wi-Fi
+                </p>
+                <div class="device__stroke-wires">
+                  <div class="device__stroke-controller">
+                    <div class="device__stroke-chip">
+                      <span>DW01-B</span>
+                      <span>DW11-B</span>
+                      <span>DW02-B</span>
+                      <div class="dote orange"></div>
+                    </div>
+                    <div class="device__stroke-popup">
+                      <div class="device__stroke-popup-body">
+                        <div class="device__stroke-popup-img">
+                          <img src="img/cable-blue.jpg" alt="Cable">
+                        </div>
+                        <div class="device__stroke-popup-inner">
+                          <p class="device__stroke-popup-title">
+                            Кабель подключения
+                          </p>
+                          <div class="device__stroke-popup-cable">
+                            <div class="dote orange"></div>
+                            <span>Оранжевый</span>
+                          </div>
+                        </div>
+                        <button class="device__stroke-popup-close">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#close"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="device__stroke-controller">
+                    <div class="device__stroke-chip">
+                      <span>DW21-B</span>
+                      <span>DW22-B</span>
+                      <div class="dote black"><div>I</div></div>
+                    </div>
+                    <div class="device__stroke-popup">
+                      <div class="device__stroke-popup-body">
+                        <div class="device__stroke-popup-img">
+                          <img src="img/cable-blue.jpg" alt="Cable">
+                        </div>
+                        <div class="device__stroke-popup-inner">
+                          <p class="device__stroke-popup-title">
+                            Кабель подключения
+                          </p>
+                          <div class="device__stroke-popup-cable">
+                            <div class="dote black"><div>I</div></div>
+                            <span>DCOMUS1A</span>
+                          </div>
+                          <div class="device__stroke-popup-note">
+                            Не забудьте приобрести соответствующий кабель для
+                            модели DW22-B
+                          </div>
+                        </div>
+                        <button class="device__stroke-popup-close">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#close"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="device__warning-block">
+                  <div class="device__warning-icon">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#warning-dark"></use>
+                    </svg>
+                  </div>
+                  <div class="device__warning-popup">
+                    <div class="device__warning-popup-body">
+                      <div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Sed iaculis malesuada tellus, et fermentum dolor porta
+                        quis. Curabitur quis urna sed erat maximus congue.
+                        Aenean eu massa id augue commodo auctor.
+                      </div>
+                      <button class="device__stroke-popup-close">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="device__stroke">
+                <p class="device__stroke-title-mobile">Модель</p>
+                <span class="device__stroke-name">FTXM20R</span>
+                <p class="device__stroke-title-mobile">
+                  Подходящий контроллер Wi-Fi
+                </p>
+                <div class="device__stroke-wires">
+                  <div class="device__stroke-controller">
+                    <div class="device__stroke-chip">
+                      <span>DW01-B</span>
+                      <span>DW11-B</span>
+                      <span>DW02-B</span>
+                      <div class="dote yellow"></div>
+                    </div>
+                    <div class="device__stroke-popup">
+                      <div class="device__stroke-popup-body">
+                        <div class="device__stroke-popup-img">
+                          <img src="img/cable-blue.jpg" alt="Cable">
+                        </div>
+                        <div class="device__stroke-popup-inner">
+                          <p class="device__stroke-popup-title">
+                            Кабель подключения
+                          </p>
+                          <div class="device__stroke-popup-cable">
+                            <div class="dote yellow"></div>
+                            <span>Желтый</span>
+                          </div>
+                        </div>
+                        <button class="device__stroke-popup-close">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#close"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="device__stroke-controller">
+                    <div class="device__stroke-chip">
+                      <span>DW21-B</span>
+                      <span>DW22-B</span>
+                      <div class="dote black"><div>J</div></div>
+                    </div>
+                    <div class="device__stroke-popup">
+                      <div class="device__stroke-popup-body">
+                        <div class="device__stroke-popup-img">
+                          <img src="img/cable-blue.jpg" alt="Cable">
+                        </div>
+                        <div class="device__stroke-popup-inner">
+                          <p class="device__stroke-popup-title">
+                            Кабель подключения
+                          </p>
+                          <div class="device__stroke-popup-cable">
+                            <div class="dote black"><div>J</div></div>
+                            <span>DCOMUS1A</span>
+                          </div>
+                          <div class="device__stroke-popup-note">
+                            Не забудьте приобрести соответствующий кабель для
+                            модели DW22-B
+                          </div>
+                        </div>
+                        <button class="device__stroke-popup-close">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#close"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="device__warning-block">
+                  <div class="device__warning-icon">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#warning-dark"></use>
+                    </svg>
+                  </div>
+                  <div class="device__warning-popup">
+                    <div class="device__warning-popup-body">
+                      <div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Sed iaculis malesuada tellus, et fermentum dolor porta
+                        quis. Curabitur quis urna sed erat maximus congue.
+                        Aenean eu massa id augue commodo auctor.
+                      </div>
+                      <button class="device__stroke-popup-close">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="device__stroke">
+                <p class="device__stroke-title-mobile">Модель</p>
+                <span class="device__stroke-name">FTXM20R</span>
+                <p class="device__stroke-title-mobile">
+                  Подходящий контроллер Wi-Fi
+                </p>
+                <div class="device__stroke-wires">
+                  <div class="device__stroke-controller">
+                    <div class="device__stroke-chip">
+                      <span>DW01-B</span>
+                      <span>DW11-B</span>
+                      <span>DW02-B</span>
+                      <div class="dote brown"></div>
+                    </div>
+                    <div class="device__stroke-popup">
+                      <div class="device__stroke-popup-body">
+                        <div class="device__stroke-popup-img">
+                          <img src="img/cable-blue.jpg" alt="Cable">
+                        </div>
+                        <div class="device__stroke-popup-inner">
+                          <p class="device__stroke-popup-title">
+                            Кабель подключения
+                          </p>
+                          <div class="device__stroke-popup-cable">
+                            <div class="dote brown"></div>
+                            <span>Коричневый</span>
+                          </div>
+                        </div>
+                        <button class="device__stroke-popup-close">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#close"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="device__stroke-controller">
+                    <div class="device__stroke-chip">
+                      <span>DW21-B</span>
+                      <span>DW22-B</span>
+                      <div class="dote black"><div>K</div></div>
+                    </div>
+                    <div class="device__stroke-popup">
+                      <div class="device__stroke-popup-body">
+                        <div class="device__stroke-popup-img">
+                          <img src="img/cable-blue.jpg" alt="Cable">
+                        </div>
+                        <div class="device__stroke-popup-inner">
+                          <p class="device__stroke-popup-title">
+                            Кабель подключения
+                          </p>
+                          <div class="device__stroke-popup-cable">
+                            <div class="dote black"><div>K</div></div>
+                            <span>DCOMUS1A</span>
+                          </div>
+                          <div class="device__stroke-popup-note">
+                            Не забудьте приобрести соответствующий кабель для
+                            модели DW22-B
+                          </div>
+                        </div>
+                        <button class="device__stroke-popup-close">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#close"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="device__warning-block">
+                  <div class="device__warning-icon">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#warning-dark"></use>
+                    </svg>
+                  </div>
+                  <div class="device__warning-popup">
+                    <div class="device__warning-popup-body">
+                      <div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Sed iaculis malesuada tellus, et fermentum dolor porta
+                        quis. Curabitur quis urna sed erat maximus congue.
+                        Aenean eu massa id augue commodo auctor.
+                      </div>
+                      <button class="device__stroke-popup-close">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- <div class="device__info">
+            <div class="device__title-wrap">
+              <p class="device__series-title">
+                <span>Серия</span>
+              </p>
+              <p class="device__model-title">
+                <span>Модель</span>
+                <span>Контроллер Wi-Fi</span>
+              </p>
+            </div>
+
+            <div class="device__item model">
+              <a class="model__link" href="#">
+                <div class="model__image-container swiper-container">
+                  <div class="model__image-wrapper swiper-wrapper">
+                    <div class="model__image swiper-slide">
+                      <img src="img/ftxs-rxs.png" alt="FTXS/RXS" />
+                    </div>
+                    <div class="model__image swiper-slide">
+                      <img src="img/ftxs-rxs.png" alt="FTXS/RXS" />
+                    </div>
+                    <div class="model__image swiper-slide">
+                      <img src="img/ftxs-rxs.png" alt="FTXS/RXS" />
+                    </div>
+                  </div>
+                  <div class="model__pagination swiper-pagination"></div>
                 </div>
                 <div class="device__item-data">
                   <p class="model__brand">Daikin</p>
@@ -104,687 +1514,459 @@
               </a>
             </div>
 
-          <div class="device__model">
-            <ul class="device__model-list">
-              <li class="device__model-item">
-                <p class="device__model-name">ZACS/I-07 HPF/A17/N1</p>
-                <a class="device__controller-link" href="#">DW11-GW</a>
-                <div class="device__wire-color  white">
-                  <div class="device__wire-dote"><span></span></div>
+            <div class="device__model">
+              <ul class="device__model-list">
+                <li class="device__model-item">
+                  <p class="device__model-name">ZACS/I-07 HPF/A17/N1</p>
+                  <a class="device__controller-link" href="#">DW11-GW</a>
+                  <div class="device__wire-color white">
+                    <div class="device__wire-dote"><span></span></div>
 
-                  <div class="device__wire-popup">
-                    <div class="device__wire-image-wrap">
-
+                    <div class="device__wire-popup">
+                      <div class="device__wire-image-wrap"></div>
+                      <div class="device__wire-info">
+                        <p class="device__wire-title">Кабель подключения</p>
+                        <div class="device__wire-dote"></div>
+                        <p class="device__wire-name">Белый</p>
+                      </div>
                     </div>
-                    <div class="device__wire-info">
-                      <p class="device__wire-title">Кабель подключения</p>
-                      <div class="device__wire-dote"></div>
-                      <p class="device__wire-name">Белый</p>
-                    </div>
-                  </div>
 
-                  <div class="device__wire-popup-mobile">
-                    <div class="device__wire-popup-mobile-wrap">
-                      <div class="device__wire-image-wrap-mobile"></div>
-                      <p class="device__wire-popup-text">
-                        <span>Модель</span>
-                        <span>ZACS/I-12 HPF/A17/N1</span>
-                      </p>
-                      <p class="device__wire-popup-text">
-                        <span>Контроллер Wi-Fi</span>
-                        <a link="#" class="device__controller-link">DW11-GW</a>
-                      </p>
-                      <p class="device__wire-popup-text">
-                        <span>Кабель подключения</span>
-                        <span class="device__wire-dote"></span>
-                        <span>Белый</span>
-                      </p>
-                    </div>
-                    <button type="button" class="device__wire-popup-close">Ок</button>
-                  </div>
-
-                </div>
-              </li>
-              <li class="device__model-item">
-                <p class="device__model-name">ZACS/I-07 HPF/A17/N1</p>
-                <a class="device__controller-link" href="#">DW11-GW</a>
-                <div class="device__wire-color  grey">
-                  <div class="device__wire-dote"><span></span></div>
-
-                  <div class="device__wire-popup">
-                    <div class="device__wire-image-wrap">
-
-                    </div>
-                    <div class="device__wire-info">
-                      <p class="device__wire-title">Кабель подключения</p>
-                      <div class="device__wire-dote"></div>
-                      <p class="device__wire-name">Серый</p>
+                    <div class="device__wire-popup-mobile">
+                      <div class="device__wire-popup-mobile-wrap">
+                        <div class="device__wire-image-wrap-mobile"></div>
+                        <p class="device__wire-popup-text">
+                          <span>Модель</span>
+                          <span>ZACS/I-12 HPF/A17/N1</span>
+                        </p>
+                        <p class="device__wire-popup-text">
+                          <span>Контроллер Wi-Fi</span>
+                          <a link="#" class="device__controller-link"
+                            >DW11-GW</a
+                          >
+                        </p>
+                        <p class="device__wire-popup-text">
+                          <span>Кабель подключения</span>
+                          <span class="device__wire-dote"></span>
+                          <span>Белый</span>
+                        </p>
+                      </div>
+                      <button type="button" class="device__wire-popup-close">
+                        Ок
+                      </button>
                     </div>
                   </div>
+                </li>
+                <li class="device__model-item">
+                  <p class="device__model-name">ZACS/I-07 HPF/A17/N1</p>
+                  <a class="device__controller-link" href="#">DW11-GW</a>
+                  <div class="device__wire-color grey">
+                    <div class="device__wire-dote"><span></span></div>
 
-                  <div class="device__wire-popup-mobile">
-                    <div class="device__wire-popup-mobile-wrap">
-                      <div class="device__wire-image-wrap-mobile"></div>
-                      <p class="device__wire-popup-text">
-                        <span>Модель</span>
-                        <span>ZACS/I-12 HPF/A17/N1</span>
-                      </p>
-                      <p class="device__wire-popup-text">
-                        <span>Контроллер Wi-Fi</span>
-                        <a link="#" class="device__controller-link">DW11-GW</a>
-                      </p>
-                      <p class="device__wire-popup-text">
-                        <span>Кабель подключения</span>
-                        <span class="device__wire-dote"></span>
-                        <span>Белый</span>
-                      </p>
+                    <div class="device__wire-popup">
+                      <div class="device__wire-image-wrap"></div>
+                      <div class="device__wire-info">
+                        <p class="device__wire-title">Кабель подключения</p>
+                        <div class="device__wire-dote"></div>
+                        <p class="device__wire-name">Серый</p>
+                      </div>
                     </div>
-                    <button type="button" class="device__wire-popup-close">Ок</button>
-                  </div>
 
-                </div>
-              </li>
-              <li class="device__model-item">
-                <p class="device__model-name">ZACS/I-07 HPF/A17/N1</p>
-                <a class="device__controller-link" href="#">DW11-GW</a>
-                <div class="device__wire-color  red">
-                  <div class="device__wire-dote"><span></span></div>
-
-                  <div class="device__wire-popup">
-                    <div class="device__wire-image-wrap">
-
-                    </div>
-                    <div class="device__wire-info">
-                      <p class="device__wire-title">Кабель подключения</p>
-                      <div class="device__wire-dote"></div>
-                      <p class="device__wire-name">Красный</p>
-                    </div>
-                  </div>
-
-                  <div class="device__wire-popup-mobile">
-                    <div class="device__wire-popup-mobile-wrap">
-                      <div class="device__wire-image-wrap-mobile"></div>
-                      <p class="device__wire-popup-text">
-                        <span>Модель</span>
-                        <span>ZACS/I-12 HPF/A17/N1</span>
-                      </p>
-                      <p class="device__wire-popup-text">
-                        <span>Контроллер Wi-Fi</span>
-                        <a link="#" class="device__controller-link">DW11-GW</a>
-                      </p>
-                      <p class="device__wire-popup-text">
-                        <span>Кабель подключения</span>
-                        <span class="device__wire-dote"></span>
-                        <span>Красный</span>
-                      </p>
-                    </div>
-                    <button type="button" class="device__wire-popup-close">Ок</button>
-                  </div>
-
-                </div>
-              </li>
-              <li class="device__model-item">
-                <p class="device__model-name">ZACS/I-07 HPF/A17/N1</p>
-                <a class="device__controller-link" href="#">DW11-GW</a>
-                <div class="device__wire-color  black">
-                  <div class="device__wire-dote"><span></span></div>
-
-                  <div class="device__wire-popup">
-                    <div class="device__wire-image-wrap">
-
-                    </div>
-                    <div class="device__wire-info">
-                      <p class="device__wire-title">Кабель подключения</p>
-                      <div class="device__wire-dote"></div>
-                      <p class="device__wire-name">Черный</p>
+                    <div class="device__wire-popup-mobile">
+                      <div class="device__wire-popup-mobile-wrap">
+                        <div class="device__wire-image-wrap-mobile"></div>
+                        <p class="device__wire-popup-text">
+                          <span>Модель</span>
+                          <span>ZACS/I-12 HPF/A17/N1</span>
+                        </p>
+                        <p class="device__wire-popup-text">
+                          <span>Контроллер Wi-Fi</span>
+                          <a link="#" class="device__controller-link"
+                            >DW11-GW</a
+                          >
+                        </p>
+                        <p class="device__wire-popup-text">
+                          <span>Кабель подключения</span>
+                          <span class="device__wire-dote"></span>
+                          <span>Белый</span>
+                        </p>
+                      </div>
+                      <button type="button" class="device__wire-popup-close">
+                        Ок
+                      </button>
                     </div>
                   </div>
+                </li>
+                <li class="device__model-item">
+                  <p class="device__model-name">ZACS/I-07 HPF/A17/N1</p>
+                  <a class="device__controller-link" href="#">DW11-GW</a>
+                  <div class="device__wire-color red">
+                    <div class="device__wire-dote"><span></span></div>
 
-                  <div class="device__wire-popup-mobile">
-                    <div class="device__wire-popup-mobile-wrap">
-                      <div class="device__wire-image-wrap-mobile"></div>
-                      <p class="device__wire-popup-text">
-                        <span>Модель</span>
-                        <span>ZACS/I-12 HPF/A17/N1</span>
-                      </p>
-                      <p class="device__wire-popup-text">
-                        <span>Контроллер Wi-Fi</span>
-                        <a link="#" class="device__controller-link">DW11-GW</a>
-                      </p>
-                      <p class="device__wire-popup-text">
-                        <span>Кабель подключения</span>
-                        <span class="device__wire-dote"></span>
-                        <span>Черный</span>
-                      </p>
+                    <div class="device__wire-popup">
+                      <div class="device__wire-image-wrap"></div>
+                      <div class="device__wire-info">
+                        <p class="device__wire-title">Кабель подключения</p>
+                        <div class="device__wire-dote"></div>
+                        <p class="device__wire-name">Красный</p>
+                      </div>
                     </div>
-                    <button type="button" class="device__wire-popup-close">Ок</button>
-                  </div>
 
-                </div>
-              </li>
-              <li class="device__model-item">
-                <p class="device__model-name">ZACS/I-07 HPF/A17/N1</p>
-                <a class="device__controller-link" href="#">DW11-GW</a>
-                <div class="device__wire-color  blue">
-                  <div class="device__wire-dote"><span></span></div>
-
-                  <div class="device__wire-popup">
-                    <div class="device__wire-image-wrap">
-
-                    </div>
-                    <div class="device__wire-info">
-                      <p class="device__wire-title">Кабель подключения</p>
-                      <div class="device__wire-dote"></div>
-                      <p class="device__wire-name">Синий</p>
-                    </div>
-                  </div>
-
-                  <div class="device__wire-popup-mobile">
-                    <div class="device__wire-popup-mobile-wrap">
-                      <div class="device__wire-image-wrap-mobile"></div>
-                      <p class="device__wire-popup-text">
-                        <span>Модель</span>
-                        <span>ZACS/I-12 HPF/A17/N1</span>
-                      </p>
-                      <p class="device__wire-popup-text">
-                        <span>Контроллер Wi-Fi</span>
-                        <a link="#" class="device__controller-link">DW11-GW</a>
-                      </p>
-                      <p class="device__wire-popup-text">
-                        <span>Кабель подключения</span>
-                        <span class="device__wire-dote"></span>
-                        <span>Синий</span>
-                      </p>
-                    </div>
-                    <button type="button" class="device__wire-popup-close">Ок</button>
-                  </div>
-
-                </div>
-              </li>
-              <li class="device__model-item">
-                <p class="device__model-name">ZACS/I-07 HPF/A17/N1</p>
-                <a class="device__controller-link" href="#">DW11-GW</a>
-                <div class="device__wire-color  green">
-                  <div class="device__wire-dote"><span></span></div>
-
-                  <div class="device__wire-popup">
-                    <div class="device__wire-image-wrap">
-
-                    </div>
-                    <div class="device__wire-info">
-                      <p class="device__wire-title">Кабель подключения</p>
-                      <div class="device__wire-dote"></div>
-                      <p class="device__wire-name">Зеленый</p>
+                    <div class="device__wire-popup-mobile">
+                      <div class="device__wire-popup-mobile-wrap">
+                        <div class="device__wire-image-wrap-mobile"></div>
+                        <p class="device__wire-popup-text">
+                          <span>Модель</span>
+                          <span>ZACS/I-12 HPF/A17/N1</span>
+                        </p>
+                        <p class="device__wire-popup-text">
+                          <span>Контроллер Wi-Fi</span>
+                          <a link="#" class="device__controller-link"
+                            >DW11-GW</a
+                          >
+                        </p>
+                        <p class="device__wire-popup-text">
+                          <span>Кабель подключения</span>
+                          <span class="device__wire-dote"></span>
+                          <span>Красный</span>
+                        </p>
+                      </div>
+                      <button type="button" class="device__wire-popup-close">
+                        Ок
+                      </button>
                     </div>
                   </div>
+                </li>
+                <li class="device__model-item">
+                  <p class="device__model-name">ZACS/I-07 HPF/A17/N1</p>
+                  <a class="device__controller-link" href="#">DW11-GW</a>
+                  <div class="device__wire-color black">
+                    <div class="device__wire-dote"><span></span></div>
 
-                  <div class="device__wire-popup-mobile">
-                    <div class="device__wire-popup-mobile-wrap">
-                      <div class="device__wire-image-wrap-mobile"></div>
-                      <p class="device__wire-popup-text">
-                        <span>Модель</span>
-                        <span>ZACS/I-12 HPF/A17/N1</span>
-                      </p>
-                      <p class="device__wire-popup-text">
-                        <span>Контроллер Wi-Fi</span>
-                        <a link="#" class="device__controller-link">DW11-GW</a>
-                      </p>
-                      <p class="device__wire-popup-text">
-                        <span>Кабель подключения</span>
-                        <span class="device__wire-dote"></span>
-                        <span>Зеленый</span>
-                      </p>
+                    <div class="device__wire-popup">
+                      <div class="device__wire-image-wrap"></div>
+                      <div class="device__wire-info">
+                        <p class="device__wire-title">Кабель подключения</p>
+                        <div class="device__wire-dote"></div>
+                        <p class="device__wire-name">Черный</p>
+                      </div>
                     </div>
-                    <button type="button" class="device__wire-popup-close">Ок</button>
-                  </div>
 
-                </div>
-              </li>
-
-              <li class="device__model-item">
-                <p class="device__model-name">ZACS/I-07 HPF/A17/N1</p>
-                <a class="device__controller-link" href="#">DW11-GW</a>
-                <div class="device__wire-color  yellow">
-                  <div class="device__wire-dote"><span></span></div>
-
-                  <div class="device__wire-popup">
-                    <div class="device__wire-image-wrap">
-
-                    </div>
-                    <div class="device__wire-info">
-                      <p class="device__wire-title">Кабель подключения</p>
-                      <div class="device__wire-dote"></div>
-                      <p class="device__wire-name">Желтый</p>
-                    </div>
-                  </div>
-
-                  <div class="device__wire-popup-mobile">
-                    <div class="device__wire-popup-mobile-wrap">
-                      <div class="device__wire-image-wrap-mobile"></div>
-                      <p class="device__wire-popup-text">
-                        <span>Модель</span>
-                        <span>ZACS/I-12 HPF/A17/N1</span>
-                      </p>
-                      <p class="device__wire-popup-text">
-                        <span>Контроллер Wi-Fi</span>
-                        <a link="#" class="device__controller-link">DW11-GW</a>
-                      </p>
-                      <p class="device__wire-popup-text">
-                        <span>Кабель подключения</span>
-                        <span class="device__wire-dote"></span>
-                        <span>Зеленый</span>
-                      </p>
-                    </div>
-                    <button type="button" class="device__wire-popup-close">Ок</button>
-                  </div>
-
-                </div>
-              </li>
-
-              <li class="device__model-item">
-                <p class="device__model-name">ZACS/I-07 HPF/A17/N1</p>
-                <a class="device__controller-link" href="#">DW11-GW</a>
-                <div class="device__wire-color  brown">
-                  <div class="device__wire-dote"><span></span></div>
-
-                  <div class="device__wire-popup">
-                    <div class="device__wire-image-wrap">
-
-                    </div>
-                    <div class="device__wire-info">
-                      <p class="device__wire-title">Кабель подключения</p>
-                      <div class="device__wire-dote"></div>
-                      <p class="device__wire-name">Коричневый</p>
+                    <div class="device__wire-popup-mobile">
+                      <div class="device__wire-popup-mobile-wrap">
+                        <div class="device__wire-image-wrap-mobile"></div>
+                        <p class="device__wire-popup-text">
+                          <span>Модель</span>
+                          <span>ZACS/I-12 HPF/A17/N1</span>
+                        </p>
+                        <p class="device__wire-popup-text">
+                          <span>Контроллер Wi-Fi</span>
+                          <a link="#" class="device__controller-link"
+                            >DW11-GW</a
+                          >
+                        </p>
+                        <p class="device__wire-popup-text">
+                          <span>Кабель подключения</span>
+                          <span class="device__wire-dote"></span>
+                          <span>Черный</span>
+                        </p>
+                      </div>
+                      <button type="button" class="device__wire-popup-close">
+                        Ок
+                      </button>
                     </div>
                   </div>
+                </li>
+                <li class="device__model-item">
+                  <p class="device__model-name">ZACS/I-07 HPF/A17/N1</p>
+                  <a class="device__controller-link" href="#">DW11-GW</a>
+                  <div class="device__wire-color blue">
+                    <div class="device__wire-dote"><span></span></div>
 
-                  <div class="device__wire-popup-mobile">
-                    <div class="device__wire-popup-mobile-wrap">
-                      <div class="device__wire-image-wrap-mobile"></div>
-                      <p class="device__wire-popup-text">
-                        <span>Модель</span>
-                        <span>ZACS/I-12 HPF/A17/N1</span>
-                      </p>
-                      <p class="device__wire-popup-text">
-                        <span>Контроллер Wi-Fi</span>
-                        <a link="#" class="device__controller-link">DW11-GW</a>
-                      </p>
-                      <p class="device__wire-popup-text">
-                        <span>Кабель подключения</span>
-                        <span class="device__wire-dote"></span>
-                        <span>Зеленый</span>
-                      </p>
+                    <div class="device__wire-popup">
+                      <div class="device__wire-image-wrap"></div>
+                      <div class="device__wire-info">
+                        <p class="device__wire-title">Кабель подключения</p>
+                        <div class="device__wire-dote"></div>
+                        <p class="device__wire-name">Синий</p>
+                      </div>
                     </div>
-                    <button type="button" class="device__wire-popup-close">Ок</button>
-                  </div>
 
-                </div>
-              </li>
-
-              <li class="device__model-item">
-                <p class="device__model-name">ZACS/I-07 HPF/A17/N1</p>
-                <a class="device__controller-link" href="#">DW11-GW</a>
-                <div class="device__wire-color  orange">
-                  <div class="device__wire-dote"><span></span></div>
-
-                  <div class="device__wire-popup">
-                    <div class="device__wire-image-wrap">
-
-                    </div>
-                    <div class="device__wire-info">
-                      <p class="device__wire-title">Кабель подключения</p>
-                      <div class="device__wire-dote"></div>
-                      <p class="device__wire-name">Оранжевый</p>
-                    </div>
-                  </div>
-
-                  <div class="device__wire-popup-mobile">
-                    <div class="device__wire-popup-mobile-wrap">
-                      <div class="device__wire-image-wrap-mobile"></div>
-                      <p class="device__wire-popup-text">
-                        <span>Модель</span>
-                        <span>ZACS/I-12 HPF/A17/N1</span>
-                      </p>
-                      <p class="device__wire-popup-text">
-                        <span>Контроллер Wi-Fi</span>
-                        <a link="#" class="device__controller-link">DW11-GW</a>
-                      </p>
-                      <p class="device__wire-popup-text">
-                        <span>Кабель подключения</span>
-                        <span class="device__wire-dote"></span>
-                        <span>Зеленый</span>
-                      </p>
-                    </div>
-                    <button type="button" class="device__wire-popup-close">Ок</button>
-                  </div>
-
-                </div>
-              </li>
-
-              <li class="device__model-item">
-                <p class="device__model-name">ZACS/I-07 HPF/A17/N1</p>
-                <a class="device__controller-link" href="#">DW11-GW</a>
-                <div class="device__wire-color  rose">
-                  <div class="device__wire-dote"><span></span></div>
-
-                  <div class="device__wire-popup">
-                    <div class="device__wire-image-wrap">
-
-                    </div>
-                    <div class="device__wire-info">
-                      <p class="device__wire-title">Кабель подключения</p>
-                      <div class="device__wire-dote"></div>
-                      <p class="device__wire-name">Розовый</p>
+                    <div class="device__wire-popup-mobile">
+                      <div class="device__wire-popup-mobile-wrap">
+                        <div class="device__wire-image-wrap-mobile"></div>
+                        <p class="device__wire-popup-text">
+                          <span>Модель</span>
+                          <span>ZACS/I-12 HPF/A17/N1</span>
+                        </p>
+                        <p class="device__wire-popup-text">
+                          <span>Контроллер Wi-Fi</span>
+                          <a link="#" class="device__controller-link"
+                            >DW11-GW</a
+                          >
+                        </p>
+                        <p class="device__wire-popup-text">
+                          <span>Кабель подключения</span>
+                          <span class="device__wire-dote"></span>
+                          <span>Синий</span>
+                        </p>
+                      </div>
+                      <button type="button" class="device__wire-popup-close">
+                        Ок
+                      </button>
                     </div>
                   </div>
+                </li>
+                <li class="device__model-item">
+                  <p class="device__model-name">ZACS/I-07 HPF/A17/N1</p>
+                  <a class="device__controller-link" href="#">DW11-GW</a>
+                  <div class="device__wire-color green">
+                    <div class="device__wire-dote"><span></span></div>
 
-                  <div class="device__wire-popup-mobile">
-                    <div class="device__wire-popup-mobile-wrap">
-                      <div class="device__wire-image-wrap-mobile"></div>
-                      <p class="device__wire-popup-text">
-                        <span>Модель</span>
-                        <span>ZACS/I-12 HPF/A17/N1</span>
-                      </p>
-                      <p class="device__wire-popup-text">
-                        <span>Контроллер Wi-Fi</span>
-                        <a link="#" class="device__controller-link">DW11-GW</a>
-                      </p>
-                      <p class="device__wire-popup-text">
-                        <span>Кабель подключения</span>
-                        <span class="device__wire-dote"></span>
-                        <span>Зеленый</span>
-                      </p>
+                    <div class="device__wire-popup">
+                      <div class="device__wire-image-wrap"></div>
+                      <div class="device__wire-info">
+                        <p class="device__wire-title">Кабель подключения</p>
+                        <div class="device__wire-dote"></div>
+                        <p class="device__wire-name">Зеленый</p>
+                      </div>
                     </div>
-                    <button type="button" class="device__wire-popup-close">Ок</button>
-                  </div>
 
-                </div>
-              </li>
+                    <div class="device__wire-popup-mobile">
+                      <div class="device__wire-popup-mobile-wrap">
+                        <div class="device__wire-image-wrap-mobile"></div>
+                        <p class="device__wire-popup-text">
+                          <span>Модель</span>
+                          <span>ZACS/I-12 HPF/A17/N1</span>
+                        </p>
+                        <p class="device__wire-popup-text">
+                          <span>Контроллер Wi-Fi</span>
+                          <a link="#" class="device__controller-link"
+                            >DW11-GW</a
+                          >
+                        </p>
+                        <p class="device__wire-popup-text">
+                          <span>Кабель подключения</span>
+                          <span class="device__wire-dote"></span>
+                          <span>Зеленый</span>
+                        </p>
+                      </div>
+                      <button type="button" class="device__wire-popup-close">
+                        Ок
+                      </button>
+                    </div>
+                  </div>
+                </li>
 
-              <li class="device__model-item">
-                <p class="device__model-name">ZACS/I-07 HPF/A17/N1</p>
-                <p class="device__model-not-supported">не поддерживается</p>
-              </li>
-            </ul>
-          </div>
-        </div>
+                <li class="device__model-item">
+                  <p class="device__model-name">ZACS/I-07 HPF/A17/N1</p>
+                  <a class="device__controller-link" href="#">DW11-GW</a>
+                  <div class="device__wire-color yellow">
+                    <div class="device__wire-dote"><span></span></div>
 
-        <div class="device__wire-popup-overlay"></div>
-      </section>
-      <section class="manual">
-        <div class="toggle-wrapper">
-          <input id="how-works" type="checkbox" class="visually-hidden  toggle-input">
-          <label for="how-works" class="how-works__label  toggle-label">Инструкция по установке</label>
-          <div class="manual__installation  installation  toggle-content">
-            <p class="installation__warning">
-              Все работы по монтажу и обслуживанию Wi-Fi контроллера производятся только при отключенном электропитании.
-            </p>
-            <p class="installation__desc">
-              В процессе монтажа и эксплуатации соблюдайте общие правила электробезопасности при использовании электроприборов.
-            </p>
-            <section class="installation__difficulty-section">
-              <h2 class="installation__difficulty-title">
-                Уровень сложности
-              </h2>
-              <section class="installation__difficulty  difficulty  difficulty--7">
-                <div class="difficulty__bar">
-                  <span class="difficulty__section  difficulty__section--1"></span>
-                  <span class="difficulty__section  difficulty__section--2"></span>
-                  <span class="difficulty__section  difficulty__section--3"></span>
-                  <span class="difficulty__section  difficulty__section--4"></span>
-                  <span class="difficulty__section  difficulty__section--5"></span>
-                  <span class="difficulty__section  difficulty__section--6"></span>
-                  <span class="difficulty__section  difficulty__section--7"></span>
-                  <span class="difficulty__section  difficulty__section--8"></span>
-                  <span class="difficulty__section  difficulty__section--9"></span>
-                  <span class="difficulty__section  difficulty__section--10"></span>
-                </div>
-              </section>
-            </section>
-            <section class="installation__equipment  equipment">
-              <h2 class="equipment__title">Вам понадобятся:</h2>
-              <div class="equipment__wrapper">
-                <div class="equipment__item">
-                  <div class="equipment__image  equipment__image--dw01-b_11">
-                    <img src="img/dw01-b_11.jpg" alt="Контроллер">
-                  </div>
-                  <div class="equipment__content">
-                    <h3 class="equipment__item-title">
-                      Контроллер DW01-B или DW01/11
-                    </h3>
-                    <p class="equipment__item-desc">
-                      Wi-Fi контроллер управления
-                    </p>
-                  </div>
-                </div>
-                <div class="equipment__item">
-                  <div class="equipment__image  equipment__image--cable-white">
-                    <img src="img/cable-black-big.jpg" alt="Кабель подключения">
-                  </div>
-                  <div class="equipment__content">
-                    <h3 class="equipment__item-title">
-                      Кабель подключения
-                    </h3>
-                    <p class="equipment__item-desc">
-                      Кабель входит в стандартную комплектацию Вашего контроллера
-                    </p>
-                  </div>
-                </div>
-                <div class="equipment__item">
-                  <div class="equipment__image  equipment__image--crosshead-sd">
-                    <img src="img/crosshead-sd.svg" alt="Отвертка крестовая">
-                  </div>
-                  <div class="equipment__content">
-                    <h3 class="equipment__item-title">
-                      Отвертка крестовая
-                    </h3>
-                    <p class="equipment__item-desc">
-                      Ширина наконечника 5мм
-                    </p>
-                  </div>
-                </div>
-                <div class="equipment__item">
-                  <div class="equipment__image  equipment__image--flat-sd">
-                    <img src="img/flat-sd.svg" alt="Отвертка плоская">
-                  </div>
-                  <div class="equipment__content">
-                    <h3 class="equipment__item-title">
-                      Отвертка плоская
-                    </h3>
-                    <p class="equipment__item-desc">
-                      Ширина наконечника 5мм
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="equipment__container  swiper-container"></div>
-            </section>
-            <section class="installation__process  process">
-              <h2 class="process__title">Процесс установки:</h2>
-              <div class="process__wrapper">
-                <div class="process__item">
-                  <div class="process__image  flat">
-                    <img src="img/flxs-step-1.jpg" alt="Слайд установки">
-                  </div>
-                  <div class="process__item-content">
-                    <span class="process__item-number">1</span>
-                    <p class="process__item-desc">
-                      Снимите 3 заглушки, скрывающие винты крепления панели внутреннего блока
-                    </p>
-                  </div>
-                </div>
-                <div class="process__item">
-                  <div class="process__image">
-                    <img src="img/step-000.jpg" alt="Слайд установки">
-                  </div>
-                  <div class="process__item-content">
-                    <span class="process__item-number">2</span>
-                    <p class="process__item-desc">
-                      Открутите 3 винта крепления корпуса внутреннего блока
-                    </p>
-                  </div>
-                </div>
-                <div class="process__item">
-                  <div class="process__image">
-                    <img src="img/flxs-step-3.jpg" alt="Слайд установки">
-                  </div>
-                  <div class="process__item-content">
-                    <span class="process__item-number">3</span>
-                    <p class="process__item-desc">
-                      Откройте панель фильтров
-                    </p>
-                  </div>
-                </div>
-                <div class="process__item">
-                  <div class="process__image">
-                    <img src="img/flxs-step-4.jpg" alt="Слайд установки">
-                  </div>
-                  <div class="process__item-content">
-                    <span class="process__item-number">4</span>
-                    <p class="process__item-desc">
-                      Открутите 2 винта за панелью фильтров
-                    </p>
-                  </div>
-                </div>
-                <div class="process__item">
-                  <div class="process__image">
-                    <img src="img/flxs-step-5.jpg" alt="Слайд установки">
-                  </div>
-                  <div class="process__item-content">
-                    <span class="process__item-number">5</span>
-                    <p class="process__item-desc">
-                      Отщёлкните центральный фиксатор
-                    </p>
-                  </div>
-                </div>
-                <div class="process__item">
-                  <div class="process__image">
-                    <img src="img/flxs-step-6.jpg" alt="Слайд установки">
-                  </div>
-                  <div class="process__item-content">
-                    <span class="process__item-number">6</span>
-                    <p class="process__item-desc">
-                      Открутите 2 винта под крышкой блока фильтров
-                    </p>
-                  </div>
-                </div>
-                <div class="process__item">
-                  <div class="process__image">
-                    <img src="img/flxs-step-7.jpg" alt="Слайд установки">
-                  </div>
-                  <div class="process__item-content">
-                    <span class="process__item-number">7</span>
-                    <p class="process__item-desc">
-                      Снимите корпус внутреннего блока
-                    </p>
-                  </div>
-                </div>
-                <div class="process__item">
-                  <div class="process__image">
-                    <img src="img/flxs-step-8.jpg" alt="Слайд установки">
-                  </div>
-                  <div class="process__item-content">
-                    <span class="process__item-number">8</span>
-                    <p class="process__item-desc">
-                      Открутите 4 винта крепления пластикового блока управления
-                    </p>
-                  </div>
-                </div>
-                <div class="process__item">
-                  <div class="process__image">
-                    <img src="img/flxs-step-9.jpg" alt="Слайд установки">
-                  </div>
-                  <div class="process__item-content">
-                    <span class="process__item-number">9</span>
-                    <p class="process__item-desc">
-                      Снимите крышку блока управления для доступа к разъёму S21 подключения внещних контроллеров
-                    </p>
-                  </div>
-                </div>
-                <div class="process__item">
-                  <div class="process__image">
-                    <img src="img/flxs-step-10.jpg" alt="Слайд установки">
-                  </div>
-                  <div class="process__item-content">
-                    <span class="process__item-number">10</span>
-                    <p class="process__item-desc">
-                      Подключите один конец разъёма кабеля контроллера к разъёму плат внутренного блока, второй конец к контроллеру DW01-B
-                    </p>
-                  </div>
-                </div>
-                <div class="process__item">
-                  <div class="process__image">
-                    <img src="img/flxs-step-11.jpg" alt="Слайд установки">
-                  </div>
-                  <div class="process__item-content">
-                    <span class="process__item-number">11</span>
-                    <p class="process__item-desc">
-                      Закройте крышку блока управления, закрепите контроллер в пространстве внутреннего блока
-                    </p>
-                  </div>
-                </div>
-                <div class="process__item">
-                  <div class="process__image">
-                    <img src="img/flxs-step-12.jpg" alt="Слайд установки">
-                  </div>
-                  <div class="process__item-content">
-                    <span class="process__item-number">12</span>
-                    <p class="process__item-desc">
-                      Закрепите блок управления кондиционера винтами.
-                    </p>
-                  </div>
-                </div>
-                <div class="process__item">
-                  <div class="process__image">
-                    <img src="img/daichi-comfort-qr.jpg" alt="Слайд установки">
-                  </div>
-                  <div class="process__item-content">
-                    <span class="process__item-number">13</span>
-                    <p class="process__item-desc">
-                      Соберите корпус внутреннего блока в обратном порядке
-                    </p>
-                  </div>
-                </div>
-                <div class="process__item">
-                  <div class="process__image">
-                    <img src="img/service-center.jpg" alt="Слайд установки">
-                  </div>
-                  <div class="process__item-content">
-                    <span class="process__item-number">14</span>
-                    <p class="process__item-desc">
-                      Установка контроллера завершена!
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="process__container  swiper-container">
+                    <div class="device__wire-popup">
+                      <div class="device__wire-image-wrap"></div>
+                      <div class="device__wire-info">
+                        <p class="device__wire-title">Кабель подключения</p>
+                        <div class="device__wire-dote"></div>
+                        <p class="device__wire-name">Желтый</p>
+                      </div>
+                    </div>
 
-              </div>
-            </section>
+                    <div class="device__wire-popup-mobile">
+                      <div class="device__wire-popup-mobile-wrap">
+                        <div class="device__wire-image-wrap-mobile"></div>
+                        <p class="device__wire-popup-text">
+                          <span>Модель</span>
+                          <span>ZACS/I-12 HPF/A17/N1</span>
+                        </p>
+                        <p class="device__wire-popup-text">
+                          <span>Контроллер Wi-Fi</span>
+                          <a link="#" class="device__controller-link"
+                            >DW11-GW</a
+                          >
+                        </p>
+                        <p class="device__wire-popup-text">
+                          <span>Кабель подключения</span>
+                          <span class="device__wire-dote"></span>
+                          <span>Зеленый</span>
+                        </p>
+                      </div>
+                      <button type="button" class="device__wire-popup-close">
+                        Ок
+                      </button>
+                    </div>
+                  </div>
+                </li>
 
-          </div>
-          <div class="toggle-shadow"></div>
-        </div>
-      </section>
-    </div>
-  </main>
-  <footer class="footer  container">
-    <div class="footer__right">
-      <a class="footer__logo-link" href="https:/daichi.ru">
-        <svg xmlns="http://www.w3.org/2000/svg" width="154.826" height="28" viewBox="0 0 154.826 28"><defs><style>.a{fill: inherit;}</style></defs><g transform="translate(-41 -254)"><g transform="translate(41 254)"><path class="a" d="M44.034.718A13.883,13.883,0,0,1,53.886,4.64a13.52,13.52,0,0,1,2.966,4.3,12.865,12.865,0,0,1,1.061,5.311,13.412,13.412,0,0,1-1.061,5.311,13.971,13.971,0,0,1-2.966,4.3,13.119,13.119,0,0,1-4.409,2.86,13.57,13.57,0,0,1-5.443,1.062H33.665V.718Zm3.429,21.3a7.459,7.459,0,0,0,2.64-1.8,8.859,8.859,0,0,0,1.687-2.7,8.716,8.716,0,0,0,.6-3.268,9,9,0,0,0-.6-3.323A7.962,7.962,0,0,0,50.1,8.262a8.314,8.314,0,0,0-2.64-1.825,9.263,9.263,0,0,0-3.429-.654H39.19V22.7h4.844A8.293,8.293,0,0,0,47.464,22.017Z" transform="translate(-11.948 -0.255)"></path><path class="a" d="M127.023.718V27.764H121.5V.718Z" transform="translate(-43.119 -0.255)"></path><path class="a" d="M158.532,16.914a7.2,7.2,0,0,1-7.457,5.747c-5.769,0-7.593-4.467-7.593-8.661s1.851-8.661,7.593-8.661a7.171,7.171,0,0,1,7.457,5.747h5.661C163.077,4.44,158.178,0,151.293,0c-7.838,0-13.553,5.747-13.553,14,0,8.226,5.688,14,13.553,14,6.885,0,11.784-4.412,12.9-11.058h-5.661Z" transform="translate(-48.883)"></path><path class="a" d="M236.961.718V27.764h-5.525V.718Z" transform="translate(-82.135 -0.255)"></path><path class="a" d="M191.442.718V11.694h12.138V.718h5.552V27.764h-5.525V16.542H191.442V27.764h-5.525V.718Z" transform="translate(-65.98 -0.255)"></path><path class="a" d="M8.273,0a8.28,8.28,0,1,0,8.273,8.28A8.273,8.273,0,0,0,8.273,0Zm0,11.658a3.4,3.4,0,1,1,3.4-3.4A3.44,3.44,0,0,1,8.273,11.658Z"></path><path class="a" d="M94.171,27.764h5.851L90.824.718H82.332L73.025,27.764h5.851L80.7,22.208H92.348Zm-11.893-10.3L86.551,4.531,90.8,17.469Z" transform="translate(-25.916 -0.255)"></path></g></g></svg>
-      </a>
-      <p class="footer__copyright">© Daichi 2020. Все права защищены</p>
-    </div>
+                <li class="device__model-item">
+                  <p class="device__model-name">ZACS/I-07 HPF/A17/N1</p>
+                  <a class="device__controller-link" href="#">DW11-GW</a>
+                  <div class="device__wire-color brown">
+                    <div class="device__wire-dote"><span></span></div>
 
-    <div class="footer__links">
-      <a href="#" class="footer__link  footer__link--ios"></a>
-      <a href="#" class="footer__link  footer__link--android"></a>
-    </div>
-  </footer>
+                    <div class="device__wire-popup">
+                      <div class="device__wire-image-wrap"></div>
+                      <div class="device__wire-info">
+                        <p class="device__wire-title">Кабель подключения</p>
+                        <div class="device__wire-dote"></div>
+                        <p class="device__wire-name">Коричневый</p>
+                      </div>
+                    </div>
 
+                    <div class="device__wire-popup-mobile">
+                      <div class="device__wire-popup-mobile-wrap">
+                        <div class="device__wire-image-wrap-mobile"></div>
+                        <p class="device__wire-popup-text">
+                          <span>Модель</span>
+                          <span>ZACS/I-12 HPF/A17/N1</span>
+                        </p>
+                        <p class="device__wire-popup-text">
+                          <span>Контроллер Wi-Fi</span>
+                          <a link="#" class="device__controller-link"
+                            >DW11-GW</a
+                          >
+                        </p>
+                        <p class="device__wire-popup-text">
+                          <span>Кабель подключения</span>
+                          <span class="device__wire-dote"></span>
+                          <span>Зеленый</span>
+                        </p>
+                      </div>
+                      <button type="button" class="device__wire-popup-close">
+                        Ок
+                      </button>
+                    </div>
+                  </div>
+                </li>
 
+                <li class="device__model-item">
+                  <p class="device__model-name">ZACS/I-07 HPF/A17/N1</p>
+                  <a class="device__controller-link" href="#">DW11-GW</a>
+                  <div class="device__wire-color orange">
+                    <div class="device__wire-dote"><span></span></div>
 
-  <script src="js/vendor.min.js"></script>
-  <script src="js/script.min.js"></script>
-</body>
+                    <div class="device__wire-popup">
+                      <div class="device__wire-image-wrap"></div>
+                      <div class="device__wire-info">
+                        <p class="device__wire-title">Кабель подключения</p>
+                        <div class="device__wire-dote"></div>
+                        <p class="device__wire-name">Оранжевый</p>
+                      </div>
+                    </div>
+
+                    <div class="device__wire-popup-mobile">
+                      <div class="device__wire-popup-mobile-wrap">
+                        <div class="device__wire-image-wrap-mobile"></div>
+                        <p class="device__wire-popup-text">
+                          <span>Модель</span>
+                          <span>ZACS/I-12 HPF/A17/N1</span>
+                        </p>
+                        <p class="device__wire-popup-text">
+                          <span>Контроллер Wi-Fi</span>
+                          <a link="#" class="device__controller-link"
+                            >DW11-GW</a
+                          >
+                        </p>
+                        <p class="device__wire-popup-text">
+                          <span>Кабель подключения</span>
+                          <span class="device__wire-dote"></span>
+                          <span>Зеленый</span>
+                        </p>
+                      </div>
+                      <button type="button" class="device__wire-popup-close">
+                        Ок
+                      </button>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="device__model-item">
+                  <p class="device__model-name">ZACS/I-07 HPF/A17/N1</p>
+                  <a class="device__controller-link" href="#">DW11-GW</a>
+                  <div class="device__wire-color rose">
+                    <div class="device__wire-dote"><span></span></div>
+
+                    <div class="device__wire-popup">
+                      <div class="device__wire-image-wrap"></div>
+                      <div class="device__wire-info">
+                        <p class="device__wire-title">Кабель подключения</p>
+                        <div class="device__wire-dote"></div>
+                        <p class="device__wire-name">Розовый</p>
+                      </div>
+                    </div>
+
+                    <div class="device__wire-popup-mobile">
+                      <div class="device__wire-popup-mobile-wrap">
+                        <div class="device__wire-image-wrap-mobile"></div>
+                        <p class="device__wire-popup-text">
+                          <span>Модель</span>
+                          <span>ZACS/I-12 HPF/A17/N1</span>
+                        </p>
+                        <p class="device__wire-popup-text">
+                          <span>Контроллер Wi-Fi</span>
+                          <a link="#" class="device__controller-link"
+                            >DW11-GW</a
+                          >
+                        </p>
+                        <p class="device__wire-popup-text">
+                          <span>Кабель подключения</span>
+                          <span class="device__wire-dote"></span>
+                          <span>Зеленый</span>
+                        </p>
+                      </div>
+                      <button type="button" class="device__wire-popup-close">
+                        Ок
+                      </button>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="device__model-item">
+                  <p class="device__model-name">ZACS/I-07 HPF/A17/N1</p>
+                  <p class="device__model-not-supported">не поддерживается</p>
+                </li>
+              </ul>
+            </div>
+          </div> -->
+
+          <div class="device__wire-popup-overlay"></div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer container">
+      <div class="footer__right">
+        <a class="footer__logo-link" href="https:/daichi.ru">
+          <svg xmlns="http://www.w3.org/2000/svg" width="154.826" height="28" viewBox="0 0 154.826 28">
+            <defs>
+              <style>
+                .a {
+                  fill: inherit;
+                }
+              </style>
+            </defs>
+            <g transform="translate(-41 -254)">
+              <g transform="translate(41 254)">
+                <path class="a" d="M44.034.718A13.883,13.883,0,0,1,53.886,4.64a13.52,13.52,0,0,1,2.966,4.3,12.865,12.865,0,0,1,1.061,5.311,13.412,13.412,0,0,1-1.061,5.311,13.971,13.971,0,0,1-2.966,4.3,13.119,13.119,0,0,1-4.409,2.86,13.57,13.57,0,0,1-5.443,1.062H33.665V.718Zm3.429,21.3a7.459,7.459,0,0,0,2.64-1.8,8.859,8.859,0,0,0,1.687-2.7,8.716,8.716,0,0,0,.6-3.268,9,9,0,0,0-.6-3.323A7.962,7.962,0,0,0,50.1,8.262a8.314,8.314,0,0,0-2.64-1.825,9.263,9.263,0,0,0-3.429-.654H39.19V22.7h4.844A8.293,8.293,0,0,0,47.464,22.017Z" transform="translate(-11.948 -0.255)"></path>
+                <path class="a" d="M127.023.718V27.764H121.5V.718Z" transform="translate(-43.119 -0.255)"></path>
+                <path class="a" d="M158.532,16.914a7.2,7.2,0,0,1-7.457,5.747c-5.769,0-7.593-4.467-7.593-8.661s1.851-8.661,7.593-8.661a7.171,7.171,0,0,1,7.457,5.747h5.661C163.077,4.44,158.178,0,151.293,0c-7.838,0-13.553,5.747-13.553,14,0,8.226,5.688,14,13.553,14,6.885,0,11.784-4.412,12.9-11.058h-5.661Z" transform="translate(-48.883)"></path>
+                <path class="a" d="M236.961.718V27.764h-5.525V.718Z" transform="translate(-82.135 -0.255)"></path>
+                <path class="a" d="M191.442.718V11.694h12.138V.718h5.552V27.764h-5.525V16.542H191.442V27.764h-5.525V.718Z" transform="translate(-65.98 -0.255)"></path>
+                <path class="a" d="M8.273,0a8.28,8.28,0,1,0,8.273,8.28A8.273,8.273,0,0,0,8.273,0Zm0,11.658a3.4,3.4,0,1,1,3.4-3.4A3.44,3.44,0,0,1,8.273,11.658Z"></path>
+                <path class="a" d="M94.171,27.764h5.851L90.824.718H82.332L73.025,27.764h5.851L80.7,22.208H92.348Zm-11.893-10.3L86.551,4.531,90.8,17.469Z" transform="translate(-25.916 -0.255)"></path>
+              </g>
+            </g>
+          </svg>
+        </a>
+        <p class="footer__copyright">© Daichi 2020. Все права защищены</p>
+      </div>
+
+      <div class="footer__links">
+        <a href="#" class="footer__link footer__link--ios"></a>
+        <a href="#" class="footer__link footer__link--android"></a>
+      </div>
+    </footer>
+
+    <script src="js/vendor.min.js"></script>
+    <script src="js/script.min.js"></script>
+  </body>
 </html>
