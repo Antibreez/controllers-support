@@ -511,6 +511,9 @@
     // padding-left: 3px;
     margin-right: 8px;
     font-weight: 600;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 
     div {
       width: 12px;
@@ -562,6 +565,58 @@
 
     &.brown {
       background-color: brown;
+    }
+
+    &.wire-a {
+      background-image: url("../img/wire-a.svg");
+    }
+
+    &.wire-c {
+      background-image: url("../img/wire-c.svg");
+    }
+
+    &.wire-e {
+      background-image: url("../img/wire-e.svg");
+    }
+
+    &.wire-f {
+      background-image: url("../img/wire-f.svg");
+    }
+
+    &.wire-g {
+      background-image: url("../img/wire-g.svg");
+    }
+
+    &.wire-l {
+      background-image: url("../img/wire-l.svg");
+    }
+
+    &.wire-m {
+      background-image: url("../img/wire-m.svg");
+    }
+
+    &.wire-h {
+      background-image: url("../img/wire-h.svg");
+    }
+
+    &.wire-i {
+      background-image: url("../img/wire-i.svg");
+    }
+
+    &.wire-j {
+      background-image: url("../img/wire-j.svg");
+    }
+
+    &.wire-k {
+      background-image: url("../img/wire-k.svg");
+    }
+
+    &.wire-b {
+      background-image: url("../img/wire-b.svg");
+    }
+
+    &.wire-d {
+      background-image: url("../img/wire-d.svg");
     }
   }
 }
@@ -652,6 +707,9 @@
     justify-content: center;
     // padding-left: 2px;
     font-weight: 600;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 
     div {
       width: auto;
@@ -702,6 +760,58 @@
 
     &.brown {
       background-color: brown;
+    }
+
+    &.wire-a {
+      background-image: url("../img/wire-a.svg");
+    }
+
+    &.wire-c {
+      background-image: url("../img/wire-c.svg");
+    }
+
+    &.wire-e {
+      background-image: url("../img/wire-e.svg");
+    }
+
+    &.wire-f {
+      background-image: url("../img/wire-f.svg");
+    }
+
+    &.wire-g {
+      background-image: url("../img/wire-g.svg");
+    }
+
+    &.wire-l {
+      background-image: url("../img/wire-l.svg");
+    }
+
+    &.wire-m {
+      background-image: url("../img/wire-m.svg");
+    }
+
+    &.wire-h {
+      background-image: url("../img/wire-h.svg");
+    }
+
+    &.wire-i {
+      background-image: url("../img/wire-i.svg");
+    }
+
+    &.wire-j {
+      background-image: url("../img/wire-j.svg");
+    }
+
+    &.wire-k {
+      background-image: url("../img/wire-k.svg");
+    }
+
+    &.wire-b {
+      background-image: url("../img/wire-b.svg");
+    }
+
+    &.wire-d {
+      background-image: url("../img/wire-d.svg");
     }
   }
 }
