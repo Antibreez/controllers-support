@@ -4504,6 +4504,13 @@ a {
   padding: 16px;
   border-radius: 8px;
   margin: 0 0 40px;
+  text-decoration: none;
+  -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0);
+          box-shadow: 0 3px 20px rgba(0, 0, 0, 0);
+  -webkit-transition: -webkit-box-shadow 0.3s;
+  transition: -webkit-box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
 }
 
 .device__block .model__image-container {
@@ -4511,6 +4518,24 @@ a {
   margin-right: 40px;
   width: 200px;
   height: 200px;
+}
+
+.device__block[href]:hover {
+  -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 3px 20px rgba(0, 0, 0, 0.05);
+}
+
+.device__block-installation-link {
+  font-size: 16px;
+  line-height: 24px;
+  color: #5ea9ff;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.device__block-installation-link:hover {
+  color: #3090fd;
 }
 
 .device__block-name {

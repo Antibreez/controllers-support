@@ -333,12 +333,33 @@
   padding: 16px;
   border-radius: 8px;
   margin: 0 0 40px;
+  text-decoration: none;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0);
+  transition: box-shadow 0.3s;
 
   .model__image-container {
     margin: 0;
     margin-right: 40px;
     width: 200px;
     height: 200px;
+  }
+}
+
+.device__block[href] {
+  &:hover {
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.05);
+  }
+}
+
+.device__block-installation-link {
+  font-size: 16px;
+  line-height: 24px;
+  color: #5ea9ff;
+  text-decoration: none;
+  transition: color 0.2s;
+
+  &:hover {
+    color: #3090fd;
   }
 }
 
