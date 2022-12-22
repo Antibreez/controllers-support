@@ -761,110 +761,118 @@
 })();
 
 (function () {
-  const wrapper = document.querySelector('.equipment__wrapper');
-  const container = document.querySelector('.equipment__container');
+  //const wrapper = document.querySelector('.equipment__wrapper');
+  const container = document.querySelectorAll(".equipment__container");
 
-  if(!wrapper) {
+  if (!container) {
     return;
   }
 
-  const initSwiper = () => {
-    return new Swiper('.equipment__container', {
+  const initSwiper = (item) => {
+    return new Swiper(item, {
       pagination: {
-        el: '.equipment__pagination',
-        type: 'bullets',
+        el: ".equipment__pagination",
+        type: "bullets",
       },
       loop: true,
     });
   };
 
   const addSlideClass = (element) => {
-    let items = element.querySelectorAll('.equipment__item');
+    let items = element.querySelectorAll(".equipment__item");
     items.forEach((item) => {
-      item.classList.add('swiper-slide');
+      item.classList.add("swiper-slide");
     });
   };
 
   const renderSlider = () => {
-    let fragment = document.createDocumentFragment();
+    container.forEach((item) => {
+      let fragment = document.createDocumentFragment();
 
-    let wrapperNode = wrapper.cloneNode(true);
-    wrapperNode.className = 'equipment__slide-wrapper';
-    wrapperNode.classList.add('swiper-wrapper');
+      let wrapperNode = item.parentNode
+        .querySelector(".equipment__wrapper")
+        .cloneNode(true);
+      wrapperNode.className = "equipment__slide-wrapper";
+      wrapperNode.classList.add("swiper-wrapper");
 
-    let paginationNode = document.createElement('div');
-    paginationNode.classList.add('equipment__pagination');
-    paginationNode.classList.add('swiper-pagination');
+      let paginationNode = document.createElement("div");
+      paginationNode.classList.add("equipment__pagination");
+      paginationNode.classList.add("swiper-pagination");
 
-    fragment.appendChild(wrapperNode);
-    fragment.appendChild(paginationNode);
+      fragment.appendChild(wrapperNode);
+      fragment.appendChild(paginationNode);
 
-    container.appendChild(fragment);
-    addSlideClass(container);
+      item.appendChild(fragment);
+      addSlideClass(item);
 
-    initSwiper();
+      initSwiper(item);
+    });
   };
 
   renderSlider();
 })();
 
 (function () {
-  const wrapper = document.querySelector('.process__wrapper');
-  const container = document.querySelector('.process__container');
+  //const wrapper = document.querySelector('.process__wrapper');
+  const container = document.querySelectorAll(".process__container");
 
-  if (!wrapper) {
+  if (!container) {
     return;
   }
 
-  const initSwiper = () => {
-    return new Swiper('.process__container', {
+  const initSwiper = (item) => {
+    return new Swiper(item, {
       pagination: {
-        el: '.process__pagination',
-        type: 'bullets',
+        el: ".process__pagination",
+        type: "bullets",
       },
       loop: true,
     });
   };
 
   const addSlideClass = (element) => {
-    let items = element.querySelectorAll('.process__item');
+    let items = element.querySelectorAll(".process__item");
     items.forEach((item) => {
-      item.classList.add('swiper-slide');
+      item.classList.add("swiper-slide");
     });
   };
 
-  const addNumbering = (swiper) => {
-    const numberField = container.querySelector('.process__number');
+  const addNumbering = (swiper, el) => {
+    const numberField = el.querySelector(".process__number");
 
-    swiper.on('slideChange', () => {
+    swiper.on("slideChange", () => {
       numberField.textContent = swiper.realIndex + 1;
     });
   };
 
   const renderSlider = () => {
-    let fragment = document.createDocumentFragment();
+    container.forEach((item) => {
+      let fragment = document.createDocumentFragment();
 
-    let wrapperNode = wrapper.cloneNode(true);
-    wrapperNode.className = 'process__slide-wrapper';
-    wrapperNode.classList.add('swiper-wrapper');
+      let wrapperNode = item.parentNode
+        .querySelector(".process__wrapper")
+        .cloneNode(true);
+      wrapperNode.className = "process__slide-wrapper";
+      wrapperNode.classList.add("swiper-wrapper");
 
-    let paginationNode = document.createElement('div');
-    paginationNode.classList.add('process__pagination');
-    paginationNode.classList.add('swiper-pagination');
+      let paginationNode = document.createElement("div");
+      paginationNode.classList.add("process__pagination");
+      paginationNode.classList.add("swiper-pagination");
 
-    let numberNode = document.createElement('div');
-    numberNode.className = 'process__number';
-    numberNode.textContent = 1;
+      let numberNode = document.createElement("div");
+      numberNode.className = "process__number";
+      numberNode.textContent = 1;
 
-    fragment.appendChild(wrapperNode);
-    fragment.appendChild(paginationNode);
-    fragment.appendChild(numberNode);
+      fragment.appendChild(wrapperNode);
+      fragment.appendChild(paginationNode);
+      fragment.appendChild(numberNode);
 
-    container.appendChild(fragment);
-    addSlideClass(container);
+      item.appendChild(fragment);
+      addSlideClass(item);
 
-    const processSwiper = initSwiper();
-    addNumbering(processSwiper);
+      const processSwiper = initSwiper(item);
+      addNumbering(processSwiper, item);
+    });
   };
 
   renderSlider();

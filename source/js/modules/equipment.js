@@ -1,46 +1,50 @@
 (function () {
-  const wrapper = document.querySelector('.equipment__wrapper');
-  const container = document.querySelector('.equipment__container');
+  //const wrapper = document.querySelector('.equipment__wrapper');
+  const container = document.querySelectorAll(".equipment__container");
 
-  if(!wrapper) {
+  if (!container) {
     return;
   }
 
-  const initSwiper = () => {
-    return new Swiper('.equipment__container', {
+  const initSwiper = (item) => {
+    return new Swiper(item, {
       pagination: {
-        el: '.equipment__pagination',
-        type: 'bullets',
+        el: ".equipment__pagination",
+        type: "bullets",
       },
       loop: true,
     });
   };
 
   const addSlideClass = (element) => {
-    let items = element.querySelectorAll('.equipment__item');
+    let items = element.querySelectorAll(".equipment__item");
     items.forEach((item) => {
-      item.classList.add('swiper-slide');
+      item.classList.add("swiper-slide");
     });
   };
 
   const renderSlider = () => {
-    let fragment = document.createDocumentFragment();
+    container.forEach((item) => {
+      let fragment = document.createDocumentFragment();
 
-    let wrapperNode = wrapper.cloneNode(true);
-    wrapperNode.className = 'equipment__slide-wrapper';
-    wrapperNode.classList.add('swiper-wrapper');
+      let wrapperNode = item.parentNode
+        .querySelector(".equipment__wrapper")
+        .cloneNode(true);
+      wrapperNode.className = "equipment__slide-wrapper";
+      wrapperNode.classList.add("swiper-wrapper");
 
-    let paginationNode = document.createElement('div');
-    paginationNode.classList.add('equipment__pagination');
-    paginationNode.classList.add('swiper-pagination');
+      let paginationNode = document.createElement("div");
+      paginationNode.classList.add("equipment__pagination");
+      paginationNode.classList.add("swiper-pagination");
 
-    fragment.appendChild(wrapperNode);
-    fragment.appendChild(paginationNode);
+      fragment.appendChild(wrapperNode);
+      fragment.appendChild(paginationNode);
 
-    container.appendChild(fragment);
-    addSlideClass(container);
+      item.appendChild(fragment);
+      addSlideClass(item);
 
-    initSwiper();
+      initSwiper(item);
+    });
   };
 
   renderSlider();
